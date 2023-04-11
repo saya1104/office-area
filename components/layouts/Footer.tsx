@@ -20,7 +20,7 @@ export const UlStyle = styled.ul`
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  max-width: 890px;
+  max-width: 900px;
   width: 80%;
   min-width: 600px;
 
@@ -36,6 +36,7 @@ export const ListStyle = styled.li`
   margin-top: 50px;
   justify-content: space-around;
   min-width: 180px;
+  font-size: 20px;
 
   &::before {
     content: '';
