@@ -1,12 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import AifulLogo from '../../public/assets/AifulLogo.svg';
+import { sp } from '../../styles/breakPoint';
 
 export const FooterStyle = styled.footer`
   position: relative;
   padding: 45px 100px 80px 100px;
   //   今だけ設定
   margin-top: 600px;
+
+  ${sp`
+    padding: 45px 20px 80px 20px;
+  `}
 `;
 
 export const LogoStyle = styled.div`
@@ -14,6 +19,12 @@ export const LogoStyle = styled.div`
   & p {
     margin: auto auto 0 43px;
   }
+
+  ${sp`
+    display: block;
+    & p {
+      margin: 20px 0 0 0;
+  `}
 `;
 
 export const UlStyle = styled.ul`
@@ -27,6 +38,11 @@ export const UlStyle = styled.ul`
   li:nth-of-type(3) {
     margin-right: 60px;
   }
+
+  ${sp`
+    display: block;
+    min-width: 100%;
+  `}
 `;
 
 export const ListStyle = styled.li`
@@ -91,6 +107,12 @@ export const ArrowStyle = styled.div`
   position: absolute;
   right: 100px;
   bottom: 60px;
+
+  ${sp`
+    position: initial;
+    width: 100px;
+    margin: 0 0 0 auto;
+  `}
 `;
 
 export const PagetopLink = styled.a`
