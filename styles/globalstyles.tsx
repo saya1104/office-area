@@ -10,6 +10,7 @@ body {
 	color: #FFF;
 	font-size: 18px;
 	font-family: 'Inter';
+	width: 100%;
 }`;
 
 export default GlobalStyle;
