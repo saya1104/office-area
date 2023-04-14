@@ -6,10 +6,11 @@ type Props = {
 };
 
 const Container = styled.div<Props>`
-  display: ${({ isOpen }) => (isOpen ? 'none' : 'flex')};
+  transform: ${({ isOpen }) => (isOpen ? 'translateY(-100%)' : 'translateY(0)')};
+  visibility: ${({ isOpen }) => (isOpen ? 'hidden' : 'visible')};
   flex-direction: column;
-  padding-top: 150px;
-  padding-left: 150px;
+  padding-top: 130px;
+  padding-left: 130px;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -17,11 +18,11 @@ const Container = styled.div<Props>`
   left: 0;
   height: 100vh;
   background-color: rgba(17, 19, 24, 0.9);
+  transition: all 1.5s cubic-bezier(0.79, 0, 0.5, 0.99) 0s;
   ${sp`
     padding-top: 230px;
     padding-left: 30px;
   `}
-
   li {
     list-style: none;
     font-size: 34px;
