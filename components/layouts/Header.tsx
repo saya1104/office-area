@@ -10,7 +10,7 @@ export const HeaderStyle = styled.header`
 `;
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
