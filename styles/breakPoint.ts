@@ -14,7 +14,7 @@ export const sp = (
   }
   `;
 
-export const pc_min = (
+export const pcMin = (
     base: CSSObject | TemplateStringsArray,
     ...interpolations: SimpleInterpolation[]
   ): FlattenSimpleInterpolation => css`

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { pc_min, sp } from '../../styles/breakPoint';
+import { pcMin, sp } from '../../styles/breakPoint';
 
 type Props = {
   isOpen: boolean;
@@ -25,7 +25,7 @@ const Container = styled.div<Props>`
     opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
     transform: ${({ isOpen }) => (isOpen ? 'translateY(-100%)' : 'translateY(0)')};
     transition: all 0.3s 0.8s;
-    ${pc_min`
+    ${pcMin`
     margin-bottom: 60px;
     `}
     ${sp`
@@ -36,7 +36,7 @@ const Container = styled.div<Props>`
   ul {
     margin-top: 200px;
     margin-left: 140px;
-    ${pc_min`
+    ${pcMin`
     margin-top: 180px;
     margin-left: 100px;
     `}
