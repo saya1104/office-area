@@ -13,3 +13,12 @@ export const sp = (
     ${css(base, ...interpolations)}
   }
   `;
+
+export const pcMin = (
+    base: CSSObject | TemplateStringsArray,
+    ...interpolations: SimpleInterpolation[]
+  ): FlattenSimpleInterpolation => css`
+      @media (max-width: 1500px) {
+    ${css(base, ...interpolations)}
+  }
+  `;
