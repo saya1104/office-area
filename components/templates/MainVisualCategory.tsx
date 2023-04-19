@@ -20,22 +20,26 @@ export const TextStyle = styled.div`
   ${sp`
   position: relative;
   top: 0;
-  left: 0;`}
+  left: 0;
+  margin: 10px;
+  `}
   h2 {
     ${GradationStyle}
     white-space: nowrap;
     ${tablet`
-    // font-size: 6vw;
     font-size: 60px;
     `}
     ${sp`
-    font-size: 40px;`}
+    font-size: 10vw;
+
+    `}
   }
   p {
     font-size: 30px;
     white-space: nowrap;
     ${sp`
-    font-size: 20px;`}
+    font-size: 5vw;
+    `}
   }
 `;
 
