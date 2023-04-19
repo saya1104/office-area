@@ -7,6 +7,7 @@ import HamburgerMenu from '../elements/HamburgerMenu';
 export const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
+  margin: 8px;
 `;
 
 const Header = () => {
