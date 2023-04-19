@@ -92,9 +92,6 @@ select {
 [type=button],
 [type=reset],
 [type=submit],
-button {
-	-webkit-appearance: button
-}
 
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -141,11 +138,6 @@ textarea {
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
 	height: auto
-}
-
-[type=search] {
-	-webkit-appearance: textfield;
-	outline-offset: -2px
 }
 
 [type=search]::-webkit-search-decoration {
