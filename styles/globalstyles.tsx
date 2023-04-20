@@ -19,6 +19,8 @@ h2 {
 	font-family: 'YuGothic';
 	font-size: 87px;
 	margin: 0;
+}
+h3 {
+	font-size: 34px;
 }`;
-
 export default GlobalStyle;
