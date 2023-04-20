@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import styled from 'styled-components';
-import AifulLogo from '../../public/assets/AifulLogo.svg';
 import HamburgerButton from '../elements/HamburgerButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
 
-export const HeaderStyle = styled.header`
+const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
+  margin: 8px;
 `;
 
 const Header = () => {
@@ -17,7 +18,9 @@ const Header = () => {
 
   return (
     <HeaderStyle>
-      <AifulLogo />
+      <h1>
+        <Image src="/assets/AifulLogo.svg" alt="アイフル" width={131} height={57} />
+      </h1>
       <HamburgerButton isOpen={isOpen} onClick={handleToggle} />
       <HamburgerMenu isOpen={isOpen} />
     </HeaderStyle>

@@ -22,3 +22,13 @@ export const pcMin = (
     ${css(base, ...interpolations)}
   }
   `;
+
+export const tablet = (
+    base: CSSObject | TemplateStringsArray,
+    ...interpolations: SimpleInterpolation[]
+  ): FlattenSimpleInterpolation => css`
+      @media (max-width: 1024px) {
+    ${css(base, ...interpolations)}
+  }
+  `;
+
