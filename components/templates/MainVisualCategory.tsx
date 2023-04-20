@@ -60,7 +60,7 @@ const MainVisualCategory = () => {
       <ImageStyle>
         <Image
           src="/assets/MainVisual.png"
-          alt="MainVisual"
+          alt="alful engineer recruitment"
           width={1002}
           height={938}
           sizes="100vw"
