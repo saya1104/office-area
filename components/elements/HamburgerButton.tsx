@@ -5,7 +5,7 @@ type Props = {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-export const ButtonStyle = styled.button<Props>`
+const ButtonStyle = styled.button<Props>`
   position: relative;
   width: 56px;
   height: 56px;

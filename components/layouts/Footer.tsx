@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import AifulLogo from '../../public/assets/AifulLogo.svg';
 import { sp } from '../../styles/breakPoint';
 
-export const FooterStyle = styled.footer`
+const FooterStyle = styled.footer`
   position: relative;
   padding: 45px 100px 80px 100px;
   //   今だけ設定
@@ -14,7 +14,7 @@ export const FooterStyle = styled.footer`
   `}
 `;
 
-export const LogoStyle = styled.div`
+const LogoStyle = styled.div`
   display: flex;
   & p {
     margin: auto auto 0 43px;
@@ -27,7 +27,7 @@ export const LogoStyle = styled.div`
   `}
 `;
 
-export const UlStyle = styled.ul`
+const UlStyle = styled.ul`
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -45,7 +45,7 @@ export const UlStyle = styled.ul`
   `}
 `;
 
-export const ListStyle = styled.li`
+const ListStyle = styled.li`
   list-style: none;
   position: relative;
   padding: 0px 0px 0px 1em;
@@ -68,7 +68,7 @@ export const ListStyle = styled.li`
   }
 `;
 
-export const ArrowUp = styled.span`
+const ArrowUp = styled.span`
   position: relative;
   display: inline-block;
   width: 30px;
@@ -100,7 +100,7 @@ export const ArrowUp = styled.span`
   }
 `;
 
-export const ArrowStyle = styled.div`
+const ArrowStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,7 +115,7 @@ export const ArrowStyle = styled.div`
   `}
 `;
 
-export const PagetopLink = styled.a`
+const PagetopLink = styled.a`
   color: #ff328f;
   text-decoration: none;
   margin-top: 50px;

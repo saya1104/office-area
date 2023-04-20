@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
 import { sp, tablet } from '../../styles/breakPoint';
 
-export const MainStyle = styled.div`
+const MainStyle = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -12,7 +12,7 @@ export const MainStyle = styled.div`
   overflow: hidden;`}
 `;
 
-export const TextStyle = styled.div`
+const TextStyle = styled.div`
   position: absolute;
   top: 254px;
   left: 58px;
@@ -43,7 +43,7 @@ export const TextStyle = styled.div`
   }
 `;
 
-export const ImageStyle = styled.div`
+const ImageStyle = styled.div`
   z-index: 0;
   margin: 0 0 0 auto;
   width: 1002px;

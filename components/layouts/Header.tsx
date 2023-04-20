@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import HamburgerButton from '../elements/HamburgerButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
 
-export const HeaderStyle = styled.header`
+const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
   margin: 8px;
