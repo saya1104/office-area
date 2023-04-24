@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 
-const Arrow = styled.span`
+const Arrow = styled.a`
   position: relative;
   display: inline-block;
+  padding-right: 80px;
   &::before {
     content: '';
     position: absolute;
     width: 182px;
     height: 2px;
-	bottom: 15px;
+	top: 25px;
     background-color: #ff328f;
   }
   &::after {
     content: '';
     position: absolute;
-	bottom: 9px;
+	top: 19px;
 	left: 180px;
 	border-style: solid;
     border-width: 7px 0 7px 10px;
@@ -23,22 +24,19 @@ const Arrow = styled.span`
   }`;
 
 const ReadMeStyle = styled.div`
-  position: absolute;
-  right: 80px;
-  p {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  a {
     color: #ff388a;
     margin-bottom: 0;
   }
 `;
-const ArrowStyle = styled.div``;
 
 const ReadMore = () => {
   return (
     <ReadMeStyle>
-      <p>READ MORE</p>
-      <ArrowStyle>
-        <Arrow />
-      </ArrowStyle>
+      <Arrow>READ MORE</Arrow>
     </ReadMeStyle>
   );
 };
