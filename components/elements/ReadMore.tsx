@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Arrow = styled.a`
+const ArrowStyle = styled.a`
   position: relative;
   display: inline-block;
   padding-right: 80px;
@@ -23,7 +23,7 @@ const Arrow = styled.a`
   }
   }`;
 
-const ReadMeStyle = styled.div`
+const ReadMoreStyle = styled.div`
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -35,9 +35,9 @@ const ReadMeStyle = styled.div`
 
 const ReadMore = () => {
   return (
-    <ReadMeStyle>
-      <Arrow>READ MORE</Arrow>
-    </ReadMeStyle>
+    <ReadMoreStyle>
+      <ArrowStyle>READ MORE</ArrowStyle>
+    </ReadMoreStyle>
   );
 };
 
