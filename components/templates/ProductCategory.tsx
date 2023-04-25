@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { sp } from '../../styles/breakPoint';
+import { sp, tablet } from '../../styles/breakPoint';
 
 const ProductStyle = styled.div`
   position: relative;
@@ -8,10 +8,13 @@ const ProductStyle = styled.div`
 
 const TextStyle = styled.div`
   position: absolute;
-  z-index: 2;
   top: 40%;
   left: 10%;
   width: 35%;
+  height: auto;
+  ${tablet`
+  width: 40%
+  `}
   ${sp`
   top: 12%;
   left: auto;
@@ -21,23 +24,37 @@ const TextStyle = styled.div`
   h3 {
     font-size: 34px;
     font-weight: 600;
+    ${tablet`
+    font-size: 3vw;
+    `}
+    ${sp`
+    font-size: 34px;
+    `}
   }
   p {
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
+    ${tablet`
+    font-size: 1.6vw;
+    line-height: 3vw;
+    `}
     ${sp`
     margin-top: 60px;
+    font-size: 3.8vw;
+    line-height: 7vw;
     `}
   }
 `;
 
 const ImagePcStyle = styled.div`
   position: absolute;
-  z-index: 2;
   width: 38%;
   top: 23%;
   right: 10%;
+  ${tablet`
+  width: 30%;
+  `}
   ${sp`
   display: none;
   `}
@@ -47,12 +64,13 @@ const ImageSpStyle = styled.div`
   display: none;
   ${sp`
   display: block;
+  margin-top: 80px;
 `}
 `;
 
 const PcWaveStyle = styled.div`
   display: block;
-  z-index: 1;
+  z-index: -1;
   ${sp`
   display: none;
 `}
@@ -62,6 +80,7 @@ const SpWaveStyle = styled.div`
   display: none;
   ${sp`
   display: block;
+  z-index: -1;
 `}
 `;
 
