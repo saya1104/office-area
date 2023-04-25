@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
+import { sp } from '../../styles/breakPoint';
 import InterviewMember from '../elements/InterviewMember';
 
 const InterviewStyle = styled.div`
@@ -7,11 +8,19 @@ const InterviewStyle = styled.div`
   text-align: center;
   max-width: 700px;
   width: 70%;
+  ${sp`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  `}
   h3 {
     ${GradationStyle}
   }
   p {
     font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
   }
 `;
 
@@ -28,8 +37,6 @@ const InterviewCategory = () => {
       </p>
       <MembersListStyle>
         <InterviewMember />
-        {/* <InterviewMember />
-        <InterviewMember /> */}
       </MembersListStyle>
     </InterviewStyle>
   );

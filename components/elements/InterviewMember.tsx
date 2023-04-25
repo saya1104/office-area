@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
+import { sp } from '../../styles/breakPoint';
 
 const InterviewStyle = styled.div`
   display: flex;
@@ -12,6 +13,9 @@ const InterviewImageStyle = styled.div`
   max-width: 280px;
   width: 100%;
   height: auto;
+  ${sp`
+  margin: 50px 0 20px 0;
+  `}
 `;
 
 const InterviewTextStyle = styled.div`
@@ -45,6 +49,10 @@ const SquareStyle = styled.div`
     background: linear-gradient(90deg, #ff318f 0%, #ff7d53 100%);
     width: 100%;
     height: 100%;
+    ${sp`
+    width: 98%;
+    left: 2px;
+    `}
   }
 `;
 
