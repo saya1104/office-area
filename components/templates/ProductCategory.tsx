@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { sp, tablet } from '../../styles/breakPoint';
+import { pcMin } from '../../styles/breakPoint';
+import ReadMore from '../elements/ReadMore';
 
 const ProductStyle = styled.div`
   position: relative;
@@ -13,7 +15,7 @@ const TextStyle = styled.div`
   width: 35%;
   height: auto;
   ${tablet`
-  width: 40%
+  width: 42%
   `}
   ${sp`
   top: 12%;
@@ -24,8 +26,8 @@ const TextStyle = styled.div`
   h3 {
     font-size: 34px;
     font-weight: 600;
-    ${tablet`
-    font-size: 3vw;
+    ${pcMin`
+    font-size: 2.7vw;
     `}
     ${sp`
     font-size: 34px;
@@ -35,13 +37,14 @@ const TextStyle = styled.div`
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
+    margin-bottom: 7%;
     ${tablet`
-    font-size: 1.6vw;
-    line-height: 3vw;
+    font-size: 1.8vw;
+    line-height: 3.2vw;
     `}
     ${sp`
-    margin-top: 60px;
-    font-size: 3.8vw;
+    margin-top: 10vw;
+    font-size: 3.4vw;
     line-height: 7vw;
     `}
   }
@@ -134,6 +137,7 @@ const ProductCategory = () => {
             開発プロダクト紹介テキスト。 開発プロダクト紹介テキスト。
             開発プロダクト紹介テキスト。開発プロダクト紹介テキスト。
           </p>
+          <ReadMore />
         </TextStyle>
         <ImagePcStyle>
           <Image
