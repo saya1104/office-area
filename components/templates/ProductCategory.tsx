@@ -71,7 +71,7 @@ const ImageSpStyle = styled.div`
 `}
 `;
 
-const PcWaveStyle = styled.div`
+const WavePcStyle = styled.div`
   display: block;
   z-index: -1;
   ${sp`
@@ -79,7 +79,7 @@ const PcWaveStyle = styled.div`
 `}
 `;
 
-const SpWaveStyle = styled.div`
+const WaveSpStyle = styled.div`
   display: none;
   ${sp`
   display: block;
@@ -91,7 +91,7 @@ const ProductCategory = () => {
   return (
     <>
       <ProductStyle>
-        <PcWaveStyle>
+        <WavePcStyle>
           <Image
             src="/assets/TopProductWavePc.svg"
             alt="TopProductWave"
@@ -103,8 +103,8 @@ const ProductCategory = () => {
               height: 'auto',
             }}
           />
-        </PcWaveStyle>
-        <SpWaveStyle>
+        </WavePcStyle>
+        <WaveSpStyle>
           <Image
             src="/assets/TopProductWaveSp.svg"
             alt="TopProductWave"
@@ -116,7 +116,7 @@ const ProductCategory = () => {
               height: 'auto',
             }}
           />
-        </SpWaveStyle>
+        </WaveSpStyle>
         <TextStyle>
           <h3>PRODUCT</h3>
           <ImageSpStyle>
