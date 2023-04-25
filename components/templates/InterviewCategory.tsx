@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
+import InterviewMember from '../elements/InterviewMember';
 
 const InterviewStyle = styled.div`
   margin: 0 auto;
@@ -14,6 +15,10 @@ const InterviewStyle = styled.div`
   }
 `;
 
+const MembersListStyle = styled.div`
+  display: flex;
+`;
+
 const InterviewCategory = () => {
   return (
     <InterviewStyle>
@@ -21,6 +26,11 @@ const InterviewCategory = () => {
       <p>
         メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。
       </p>
+      <MembersListStyle>
+        <InterviewMember />
+        {/* <InterviewMember />
+        <InterviewMember /> */}
+      </MembersListStyle>
     </InterviewStyle>
   );
 };
