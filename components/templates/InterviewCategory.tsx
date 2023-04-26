@@ -26,19 +26,29 @@ const InterviewStyle = styled.div`
 
 const MembersListStyle = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-right: 8%;
+  margin-left: 8%;
 `;
 
 const InterviewCategory = () => {
   return (
-    <InterviewStyle>
-      <h3>INTERVIEW</h3>
-      <p>
-        メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。
-      </p>
+    <>
+      <InterviewStyle>
+        <h3>INTERVIEW</h3>
+        <p>
+          メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。
+        </p>
+      </InterviewStyle>
       <MembersListStyle>
         <InterviewMember />
+        <InterviewMember />
+        <InterviewMember />
+        <InterviewMember />
       </MembersListStyle>
-    </InterviewStyle>
+    </>
   );
 };
 

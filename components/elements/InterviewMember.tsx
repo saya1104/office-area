@@ -7,6 +7,7 @@ const InterviewStyle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 14px;
 `;
 
 const InterviewImageStyle = styled.div`
