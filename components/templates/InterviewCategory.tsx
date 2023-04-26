@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { GradationStyle } from '../../styles/Styled';
 import { sp } from '../../styles/breakPoint';
 import InterviewMember from '../elements/InterviewMember';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const InterviewStyle = styled.div`
   margin: 0 auto;
@@ -24,14 +29,14 @@ const InterviewStyle = styled.div`
   }
 `;
 
-const MembersListStyle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  margin-right: 8%;
-  margin-left: 8%;
-`;
+// const MembersListStyle = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-top: 100px;
+//   margin-right: 8%;
+//   margin-left: 8%;
+// `;
 
 const InterviewCategory = () => {
   return (
@@ -42,12 +47,40 @@ const InterviewCategory = () => {
           メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。
         </p>
       </InterviewStyle>
-      <MembersListStyle>
+      {/* <MembersListStyle>
         <InterviewMember />
         <InterviewMember />
         <InterviewMember />
         <InterviewMember />
-      </MembersListStyle>
+      </MembersListStyle> */}
+      {/* <SwiperMembersStyle> */}
+      <Swiper
+        // 一度に表示するスライドの数
+        slidesPerView={4}
+        // スライド間の余白
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <InterviewMember />
+        </SwiperSlide>
+        <SwiperSlide>
+          <InterviewMember />
+        </SwiperSlide>
+        <SwiperSlide>
+          <InterviewMember />
+        </SwiperSlide>
+        <SwiperSlide>
+          <InterviewMember />
+        </SwiperSlide>
+        <SwiperSlide>
+          <InterviewMember />
+        </SwiperSlide>
+      </Swiper>
     </>
   );
 };
