@@ -33,7 +33,6 @@ const RecruitTextStyle = styled.div`
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
- 
   `}
   h3 {
     background: linear-gradient(90deg, #ff318f 32.75%, #ff7d53 67.17%);
