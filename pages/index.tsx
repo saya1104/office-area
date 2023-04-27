@@ -3,6 +3,7 @@ import Header from '../components/layouts/Header';
 import AboutTeamCategory from '../components/templates/AboutTeamCategory';
 import MainVisualCategory from '../components/templates/MainVisualCategory';
 import ProductCategory from '../components/templates/ProductCategory';
+import RecruitCategory from '../components/templates/RecruitCategory';
 import TeamCoreValuesCategory from '../components/templates/TeamCoreValuesCategory';
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
       <AboutTeamCategory />
       <TeamCoreValuesCategory />
       <ProductCategory />
+      <RecruitCategory />
       <Footer />
     </>
   );
