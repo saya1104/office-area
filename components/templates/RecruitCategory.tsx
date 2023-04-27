@@ -1,15 +1,78 @@
 import Image from 'next/image';
 import styled from 'styled-components';
+import { sp } from '../../styles/breakPoint';
 
 const RecruitStyle = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ${sp`
+  display: block;
+  position: relative;
+  `}
 `;
 
-const RecruitLeftImageStyle = styled.div``;
+const RecruitLeftImageStyle = styled.div`
+  ${sp`
+  max-width: 354px;
+`}
+`;
 
-const EntryButtonStyle = styled.a``;
+const RecruitTextStyle = styled.div`
+  display: block;
+  text-align: center;
+  width: 40%;
+  min-width: 350px;
+  ${sp`
+  margin: 0 auto;
+  width: 50%;
+  min-width: auto;
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+ 
+  `}
+  h3 {
+    background: linear-gradient(90deg, #ff318f 32.75%, #ff7d53 67.17%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 60px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+`;
 
-const RecruitRightImageStyle = styled.div``;
+const EntryButtonStyle = styled.div`
+  padding: 13px 0;
+  width: 260px;
+  margin: 60px auto 0 auto;
+  color: #ff388a;
+  border: solid 3px #ff388a;
+  border-radius: 50px;
+  ${sp`
+  width: 200px;
+  `}
+  a {
+    font-size: 25px;
+    font-weight: 700;
+  }
+`;
+
+const RecruitRightImageStyle = styled.div`
+  ${sp`
+  max-width: 339px;
+  margin: 0 0 0 auto;
+  position: absolute;
+  top: 550px;
+  right: 0;
+`}
+`;
 
 const RecruitCategory = () => {
   return (
@@ -27,11 +90,15 @@ const RecruitCategory = () => {
           }}
         />
       </RecruitLeftImageStyle>
-      <h3>RECRUIT</h3>
-      <p>
-        募集要項テキストがここに入ります。募集要項テキストがここに入ります。募集要項テキストがここに入ります。募集要項テキストがここに入ります。
-      </p>
-      <EntryButtonStyle>ENTRY</EntryButtonStyle>
+      <RecruitTextStyle>
+        <h3>RECRUIT</h3>
+        <p>
+          募集要項テキストがここに入ります。募集要項テキストがここに入ります。募集要項テキストがここに入ります。募集要項テキストがここに入ります。
+        </p>
+        <EntryButtonStyle>
+          <a>ENTRY</a>
+        </EntryButtonStyle>
+      </RecruitTextStyle>
       <RecruitRightImageStyle>
         <Image
           src="/assets/RecruitRight.svg"
