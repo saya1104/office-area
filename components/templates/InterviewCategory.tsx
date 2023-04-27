@@ -4,7 +4,7 @@ import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { GradationStyle } from '../../styles/Styled';
 import { sp } from '../../styles/breakPoint';
-import { MemberItem } from '../elements/MemberItem';
+import { MemberIntroductions } from '../elements/MemberIntroductions';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -112,7 +112,7 @@ const InterviewCategory = () => {
           },
         }}
       >
-        {MemberItem.map((item, index) => {
+        {MemberIntroductions.map((item, index) => {
           return (
             <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center' }}>
               <InterviewCardStyle>

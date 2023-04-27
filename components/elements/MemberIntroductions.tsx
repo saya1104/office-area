@@ -1,7 +1,7 @@
-export const MemberItem = [
+export const MemberIntroductions = [
   {
     imageSrc: '/assets/InterviewOta.png',
-    imageAlt: 'InterviewOta',
+    imageAlt: 'Y.O/2021年入社 AWSチーム チーフエンジニア',
     message1: '新規事業企画を経て、',
     message2: 'プロモーション戦略を担当。',
     name: 'Y.O',
@@ -10,7 +10,7 @@ export const MemberItem = [
   },
   {
     imageSrc: '/assets/InterviewWang.png',
-    imageAlt: 'InterviewWang',
+    imageAlt: 'C.W/2022年入社 フロントエンドエンジニア',
     message1: '新規事業企画を経て、',
     message2: 'プロモーション戦略を担当。',
     name: 'C.W',
@@ -19,7 +19,7 @@ export const MemberItem = [
   },
   {
     imageSrc: '/assets/InterviewMoroda.png',
-    imageAlt: 'InterviewMoroda',
+    imageAlt: 'T.M/20XX年入社 iOSアプリエンジニア',
     message1: '新規事業企画を経て、',
     message2: 'プロモーション戦略を担当。',
     name: 'T.M',
@@ -28,7 +28,7 @@ export const MemberItem = [
   },
   {
     imageSrc: '/assets/InterviewChacon.png',
-    imageAlt: 'InterviewChacon',
+    imageAlt: 'D.C/20XX年入社 フルスタックエンジニア',
     message1: '新規事業企画を経て、',
     message2: 'プロモーション戦略を担当。',
     name: 'D.C',
@@ -37,7 +37,7 @@ export const MemberItem = [
   },
   {
     imageSrc: '/assets/InterviewOu.png',
-    imageAlt: 'InterviewOu',
+    imageAlt: 'K.O/2022年入社 バックエンドエンジニア',
     message1: '新規事業企画を経て、',
     message2: 'プロモーション戦略を担当。',
     name: 'K.O',
