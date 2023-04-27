@@ -22,5 +22,22 @@ h2 {
 }
 h3 {
 	font-size: 34px;
-}`;
+}
+
+.swiper {
+	width: 80%;
+}
+
+.swiper-pagination-bullet {
+	background-color: #ff388a;
+	height: 13px;
+	width: 13px;
+}
+.swiper-wrapper {
+	padding-bottom: 50px;
+	max-width: 1200px;
+	width: 80%;
+}
+`;
+
 export default GlobalStyle;
