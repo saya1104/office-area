@@ -73,7 +73,7 @@ const RecruitRightImageStyle = styled.div`
 `}
 `;
 
-const RecruitCategory = () => {
+const Recruit = () => {
   return (
     <RecruitStyle>
       <RecruitLeftImageStyle>
@@ -115,4 +115,4 @@ const RecruitCategory = () => {
   );
 };
 
-export default RecruitCategory;
+export default Recruit;

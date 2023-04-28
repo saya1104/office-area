@@ -1,22 +1,22 @@
 import Footer from '../components/layouts/Footer';
 import Header from '../components/layouts/Header';
-import AboutTeamCategory from '../components/templates/AboutTeamCategory';
-import InterviewCategory from '../components/templates/InterviewCategory';
-import MainVisualCategory from '../components/templates/MainVisualCategory';
-import ProductCategory from '../components/templates/ProductCategory';
-import RecruitCategory from '../components/templates/RecruitCategory';
-import TeamCoreValuesCategory from '../components/templates/TeamCoreValuesCategory';
+import AboutTeam from '../components/templates/AboutTeam';
+import Interview from '../components/templates/Interview';
+import MainVisual from '../components/templates/MainVisual';
+import Product from '../components/templates/Product';
+import Recruit from '../components/templates/Recruit';
+import TeamCoreValues from '../components/templates/TeamCoreValues';
 
 function Home() {
   return (
     <>
       <Header />
-      <MainVisualCategory />
-      <AboutTeamCategory />
-      <TeamCoreValuesCategory />
-      <ProductCategory />
-      <InterviewCategory />
-      <RecruitCategory />
+      <MainVisual />
+      <AboutTeam />
+      <TeamCoreValues />
+      <Product />
+      <Interview />
+      <Recruit />
       <Footer />
     </>
   );

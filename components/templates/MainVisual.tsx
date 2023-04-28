@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
 import { sp, tablet } from '../../styles/breakPoint';
 
-const MainStyle = styled.div`
+const MainVisualStyle = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -54,9 +54,9 @@ const ImageStyle = styled.div`
   margin-left: -10%;`}
 `;
 
-const MainVisualCategory = () => {
+const MainVisual = () => {
   return (
-    <MainStyle>
+    <MainVisualStyle>
       <ImageStyle>
         <Image
           src="/assets/MainVisual.png"
@@ -78,8 +78,8 @@ const MainVisualCategory = () => {
         </h2>
         <p>AIFUL ENGINEER RECRUITMENT</p>
       </TextStyle>
-    </MainStyle>
+    </MainVisualStyle>
   );
 };
 
-export default MainVisualCategory;
+export default MainVisual;
