@@ -4,7 +4,7 @@ import { GradationStyle } from '../../styles/Styled';
 import { sp, tablet } from '../../styles/breakPoint';
 import ReadMore from '../elements/ReadMore';
 
-const CategoryBoxStyle = styled.div`
+const SectionStyle = styled.div`
   display: flex;
   margin: 200px 12%;
   justify-content: space-between;
@@ -53,9 +53,9 @@ const ImageSpStyle = styled.div`
 `}
 `;
 
-const TeamCoreValuesCategory = () => {
+const TeamCoreValues = () => {
   return (
-    <CategoryBoxStyle>
+    <SectionStyle>
       <ImagePcStyle>
         <Image
           src="/assets/TeamCoreValuesImage.svg"
@@ -90,8 +90,8 @@ const TeamCoreValuesCategory = () => {
         </p>
         <ReadMore />
       </TeamCoreValuesStyle>
-    </CategoryBoxStyle>
+    </SectionStyle>
   );
 };
 
-export default TeamCoreValuesCategory;
+export default TeamCoreValues;

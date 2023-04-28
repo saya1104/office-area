@@ -87,7 +87,7 @@ const WaveSpStyle = styled.div`
 `}
 `;
 
-const ProductCategory = () => {
+const Product = () => {
   return (
     <>
       <ProductStyle>
@@ -157,4 +157,4 @@ const ProductCategory = () => {
   );
 };
 
-export default ProductCategory;
+export default Product;
