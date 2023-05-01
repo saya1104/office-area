@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { sp } from '../../styles/breakPoint';
 import HamburgerButton from '../elements/HamburgerButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
-import { sp } from '../../styles/breakPoint';
 
 //スマホ版は10pxずつだけどどうすれば？
 const HeaderStyle = styled.header`
