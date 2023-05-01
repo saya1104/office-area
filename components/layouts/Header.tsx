@@ -3,11 +3,22 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import HamburgerButton from '../elements/HamburgerButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
+import { sp, spMin, tablet } from '../../styles/breakPoint';
 
+//スマホ版は10pxずつだけどどうすれば？
 const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
-  margin: 8px;
+  margin-top: 29px;
+  margin-left: 35px;
+  ${sp`
+    margin-top: 10px;
+    margin-left: 10px;
+  `}
+  ${spMin`
+    margin-top: 10px;
+    margin-left: 10px;
+  `}
 `;
 
 const Header = () => {

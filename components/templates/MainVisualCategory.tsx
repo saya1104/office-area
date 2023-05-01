@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { GradationStyle } from '../../styles/Styled';
+import { TitleGradationStyle } from '../../styles/Styled';
 import { sp, tablet } from '../../styles/breakPoint';
 
 const MainStyle = styled.div`
@@ -24,7 +24,7 @@ const TextStyle = styled.div`
   margin: 10px;
   `}
   h2 {
-    ${GradationStyle}
+    ${TitleGradationStyle}
     white-space: nowrap;
     ${tablet`
     font-size: 60px;

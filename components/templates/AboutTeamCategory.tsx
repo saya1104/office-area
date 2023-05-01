@@ -24,20 +24,23 @@ const AboutTeamStyle = styled.div`
   margin: auto;
   `}
   h3 {
-    ${GradationStyle}
     font-weight: 600;
     ${spMin`
-	margin-left: 20px;
-	`}
+	  margin-left: 20px;
+	  `}
   }
   p {
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
     ${spMin`
-	margin: 30px;
-	`}
+	  margin: 30px;
+	  `}
   }
+`;
+
+const Gradation = styled.span`
+  ${GradationStyle}
 `;
 
 const ImagePcStyle = styled.div`
@@ -78,7 +81,9 @@ const AboutTeamCategory = () => {
   return (
     <CategoryBoxStyle>
       <AboutTeamStyle>
-        <h3>ABOUT TEAM</h3>
+        <h3>
+          <Gradation>ABOUT TEAM</Gradation>
+        </h3>
         <ImageSpMinStyle>
           <Image
             src="/assets/AboutTeamImageSp.png"

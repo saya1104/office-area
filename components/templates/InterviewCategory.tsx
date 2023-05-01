@@ -20,14 +20,15 @@ const InterviewStyle = styled.div`
   justify-content: center;
   align-items: center;
   `}
-  h3 {
-    ${GradationStyle}
-  }
   p {
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
   }
+`;
+
+const Gradation = styled.span`
+  ${GradationStyle}
 `;
 
 const InterviewCardStyle = styled.div`
@@ -82,7 +83,9 @@ const InterviewCategory = () => {
   return (
     <>
       <InterviewStyle>
-        <h3>INTERVIEW</h3>
+        <h3>
+          <Gradation>INTERVIEW</Gradation>
+        </h3>
         <p>
           メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。
         </p>
