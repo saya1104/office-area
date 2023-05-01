@@ -17,25 +17,25 @@ const AboutTeamStyle = styled.div`
   min-width: 300px;
   margin: 0 10%;
   ${sp`
-margin: 0 6%;
-`}
+    margin: 0 6%;
+  `}
   ${spMin`
-width: auto;
-margin: auto;
-`}
+    width: auto;
+    margin: auto;
+  `}
 h3 {
     font-weight: 600;
     ${spMin`
-margin-left: 20px;
-`}
+      margin-left: 20px;
+    `}
   }
   p {
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
     ${spMin`
-margin: 30px;
-`}
+      margin: 30px;
+    `}
   }
 `;
 
@@ -45,16 +45,16 @@ const Gradation = styled.span`
 
 const ReadMoreStyle = styled.div`
   ${sp`
-margin-right: 30px;
-`}
+    margin-right: 30px;
+  `}
 `;
 
 const ImagePcStyle = styled.div`
   width: 666px;
   display: block;
   ${tablet`
-min-width: 280px;
-`}
+    min-width: 280px;
+  `}
   ${sp`
 display: none;
 `}
