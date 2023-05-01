@@ -37,9 +37,11 @@ const TextStyle = styled.div`
   p {
     font-size: 30px;
     white-space: nowrap;
+    font-family: YuGothic;
     ${sp`
     font-size: 5vw;
-    `}
+    margin-left:8px;
+    `};
   }
 `;
 

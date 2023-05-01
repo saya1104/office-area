@@ -47,9 +47,6 @@ const ReadMoreStyle = styled.div`
   ${sp`
     margin-right: 30px;
   `}
-  ${spMin`
-    margin-right:30px;
-  `}
 `;
 
 const ImagePcStyle = styled.div`
