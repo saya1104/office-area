@@ -43,6 +43,15 @@ const Gradation = styled.span`
   ${GradationStyle}
 `;
 
+const ReadMoreStyle = styled.div`
+  ${sp`
+    margin-right: 30px;
+  `}
+  ${spMin`
+    margin-right:30px;
+  `}
+`;
+
 const ImagePcStyle = styled.div`
   width: 666px;
   display: block;
@@ -102,7 +111,9 @@ const AboutTeamCategory = () => {
           テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。
           テキストが入ります。 テキストが入ります。
         </p>
-        <ReadMore />
+        <ReadMoreStyle>
+          <ReadMore />
+        </ReadMoreStyle>
       </AboutTeamStyle>
       <ImageSpStyle>
         <Image
