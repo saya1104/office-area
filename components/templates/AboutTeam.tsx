@@ -4,7 +4,7 @@ import { GradationStyle } from '../../styles/Styled';
 import { sp, spMin, tablet } from '../../styles/breakPoint';
 import ReadMore from '../elements/ReadMore';
 
-const CategoryBoxStyle = styled.div`
+const SectionStyle = styled.div`
   display: flex;
   margin-top: 200px;
   justify-content: space-between;
@@ -83,9 +83,9 @@ const ImageSpMinStyle = styled.div`
 `}
 `;
 
-const AboutTeamCategory = () => {
+const AboutTeam = () => {
   return (
-    <CategoryBoxStyle>
+    <SectionStyle>
       <AboutTeamStyle>
         <h3>
           <Gradation>ABOUT TEAM</Gradation>
@@ -139,8 +139,8 @@ const AboutTeamCategory = () => {
           }}
         />
       </ImagePcStyle>
-    </CategoryBoxStyle>
+    </SectionStyle>
   );
 };
 
-export default AboutTeamCategory;
+export default AboutTeam;

@@ -79,7 +79,7 @@ const SquareStyle = styled.div`
   }
 `;
 
-const InterviewCategory = () => {
+const Interview = () => {
   return (
     <>
       <InterviewStyle>
@@ -156,4 +156,4 @@ const InterviewCategory = () => {
   );
 };
 
-export default InterviewCategory;
+export default Interview;
