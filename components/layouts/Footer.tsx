@@ -8,6 +8,7 @@ const FooterStyle = styled.footer`
   padding: 45px 100px 80px 100px;
 
   ${sp`
+   margin-top:600px;
     padding: 45px 20px 80px 20px;
   `}
 `;

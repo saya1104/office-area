@@ -7,7 +7,7 @@ const RecruitStyle = styled.div`
   justify-content: space-between;
   align-items: center;
   ${sp`
-  display: block;
+  display: inline;
   position: relative;
   `}
 `;
