@@ -56,31 +56,31 @@ const ImagePcStyle = styled.div`
     min-width: 280px;
   `}
   ${sp`
-display: none;
-`}
+    display: none;
+  `}
 `;
 
 const ImageSpStyle = styled.div`
   display: none;
   ${sp`
-display: block;
-width: 260px;
-height: auto;
-min-width: 240px;
-margin: 0 0 0 auto;
-`}
+    display: block;
+    width: 260px;
+    height: auto;
+    min-width: 240px;
+    margin: 0 0 0 auto;
+  `}
   ${spMin`
-display: none;
-`}
+    display: none;
+  `}
 `;
 
 const ImageSpMinStyle = styled.div`
   display: none;
   ${spMin`
-display: block;
-max-width: 380px;
-margin: 0 0 0 auto;
-`}
+    display: block;
+    max-width: 380px;
+    margin: 0 0 0 auto;
+  `}
 `;
 
 const AboutTeam = () => {
