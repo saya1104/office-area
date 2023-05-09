@@ -39,7 +39,7 @@ h3 {
 }
 
 .swiper-wrapper {
-   padding-bottom: 50px;
+  padding-bottom: 50px;
   max-width: 1200px;
   width: 80%;
 }

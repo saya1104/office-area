@@ -5,7 +5,6 @@ import { sp } from '../../styles/breakPoint';
 import HamburgerButton from '../elements/HamburgerButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
 
-//スマホ版は10pxずつだけどどうすれば？
 const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
