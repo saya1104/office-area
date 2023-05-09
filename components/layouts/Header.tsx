@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { sp } from '../../styles/breakPoint';
+import { spMin } from '../../styles/breakPoint';
 import HamburgerButton from '../elements/HamburgerButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
 
@@ -10,7 +10,7 @@ const HeaderStyle = styled.header`
   justify-content: space-between;
   margin-top: 29px;
   margin-left: 35px;
-  ${sp`
+  ${spMin`
     margin-top: 10px;
     margin-left: 10px;
   `}

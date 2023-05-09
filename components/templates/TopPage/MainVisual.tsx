@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { TitleGradationStyle } from '../../styles/Styled';
-import { sp, tablet } from '../../styles/breakPoint';
-import { FollowBanner } from '../elements/FollowBanner';
+import { TitleGradationStyle } from '../../../styles/Styled';
+import { sp, tablet } from '../../../styles/breakPoint';
+import { FollowBanner } from '../../elements/FollowBanner';
 
 const MainVisualStyle = styled.div`
   display: flex;

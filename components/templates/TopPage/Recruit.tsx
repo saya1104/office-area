@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { sp } from '../../styles/breakPoint';
+import { sp } from '../../../styles/breakPoint';
 
 const RecruitStyle = styled.div`
   display: flex;

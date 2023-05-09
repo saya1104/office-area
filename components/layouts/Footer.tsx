@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import AifulLogo from '../../public/assets/AifulLogo.svg';
-import { sp } from '../../styles/breakPoint';
+import { sp, spMin } from '../../styles/breakPoint';
 
 const FooterStyle = styled.footer`
   position: relative;
   padding: 45px 100px 80px 100px;
+  margin-top: 100px;
 
-  ${sp`
-   margin-top:600px;
+  ${spMin`
     padding: 45px 20px 80px 20px;
   `}
 `;
