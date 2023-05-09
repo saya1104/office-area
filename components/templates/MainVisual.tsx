@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { GradationStyle } from '../../styles/Styled';
+import { TitleGradationStyle } from '../../styles/Styled';
 import { sp, tablet } from '../../styles/breakPoint';
+import { FollowBanner } from '../elements/FollowBanner';
 
 const MainVisualStyle = styled.div`
   display: flex;
@@ -24,7 +25,7 @@ const TextStyle = styled.div`
   margin: 10px;
   `}
   h2 {
-    ${GradationStyle}
+    ${TitleGradationStyle}
     white-space: nowrap;
     ${tablet`
     font-size: 60px;
@@ -37,9 +38,11 @@ const TextStyle = styled.div`
   p {
     font-size: 30px;
     white-space: nowrap;
+    font-family: YuGothic;
     ${sp`
     font-size: 5vw;
-    `}
+    margin-left:8px;
+    `};
   }
 `;
 
@@ -78,6 +81,7 @@ const MainVisual = () => {
         </h2>
         <p>AIFUL ENGINEER RECRUITMENT</p>
       </TextStyle>
+      <FollowBanner />
     </MainVisualStyle>
   );
 };

@@ -6,10 +6,9 @@ import { sp } from '../../styles/breakPoint';
 const FooterStyle = styled.footer`
   position: relative;
   padding: 45px 100px 80px 100px;
-  //   今だけ設定
-  margin-top: 600px;
 
   ${sp`
+   margin-top:600px;
     padding: 45px 20px 80px 20px;
   `}
 `;

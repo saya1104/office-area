@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { sp } from '../../styles/breakPoint';
 import HamburgerButton from '../elements/HamburgerButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
 
 const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
-  margin: 8px;
+  margin-top: 29px;
+  margin-left: 35px;
+  ${sp`
+    margin-top: 10px;
+    margin-left: 10px;
+  `}
 `;
 
 const Header = () => {

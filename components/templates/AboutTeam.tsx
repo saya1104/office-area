@@ -17,68 +17,79 @@ const AboutTeamStyle = styled.div`
   min-width: 300px;
   margin: 0 10%;
   ${sp`
-  margin: 0 6%;
+    margin: 0 6%;
   `}
   ${spMin`
-  width: auto;
-  margin: auto;
+    width: auto;
+    margin: auto;
   `}
-  h3 {
-    ${GradationStyle}
+h3 {
     font-weight: 600;
     ${spMin`
-	margin-left: 20px;
-	`}
+      margin-left: 20px;
+    `}
   }
   p {
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
     ${spMin`
-	margin: 30px;
-	`}
+      margin: 30px;
+    `}
   }
+`;
+
+const Gradation = styled.span`
+  ${GradationStyle}
+`;
+
+const ReadMoreStyle = styled.div`
+  ${sp`
+    margin-right: 30px;
+  `}
 `;
 
 const ImagePcStyle = styled.div`
   width: 666px;
   display: block;
   ${tablet`
-  min-width: 280px;
+    min-width: 280px;
   `}
   ${sp`
-  display: none;
-`}
+    display: none;
+  `}
 `;
 
 const ImageSpStyle = styled.div`
   display: none;
   ${sp`
-  display: block;
-  width: 260px;
-  height: auto;
-  min-width: 240px;
-  margin: 0 0 0 auto;
-`}
+    display: block;
+    width: 260px;
+    height: auto;
+    min-width: 240px;
+    margin: 0 0 0 auto;
+  `}
   ${spMin`
-display: none;
-`}
+    display: none;
+  `}
 `;
 
 const ImageSpMinStyle = styled.div`
   display: none;
   ${spMin`
-  display: block;
-  max-width: 380px;
-  margin: 0 0 0 auto;
-`}
+    display: block;
+    max-width: 380px;
+    margin: 0 0 0 auto;
+  `}
 `;
 
 const AboutTeam = () => {
   return (
     <SectionStyle>
       <AboutTeamStyle>
-        <h3>ABOUT TEAM</h3>
+        <h3>
+          <Gradation>ABOUT TEAM</Gradation>
+        </h3>
         <ImageSpMinStyle>
           <Image
             src="/assets/AboutTeamImageSp.png"
@@ -97,7 +108,9 @@ const AboutTeam = () => {
           テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。
           テキストが入ります。 テキストが入ります。
         </p>
-        <ReadMore />
+        <ReadMoreStyle>
+          <ReadMore />
+        </ReadMoreStyle>
       </AboutTeamStyle>
       <ImageSpStyle>
         <Image

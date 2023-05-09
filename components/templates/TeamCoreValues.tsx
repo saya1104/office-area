@@ -25,7 +25,6 @@ const TeamCoreValuesStyle = styled.div`
   margin: 0;
   `}
   h3 {
-    ${GradationStyle}
     font-weight: 600;
   }
   p {
@@ -33,6 +32,10 @@ const TeamCoreValuesStyle = styled.div`
     font-size: 18px;
     line-height: 30px;
   }
+`;
+
+const Gradation = styled.span`
+  ${GradationStyle}
 `;
 
 const ImagePcStyle = styled.div`
@@ -70,7 +73,9 @@ const TeamCoreValues = () => {
         />
       </ImagePcStyle>
       <TeamCoreValuesStyle>
-        <h3>TEAM CORE VALUES</h3>
+        <h3>
+          <Gradation>TEAM CORE VALUES</Gradation>
+        </h3>
         <ImageSpStyle>
           <Image
             src="/assets/TeamCoreValuesImage.svg"
