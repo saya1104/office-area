@@ -19,6 +19,7 @@ const Container = styled.div<Props>`
   background-color: rgba(17, 19, 24, 0.9);
   li {
     list-style: none;
+    cursor: pointer;
     font-size: 34px;
     font-weight: 600;
     margin-bottom: 80px;

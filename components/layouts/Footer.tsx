@@ -52,7 +52,7 @@ const ListStyle = styled.li`
   justify-content: space-around;
   min-width: 180px;
   font-size: 20px;
-
+  cursor: pointer;
   &::before {
     content: '';
     position: absolute;

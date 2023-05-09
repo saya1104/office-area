@@ -54,6 +54,7 @@ const EntryButtonStyle = styled.div`
   color: #ff388a;
   border: solid 3px #ff388a;
   border-radius: 50px;
+  cursor: pointer;
   ${sp`
   width: 200px;
   `}
