@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     min-width:280px
   `}
 `;
-const AccordionMeue = styled.div`
+const AccordionMeueStyle = styled.div`
   width: 580px;
   background: #16223f;
   position: relative;
@@ -41,7 +41,7 @@ const TitleStyle = styled.div`
   }
 `;
 
-const Flex = styled.div`
+const FlexStyle = styled.div`
   display: flex;
   justify-content: space-between;
 `;
@@ -65,7 +65,7 @@ const SubTitleStyle = styled.div`
   `}
 `;
 
-const PCButton = styled.div`
+const PCButtonStyle = styled.div`
   margin-top: auto;
   margin-bottom: 7px;
   cursor: pointer;
@@ -84,7 +84,7 @@ const PCButton = styled.div`
   `}
 `;
 
-const SPButton = styled.div`
+const SPButtonStyle = styled.div`
   ${sp`
   position: absolute;
   top:100%; 
@@ -148,18 +148,18 @@ const AboutTeamAccordion = ({ title, subTitle, detail, detailTitle, detailSubTit
 
   return (
     <Wrapper>
-      <AccordionMeue>
+      <AccordionMeueStyle>
         <TitleStyle className={isOpen ? 'isOpen' : ''}>
           <p>{title}</p>
         </TitleStyle>
-        <Flex>
+        <FlexStyle>
           <SubTitleStyle>
             <p>{subTitle}</p>
           </SubTitleStyle>
-          <PCButton onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
-        </Flex>
-        <SPButton onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
-      </AccordionMeue>
+          <PCButtonStyle onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
+        </FlexStyle>
+        <SPButtonStyle onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
+      </AccordionMeueStyle>
       {isOpen && detailTitle && detailSubTitle && !detailSubTitle[3] && (
         <DeatilStyle>
           <h3>{detailTitle[0]} </h3>
