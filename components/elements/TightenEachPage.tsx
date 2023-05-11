@@ -17,7 +17,7 @@ const SectionStyle = styled.div`
   align-items: center;
   margin-top: 50px;
   ${tablet`
-  margin: 50px 8%;
+    margin: 50px 8%;
   `}
 `;
 
@@ -58,9 +58,9 @@ const TitleStyle = styled.div`
     font-weight: 200;
     font-size: 60px;
     ${spMin`
-	text-align: center;
-	margin-bottom:10px;
-    font-size: 10vw;
+      text-align: center;
+      margin-bottom:10px;
+      font-size: 10vw;
     `}
   }
 `;
@@ -72,7 +72,7 @@ const SubTitleStyle = styled.div`
     margin-bottom: 0;
   }
   ${spMin`
-  margin:30px 10px 0px 10px
+    margin:30px 10px 0px 10px
   `}
 `;
 

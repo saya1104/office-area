@@ -17,18 +17,18 @@ const ImageStyle = styled.div`
   display: block;
   margin-right: 8%;
   ${tablet`
-  display: none;
-`}
+    display: none;
+  `}
 `;
 
 const ImageSpStyle = styled.div`
   display: none;
   ${tablet`
-  display: block;
-  text-align: center;
-  max-width: 546px;
-  margin: 0 auto;
-`}
+    display: block;
+    text-align: center;
+    max-width: 546px;
+    margin: 0 auto;
+  `}
 `;
 
 function AboutTeamDetails() {

@@ -18,10 +18,10 @@ const FollowBannerStyle = styled.button`
   margin-right: 35px;
   cursor: pointer;
   ${sp`
-	 top: 75vh;
-	width: 110px;
-	height: 110px;
-	margin-right:10px
+    top: 75vh;
+    width: 110px;
+    height: 110px;
+    margin-right:10px
   `}
   }
   span {

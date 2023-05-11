@@ -6,9 +6,9 @@ import type { AccordionType } from '../../features/domains/constants/AccordionCo
 const Wrapper = styled.div`
   width: 580px;
   ${sp`
-  margin-top:150px;
-  width:90vw;
-  min-width:280px
+    margin-top:150px;
+    width:90vw;
+    min-width:280px
   `}
 `;
 const AccordionMeue = styled.div`
@@ -16,8 +16,8 @@ const AccordionMeue = styled.div`
   background: #16223f;
   position: relative;
   ${sp`
-  width:90vw;
-  min-width:280px;
+    width:90vw;
+    min-width:280px;
   `};
 `;
 const TitleStyle = styled.div`
@@ -57,11 +57,11 @@ const SubTitleStyle = styled.div`
   color: #4ef4ff;
   }
   ${sp`
-  width:90vw;
-  min-width:280px;
-  p{
-    color:#FF318F
-  }
+    width:90vw;
+    min-width:280px;
+    p{
+      color:#FF318F
+    }
   `}
 `;
 
@@ -80,8 +80,8 @@ const PCButton = styled.div`
     transform: rotate(315deg);
   }
   ${sp`
-  display: none;
-`}
+    display: none;
+  `}
 `;
 
 const SPButton = styled.div`
@@ -126,7 +126,7 @@ const DeatilStyle = styled.div`
     color: #b7c4e5;
     ${sp`
       display:block;
-        margin: 10px 0 0 0;
+      margin: 10px 0 0 0;
     `}
   }
   @keyframes According-Animation {
