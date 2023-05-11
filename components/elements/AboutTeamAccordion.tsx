@@ -105,6 +105,9 @@ const SPButton = styled.div`
 
 const DeatilStyle = styled.div`
   white-space: pre-wrap;
+  animation-name: According-Animation;
+  animation-iteration-count;
+  animation-duration: 1s;
   p {
     line-height: 1.8em;
   }
@@ -125,6 +128,14 @@ const DeatilStyle = styled.div`
       display:block;
         margin: 10px 0 0 0;
     `}
+  }
+  @keyframes According-Animation {
+    0% {
+       opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 

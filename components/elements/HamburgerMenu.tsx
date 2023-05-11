@@ -56,7 +56,7 @@ const HamburgerMenu: React.FC<Props> = (props) => {
     <Container onClick={props.onClick} isOpen={props.isOpen}>
       <ul>
         <li onClick={() => router.push('/AboutPage')}>ABOUT TEAM</li>
-        <li onClick={() => router.push('/AboutPageTeamCoreValues')}>TEAM CORE VALUES</li>
+        <li onClick={() => router.push('/AboutPage#TeamCoreValues')}>TEAM CORE VALUES</li>
         <li>PRODUCT</li>
         <li>MEMBER</li>
         <li>RECRUIT</li>

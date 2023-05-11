@@ -8,7 +8,7 @@ import TightenEachPage from '../../elements/TightenEachPage';
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 `;
 
 const ImageStyle = styled.div`
