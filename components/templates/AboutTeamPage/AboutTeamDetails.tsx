@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import { visionData, missionData, valueData } from '../../../features/domains/constants/AccordionConstants';
 import { sp } from '../../../styles/breakPoint';
 import AboutTeamAccordion from '../../elements/AboutTeamAccordion';
-import TightenEachPage from '../TightenEachPage';
+import TightenEachPage from '../../elements/TightenEachPage';
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 `;
 
 const ImageStyle = styled.div`
@@ -41,7 +42,7 @@ function AboutTeamDetails() {
             height={486}
             sizes="100vw"
             style={{
-              width: '90%',
+              width: '83%',
               height: 'auto',
             }}
           />
