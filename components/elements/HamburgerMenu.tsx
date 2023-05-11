@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { pcMin, sp } from '../../styles/breakPoint';
 
 type Props = {
   isOpen: boolean;
+  onClick: React.MouseEventHandler<HTMLDivElement>;
 };
 
 const Container = styled.div<Props>`
@@ -19,13 +21,13 @@ const Container = styled.div<Props>`
   background-color: rgba(17, 19, 24, 0.9);
   li {
     list-style: none;
-    cursor: pointer;
     font-size: 34px;
     font-weight: 600;
     margin-bottom: 80px;
     opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
     transform: ${({ isOpen }) => (isOpen ? 'translateY(-100%)' : 'translateY(0)')};
     transition: all 0.3s 0.8s;
+    cursor: pointer;
     ${pcMin`
     margin-bottom: 60px;
     `}
@@ -48,12 +50,13 @@ const Container = styled.div<Props>`
   }
 `;
 
-const HamburgerMenu: React.FC<Props> = ({ isOpen }) => {
+const HamburgerMenu: React.FC<Props> = (props) => {
+  const router = useRouter();
   return (
-    <Container isOpen={isOpen}>
+    <Container onClick={props.onClick} isOpen={props.isOpen}>
       <ul>
-        <li>ABOUT TEAM</li>
-        <li>TEAM CORE VALUES</li>
+        <li onClick={() => router.push('/AboutPage')}>ABOUT TEAM</li>
+        <li onClick={() => router.push('/AboutPageTeamCoreValues')}>TEAM CORE VALUES</li>
         <li>PRODUCT</li>
         <li>MEMBER</li>
         <li>RECRUIT</li>

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { visionData, missionData, valueData } from '../../../features/domains/constants/AccordionConstants';
-import { sp } from '../../../styles/breakPoint';
+import { tablet } from '../../../styles/breakPoint';
 import AboutTeamAccordion from '../../elements/AboutTeamAccordion';
 import TightenEachPage from '../../elements/TightenEachPage';
 
@@ -16,8 +16,18 @@ const ImageStyle = styled.div`
   margin-top: 50px;
   display: block;
   margin-right: 8%;
-  ${sp`
+  ${tablet`
   display: none;
+`}
+`;
+
+const ImageSpStyle = styled.div`
+  display: none;
+  ${tablet`
+  display: block;
+  text-align: center;
+  max-width: 546px;
+  margin: 0 auto;
 `}
 `;
 
@@ -33,6 +43,19 @@ function AboutTeamDetails() {
         私たちのサービスにより、少しでも多くのお客様の感情を満たし、
         自然と輝いてもらうためにVISION・MISSION・VALUEを理念に掲げ、 「自分の色が輝く社会」 の実現を目指します。
       </TightenEachPage>
+      <ImageSpStyle>
+        <Image
+          src="/assets/TeamPyramid.png"
+          alt="TeamPyramid"
+          width={491}
+          height={486}
+          sizes="100vw"
+          style={{
+            width: '83%',
+            height: 'auto',
+          }}
+        />
+      </ImageSpStyle>
       <Wrapper>
         <ImageStyle>
           <Image

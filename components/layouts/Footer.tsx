@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import AifulLogo from '../../public/assets/AifulLogo.svg';
 import { sp, spMin } from '../../styles/breakPoint';
@@ -121,6 +122,7 @@ const PagetopLink = styled.a`
 `;
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <FooterStyle>
       <LogoStyle>
@@ -129,8 +131,8 @@ const Footer = () => {
       </LogoStyle>
       <UlStyle>
         <ListStyle>TOP</ListStyle>
-        <ListStyle>ABOUT TEAM</ListStyle>
-        <ListStyle>TEAM CORE VALUES</ListStyle>
+        <ListStyle onClick={() => router.push('/AboutPage')}>ABOUT TEAM</ListStyle>
+        <ListStyle onClick={() => router.push('/AboutPage#TeamCoreValues')}>TEAM CORE VALUES</ListStyle>
         <ListStyle>PRODUCT</ListStyle>
         <ListStyle>MEMBER</ListStyle>
         <ListStyle>RECRUIT</ListStyle>

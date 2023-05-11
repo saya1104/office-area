@@ -1,13 +1,24 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import { sp } from '../../styles/breakPoint';
 import type { AccordionType } from '../../features/domains/constants/AccordionConstants';
 
 const Wrapper = styled.div`
   width: 580px;
+  ${sp`
+  margin-top:150px;
+  width:90vw;
+  min-width:280px
+  `}
 `;
 const AccordionMeue = styled.div`
   width: 580px;
   background: #16223f;
+  position: relative;
+  ${sp`
+  width:90vw;
+  min-width:280px;
+  `};
 `;
 const TitleStyle = styled.div`
   width: 140px;
@@ -43,11 +54,18 @@ const SubTitleStyle = styled.div`
   p {
 	font-size:25px;
 	margin-bottom:0;
-    color: #4ef4ff;
+  color: #4ef4ff;
   }
+  ${sp`
+  width:90vw;
+  min-width:280px;
+  p{
+    color:#FF318F
+  }
+  `}
 `;
 
-const Button = styled.div`
+const PCButton = styled.div`
   margin-top: auto;
   margin-bottom: 7px;
   cursor: pointer;
@@ -61,6 +79,28 @@ const Button = styled.div`
     margin-bottom: 0;
     transform: rotate(315deg);
   }
+  ${sp`
+  display: none;
+`}
+`;
+
+const SPButton = styled.div`
+  ${sp`
+  position: absolute;
+  top:100%; 
+  right:0%;
+  cursor: pointer;
+  content: '';
+  width: 13px;
+  height: 13px;
+  border-top: 2px solid #ff7d53;
+  border-right: 2px solid #ff7d53;
+  transform: rotate(135deg);
+  &.isOpen {
+    margin-bottom: 0;
+    transform: rotate(315deg);
+  }
+  `}
 `;
 
 const DeatilStyle = styled.div`
@@ -75,13 +115,16 @@ const DeatilStyle = styled.div`
     color: #b7c4e5;
     margin-bottom: 0;
   }
-
   h4 {
     display: inline-block;
     margin: 25px 0 0 30px;
     font-weight: 200;
     font-size: 20px;
     color: #b7c4e5;
+    ${sp`
+      display:block;
+        margin: 10px 0 0 0;
+    `}
   }
 `;
 
@@ -102,8 +145,9 @@ const AboutTeamAccordion = ({ title, subTitle, detail, detailTitle, detailSubTit
           <SubTitleStyle>
             <p>{subTitle}</p>
           </SubTitleStyle>
-          <Button onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
+          <PCButton onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
         </Flex>
+        <SPButton onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
       </AccordionMeue>
       {isOpen && detailTitle && detailSubTitle && !detailSubTitle[3] && (
         <DeatilStyle>

@@ -28,7 +28,7 @@ const Header = () => {
         <Image src="/assets/AifulLogo.svg" alt="アイフル" width={131} height={57} />
       </h1>
       <HamburgerButton isOpen={isOpen} onClick={handleToggle} />
-      <HamburgerMenu isOpen={isOpen} />
+      <HamburgerMenu isOpen={isOpen} onClick={handleToggle} />
     </HeaderStyle>
   );
 };

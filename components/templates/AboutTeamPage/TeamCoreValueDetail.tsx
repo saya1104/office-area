@@ -7,7 +7,7 @@ const SectionStyle = styled.div`
   display: flex;
   justify-content: center;
   ${tablet`
-  margin: 50px 8%;
+    margin: 50px 8%;
   `}
 `;
 
@@ -42,9 +42,9 @@ const TitleStyle = styled.div`
     font-weight: 200;
     font-size: 60px;
     ${spMin`
-	text-align: center;
-	margin-bottom:10px;
-    font-size: 10vw;
+      text-align: center;
+      margin-bottom:10px;
+      font-size: 10vw;
     `}
   }
 `;
@@ -56,26 +56,43 @@ const SubTitle = styled.div`
     color: #ff318f;
     font-size: 40px;
     margin: 70px 0 20px 0;
+    ${sp`
+      font-size:30px;
+    `}
   }
 `;
 
-const PersonImageStyle = styled.div`
+const PcPersonImageStyle = styled.div`
   width: 546px;
-  display: block;
   margin: 5% 8% 0 0;
-
-  ${sp`
-  display: none;
-`}
+  ${tablet`
+    display: none;
+  `}
 `;
-const TeamCoreImageStyle = styled.div`
+
+const SpPersonImageStyle = styled.div`
+  display: none;
+  ${tablet`
+   display: block;
+  `}
+`;
+
+const PcTeamCoreImageStyle = styled.div`
   width: 546px;
   display: block;
-  margin: 5% 0% 0 8%;
+  margin: 70px 0% 0 8%;
+  ${tablet`
+    display: none;
+  `}
+`;
 
-  ${sp`
+const SpTeamCoreImageStyle = styled.div`
   display: none;
-`}
+  ${tablet`
+    display:block;
+    text-align: center;
+    margin:40px 0 40px 0 
+  `}
 `;
 
 const TeamCoreValueDetail = () => {
@@ -83,12 +100,25 @@ const TeamCoreValueDetail = () => {
     <>
       <SectionStyle>
         <TeamCoreValueStyle>
-          <TitleStyle>
+          <TitleStyle id="TeamCoreValues">
             <h2>TEAM CORE VALUES</h2>
           </TitleStyle>
           <SubTitle>
             <p>アイフルエンジニアチームの特徴</p>
           </SubTitle>
+          <SpPersonImageStyle>
+            <Image
+              src="/assets/TeamCoreValuePerson.png"
+              alt="TeamCoreValuePerson"
+              width={646}
+              height={619}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+          </SpPersonImageStyle>
           <p>
             お客様への価値を追求するためには「誰もが率直な意見を言える環境づくり
             (心理的安全性の担保)」が最も重要だと考えています。
@@ -100,7 +130,7 @@ const TeamCoreValueDetail = () => {
             (KPT)」や失敗から教訓を得る「ポストモーテム」などの特徴的な取り組みがあります。
           </p>
         </TeamCoreValueStyle>
-        <PersonImageStyle>
+        <PcPersonImageStyle>
           <Image
             src="/assets/TeamCoreValuePerson.png"
             alt="TeamCoreValuePerson"
@@ -112,10 +142,10 @@ const TeamCoreValueDetail = () => {
               height: 'auto',
             }}
           />
-        </PersonImageStyle>
+        </PcPersonImageStyle>
       </SectionStyle>
       <SectionStyle>
-        <TeamCoreImageStyle>
+        <PcTeamCoreImageStyle>
           <Image
             src="/assets/TeamCoreValuesImage.svg"
             alt="TEAM CORE VALUES"
@@ -123,15 +153,28 @@ const TeamCoreValueDetail = () => {
             height={546}
             sizes="100vw"
             style={{
-              width: '100%',
+              width: '80%',
               height: 'auto',
             }}
           />
-        </TeamCoreImageStyle>
+        </PcTeamCoreImageStyle>
         <TeamCoreValueStyle>
           <SubTitle>
             <p>チームの目指す姿</p>
           </SubTitle>
+          <SpTeamCoreImageStyle>
+            <Image
+              src="/assets/TeamCoreValuesImage.svg"
+              alt="TEAM CORE VALUES"
+              width={546}
+              height={546}
+              sizes="100vw"
+              style={{
+                width: '70%',
+                height: 'auto',
+              }}
+            />
+          </SpTeamCoreImageStyle>
           <p>
             「お客様の暮らしや仕事を変える、素晴らしいサービスを提供する」をテーマに掲げ、実現するために、守るべき大切な価値観や行動指針を「チームコアバリュー」として定義しています。
             <br />
