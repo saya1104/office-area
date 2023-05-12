@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     min-width:280px
   `}
 `;
-const AccordionMeueStyle = styled.div`
+const AccordionMenuStyle = styled.div`
   width: 580px;
   background: #16223f;
   position: relative;
@@ -27,16 +27,16 @@ const TitleStyle = styled.div`
   position: relative;
   margin-top:50px;
   .&isOpen{
-	margin-top:30px;
+    margin-top:30px;
   }
   p {
-	font-weight:900;
-	margin:0;
+    font-weight:900;
+    margin:0;
     position: absolute;
     top: 50%;
     left: 50%;
-	transform: translateY(-50%) translateX(-50%);
-  -webkit- transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
     color: #16223f;
   }
 `;
@@ -52,22 +52,21 @@ const SubTitleStyle = styled.div`
   width: 540px;
   white-space: pre-wrap;
   p {
-	font-size:25px;
-	margin-bottom:0;
-  color: #4ef4ff;
+    font-size:25px;
+    margin-bottom:0;
+    color: #4ef4ff;
   }
   ${sp`
-    width:90vw;
-    min-width:280px;
+  width:90vw;
+  min-width:280px;
     p{
       color:#FF318F
     }
   `}
 `;
 
-const PCButtonStyle = styled.div`
-  margin-top: auto;
-  margin-bottom: 7px;
+const PcButtonStyle = styled.div`
+  margin: auto 0 7px 0;
   cursor: pointer;
   content: '';
   width: 13px; /* くの字を山なりに見た時、左側の長さ */
@@ -80,11 +79,11 @@ const PCButtonStyle = styled.div`
     transform: rotate(315deg);
   }
   ${sp`
-    display: none;
+  display: none;
   `}
 `;
 
-const SPButtonStyle = styled.div`
+const SpButtonStyle = styled.div`
   ${sp`
   position: absolute;
   top:100%; 
@@ -103,7 +102,7 @@ const SPButtonStyle = styled.div`
   `}
 `;
 
-const DeatilStyle = styled.div`
+const DetailStyle = styled.div`
   white-space: pre-wrap;
   animation-name: According-Animation;
   animation-iteration-count;
@@ -125,13 +124,13 @@ const DeatilStyle = styled.div`
     font-size: 20px;
     color: #b7c4e5;
     ${sp`
-      display:block;
-      margin: 10px 0 0 0;
+    display:block;
+    margin: 10px 0 0 0;
     `}
   }
   @keyframes According-Animation {
     0% {
-       opacity: 0;
+      opacity: 0;
     }
     100% {
       opacity: 1;
@@ -148,7 +147,7 @@ const AboutTeamAccordion = ({ title, subTitle, detail, detailTitle, detailSubTit
 
   return (
     <Wrapper>
-      <AccordionMeueStyle>
+      <AccordionMenuStyle>
         <TitleStyle className={isOpen ? 'isOpen' : ''}>
           <p>{title}</p>
         </TitleStyle>
@@ -156,13 +155,18 @@ const AboutTeamAccordion = ({ title, subTitle, detail, detailTitle, detailSubTit
           <SubTitleStyle>
             <p>{subTitle}</p>
           </SubTitleStyle>
-          <PCButtonStyle onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
+          <PcButtonStyle onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
         </FlexStyle>
-        <SPButtonStyle onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
-      </AccordionMeueStyle>
+        <SpButtonStyle onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
+      </AccordionMenuStyle>
+      {isOpen && !detailTitle && (
+        <DetailStyle>
+          <p>{detail[0]}</p>
+        </DetailStyle>
+      )}
       {isOpen && detailTitle && detailSubTitle && !detailSubTitle[3] && (
-        <DeatilStyle>
-          <h3>{detailTitle[0]} </h3>
+        <DetailStyle>
+          <h3>{detailTitle[0]}</h3>
           <h4>{detailSubTitle[0]}</h4>
           <p>{detail[0]}</p>
           <h3>{detailTitle[1]}</h3>
@@ -171,10 +175,10 @@ const AboutTeamAccordion = ({ title, subTitle, detail, detailTitle, detailSubTit
           <h3>{detailTitle[2]}</h3>
           <h4>{detailSubTitle[2]}</h4>
           <p>{detail[2]}</p>
-        </DeatilStyle>
+        </DetailStyle>
       )}
       {isOpen && detailTitle && detailSubTitle && detailSubTitle[3] && (
-        <DeatilStyle>
+        <DetailStyle>
           <h3>{detailTitle[0]} </h3>
           <h4>{detailSubTitle[0]}</h4>
           <p>{detail[0]}</p>
@@ -187,12 +191,7 @@ const AboutTeamAccordion = ({ title, subTitle, detail, detailTitle, detailSubTit
           <h3>{detailTitle[3]}</h3>
           <h4>{detailSubTitle[3]}</h4>
           <p>{detail[3]}</p>
-        </DeatilStyle>
-      )}
-      {isOpen && !detailTitle && (
-        <DeatilStyle>
-          <p>{detail[0]}</p>
-        </DeatilStyle>
+        </DetailStyle>
       )}
     </Wrapper>
   );

@@ -111,19 +111,19 @@ const ImageSpMinStyle = styled.div`
 `;
 
 type Props = {
-  Titlechildren?: ReactNode;
-  SubTitlechildren?: ReactNode;
+  TitleChildren?: ReactNode;
+  SubTitleChildren?: ReactNode;
   children: ReactNode;
   src: string;
 };
 
-const TightenEachPage: React.FC<Props> = (props) => {
-  const { Titlechildren, SubTitlechildren, children, src } = props;
+const EachPageTop: React.FC<Props> = (props) => {
+  const { TitleChildren, SubTitleChildren, children, src } = props;
   return (
     <SectionStyle>
       <AboutTeamStyle>
         <TitleStyle>
-          <h2>{Titlechildren}</h2>
+          <h2>{TitleChildren}</h2>
         </TitleStyle>
         <ImageSpMinStyle>
           <Image
@@ -139,7 +139,7 @@ const TightenEachPage: React.FC<Props> = (props) => {
           />
         </ImageSpMinStyle>
         <SubTitleStyle>
-          <a>{SubTitlechildren}</a>
+          <a>{SubTitleChildren}</a>
         </SubTitleStyle>
         <p>{children}</p>
       </AboutTeamStyle>
@@ -174,4 +174,4 @@ const TightenEachPage: React.FC<Props> = (props) => {
   );
 };
 
-export default TightenEachPage;
+export default EachPageTop;

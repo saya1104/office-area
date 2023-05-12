@@ -30,7 +30,7 @@ const TeamCoreValueStyle = styled.div`
     line-height: 30px;
 
     ${spMin`
-      margin: 10px 10px 10px 10px;
+      margin: 10px;
     `}
   }
 `;
