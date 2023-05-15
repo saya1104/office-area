@@ -74,12 +74,6 @@ function AboutTeamDetails() {
           {accodionData.map((item, index) => (
             <AboutTeamAccordion title={item.title} subTitle={item.subTitle} detail={item.detail} key={index} />
           ))}
-          {/* {accodionData.map((item, index) => (
-            <AboutTeamAccordion title={item.title} subTitle={item.subTitle} detail={item?.detail} key={index} />
-          ))}
-          {accodionData.map((item, index) => (
-            <AboutTeamAccordion title={item.title} subTitle={item.subTitle} detail={item?.detail} key={index} /> */}
-          {/* ))} */}
         </div>
       </Wrapper>
     </>
