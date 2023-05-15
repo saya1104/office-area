@@ -99,7 +99,7 @@ const MainVisual = () => {
         <PersonImageStyle>
           <Image
             src="/assets/MainVisualPerson.png"
-            alt="alful engineer recruitment"
+            alt="aiful engineer recruitment"
             width={1000}
             height={940}
             sizes="100vw"
