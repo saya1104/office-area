@@ -2,9 +2,9 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { GradationStyle } from '../../styles/Styled';
-import { sp } from '../../styles/breakPoint';
-import { MemberIntroductions } from '../elements/MemberIntroductions';
+import { GradationStyle } from '../../../styles/Styled';
+import { sp } from '../../../styles/breakPoint';
+import { MemberIntroductions } from '../../elements/MemberIntroductions';
 
 import 'swiper/css';
 import 'swiper/css/pagination';

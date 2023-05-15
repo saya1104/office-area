@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import { GradationStyle } from '../../styles/Styled';
-import { sp, spMin, tablet } from '../../styles/breakPoint';
-import ReadMore from '../elements/ReadMore';
+import { GradationStyle } from '../../../styles/Styled';
+import { sp, spMin, tablet } from '../../../styles/breakPoint';
+import ReadMore from '../../elements/ReadMore';
 
 const SectionStyle = styled.div`
   display: flex;
@@ -84,6 +85,7 @@ const ImageSpMinStyle = styled.div`
 `;
 
 const AboutTeam = () => {
+  const router = useRouter();
   return (
     <SectionStyle>
       <AboutTeamStyle>
@@ -109,7 +111,7 @@ const AboutTeam = () => {
           テキストが入ります。 テキストが入ります。
         </p>
         <ReadMoreStyle>
-          <ReadMore />
+          <ReadMore onClick={() => router.push('/AboutPage')} />
         </ReadMoreStyle>
       </AboutTeamStyle>
       <ImageSpStyle>

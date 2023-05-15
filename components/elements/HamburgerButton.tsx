@@ -13,6 +13,7 @@ const ButtonStyle = styled.button<Props>`
   z-index: 101;
   background: transparent;
   border: none;
+  cursor: pointer;
   margin-right: 35px;
   ${sp`
     margin-right:10px;

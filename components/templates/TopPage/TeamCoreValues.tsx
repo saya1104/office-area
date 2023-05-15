@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import { GradationStyle } from '../../styles/Styled';
-import { sp, tablet } from '../../styles/breakPoint';
-import ReadMore from '../elements/ReadMore';
+import { GradationStyle } from '../../../styles/Styled';
+import { sp, tablet } from '../../../styles/breakPoint';
+import ReadMore from '../../elements/ReadMore';
 
 const SectionStyle = styled.div`
   display: flex;
@@ -57,6 +58,7 @@ const ImageSpStyle = styled.div`
 `;
 
 const TeamCoreValues = () => {
+  const router = useRouter();
   return (
     <SectionStyle>
       <ImagePcStyle>
@@ -93,7 +95,7 @@ const TeamCoreValues = () => {
           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。
         </p>
-        <ReadMore />
+        <ReadMore onClick={() => router.push('/AboutPage#TeamCoreValues')} />
       </TeamCoreValuesStyle>
     </SectionStyle>
   );
