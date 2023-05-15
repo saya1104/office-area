@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
 import { sp, tablet } from '../../styles/breakPoint';
-import { gsap } from 'gsap';
 
 const MainVisualStyle = styled.div`
   position: relative;
