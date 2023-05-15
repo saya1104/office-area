@@ -138,7 +138,7 @@ const DetailStyle = styled.div`
   }
 `;
 
-const AboutTeamAccordion = ({ title, subTitle, detail, detailTitle, detailSubTitle }: AccordionType) => {
+const AboutTeamAccordion = ({ title, subTitle, detail }: AccordionType) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onClickAccordionToggle = () => {
@@ -159,38 +159,20 @@ const AboutTeamAccordion = ({ title, subTitle, detail, detailTitle, detailSubTit
         </FlexStyle>
         <SpButtonStyle onClick={onClickAccordionToggle} className={isOpen ? 'isOpen' : ''} />
       </AccordionMenuStyle>
-      {isOpen && !detailTitle && (
+      {isOpen && (
         <DetailStyle>
-          <p>{detail[0]}</p>
-        </DetailStyle>
-      )}
-      {isOpen && detailTitle && detailSubTitle && !detailSubTitle[3] && (
-        <DetailStyle>
-          <h3>{detailTitle[0]}</h3>
-          <h4>{detailSubTitle[0]}</h4>
-          <p>{detail[0]}</p>
-          <h3>{detailTitle[1]}</h3>
-          <h4>{detailSubTitle[1]}</h4>
-          <p>{detail[1]}</p>
-          <h3>{detailTitle[2]}</h3>
-          <h4>{detailSubTitle[2]}</h4>
-          <p>{detail[2]}</p>
-        </DetailStyle>
-      )}
-      {isOpen && detailTitle && detailSubTitle && detailSubTitle[3] && (
-        <DetailStyle>
-          <h3>{detailTitle[0]} </h3>
-          <h4>{detailSubTitle[0]}</h4>
-          <p>{detail[0]}</p>
-          <h3>{detailTitle[1]}</h3>
-          <h4>{detailSubTitle[1]}</h4>
-          <p>{detail[1]}</p>
-          <h3>{detailTitle[2]}</h3>
-          <h4>{detailSubTitle[2]}</h4>
-          <p>{detail[2]}</p>
-          <h3>{detailTitle[3]}</h3>
-          <h4>{detailSubTitle[3]}</h4>
-          <p>{detail[3]}</p>
+          <h3>{detail?.[0].title[0]}</h3>
+          <h4>{detail?.[0].subtitle[0]}</h4>
+          <p>{detail?.[0].text[0]}</p>
+          <h3>{detail?.[0].title[1]}</h3>
+          <h4>{detail?.[0].subtitle[1]}</h4>
+          <p>{detail?.[0].text[1]}</p>
+          <h3>{detail?.[0].title[2]}</h3>
+          <h4>{detail?.[0].subtitle[2]}</h4>
+          <p>{detail?.[0].text[2]}</p>
+          <h3>{detail?.[0].title[3]}</h3>
+          <h4>{detail?.[0].subtitle[3]}</h4>
+          <p>{detail?.[0].text[3]}</p>
         </DetailStyle>
       )}
     </Wrapper>

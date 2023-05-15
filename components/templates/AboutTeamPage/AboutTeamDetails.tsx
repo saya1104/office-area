@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { visionData, missionData, valueData } from '../../../features/domains/constants/AccordionConstants';
+import { accodionData } from '../../../features/domains/constants/AccordionConstants';
 import { tablet } from '../../../styles/breakPoint';
 import AboutTeamAccordion from '../../elements/AboutTeamAccordion';
 import EachPageTop from '../../elements/EachPageTop';
@@ -71,50 +71,15 @@ function AboutTeamDetails() {
           />
         </ImageStyle>
         <div>
-          {visionData.map((item, index) => (
-            <AboutTeamAccordion
-              title={item.title}
-              subTitle={item.subTitle}
-              detailTitle={item.detailTitle}
-              detailSubTitle={item.detailSubTitle}
-              detail={item.detail.map((value) => {
-                return value;
-              })}
-              key={index}
-            />
+          {accodionData.map((item, index) => (
+            <AboutTeamAccordion title={item.title} subTitle={item.subTitle} detail={item.detail} key={index} />
           ))}
-          {missionData.map((item, index) => (
-            <AboutTeamAccordion
-              title={item.title}
-              subTitle={item.subTitle}
-              detail={item.detail.map((value) => {
-                return value;
-              })}
-              detailTitle={item.detailTitle?.map((value) => {
-                return value;
-              })}
-              detailSubTitle={item.detailSubTitle?.map((value) => {
-                return value;
-              })}
-              key={index}
-            />
+          {/* {accodionData.map((item, index) => (
+            <AboutTeamAccordion title={item.title} subTitle={item.subTitle} detail={item?.detail} key={index} />
           ))}
-          {valueData.map((item, index) => (
-            <AboutTeamAccordion
-              title={item.title}
-              subTitle={item.subTitle}
-              detail={item.detail.map((value) => {
-                return value;
-              })}
-              detailTitle={item.detailTitle?.map((value) => {
-                return value;
-              })}
-              detailSubTitle={item.detailSubTitle?.map((value) => {
-                return value;
-              })}
-              key={index}
-            />
-          ))}
+          {accodionData.map((item, index) => (
+            <AboutTeamAccordion title={item.title} subTitle={item.subTitle} detail={item?.detail} key={index} /> */}
+          {/* ))} */}
         </div>
       </Wrapper>
     </>
