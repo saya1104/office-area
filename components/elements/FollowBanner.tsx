@@ -16,11 +16,12 @@ const FollowBannerStyle = styled.button`
   background: linear-gradient(180deg, #ff398a 0%, #ff705d 100%);
   transform: rotate(-60deg);
   margin-right: 35px;
+  cursor: pointer;
   ${sp`
-	 top: 75vh;
-	width: 110px;
-	height: 110px;
-	margin-right:10px
+    top: 75vh;
+    width: 110px;
+    height: 110px;
+    margin-right:10px
   `}
   }
   span {

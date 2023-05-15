@@ -1,11 +1,17 @@
+import styled from 'styled-components';
 import Footer from '../components/layouts/Footer';
 import Header from '../components/layouts/Header';
-import AboutTeam from '../components/templates/AboutTeam';
-import Interview from '../components/templates/Interview';
-import MainVisual from '../components/templates/MainVisual';
-import Product from '../components/templates/Product';
-import Recruit from '../components/templates/Recruit';
-import TeamCoreValues from '../components/templates/TeamCoreValues';
+import AboutTeam from '../components/templates/TopPage/AboutTeam';
+import Interview from '../components/templates/TopPage/Interview';
+import MainVisual from '../components/templates/TopPage/MainVisual';
+import Product from '../components/templates/TopPage/Product';
+import Recruit from '../components/templates/TopPage/Recruit';
+import TeamCoreValues from '../components/templates/TopPage/TeamCoreValues';
+
+//Recruitがpostionの影響により高さが認識されなくなったため、marginで調整
+const FooterMargin = styled.div`
+  margin-top: 500px;
+`;
 
 function Home() {
   return (
@@ -17,7 +23,9 @@ function Home() {
       <Product />
       <Interview />
       <Recruit />
-      <Footer />
+      <FooterMargin>
+        <Footer />
+      </FooterMargin>
     </>
   );
 }

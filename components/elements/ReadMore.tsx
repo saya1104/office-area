@@ -4,6 +4,7 @@ const ArrowStyle = styled.a`
   position: relative;
   display: inline-block;
   padding-right: 80px;
+  cursor: pointer;
   &::before {
     content: '';
     position: absolute;
@@ -33,9 +34,14 @@ const ReadMoreStyle = styled.div`
   }
 `;
 
-const ReadMore = () => {
+type Props = {
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+};
+
+const ReadMore: React.FC<Props> = (props) => {
+  const { onClick } = props;
   return (
-    <ReadMoreStyle>
+    <ReadMoreStyle onClick={onClick}>
       <ArrowStyle>READ MORE</ArrowStyle>
     </ReadMoreStyle>
   );
