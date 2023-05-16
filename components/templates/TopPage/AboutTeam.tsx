@@ -144,5 +144,4 @@ const AboutTeam = () => {
     </SectionStyle>
   );
 };
-
 export default AboutTeam;
