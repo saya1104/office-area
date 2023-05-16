@@ -1,15 +1,16 @@
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { TitleGradationStyle } from '../../../styles/Styled';
+import { svgPath, svgPathChange } from '../../../features/domains/constants/MainVisualSvgPath';
+import { GradationStyle } from '../../../styles/Styled';
 import { sp, tablet } from '../../../styles/breakPoint';
-import { FollowBanner } from '../../elements/FollowBanner';
 
 const MainVisualStyle = styled.div`
-  display: flex;
-  justify-content: space-between;
   position: relative;
   ${sp`
   display: block;
+  height:150vw;
   overflow: hidden;`}
 `;
 
@@ -19,13 +20,12 @@ const TextStyle = styled.div`
   left: 58px;
   z-index: 1;
   ${sp`
-  position: relative;
-  top: 0;
+  top:110vw;
   left: 0;
   margin: 10px;
   `}
   h2 {
-    ${TitleGradationStyle}
+    ${GradationStyle}
     white-space: nowrap;
     ${tablet`
     font-size: 60px;
@@ -38,40 +38,82 @@ const TextStyle = styled.div`
   p {
     font-size: 30px;
     white-space: nowrap;
-    font-family: YuGothic;
     ${sp`
     font-size: 5vw;
-    margin-left:8px;
-    `};
+    `}
   }
 `;
 
 const ImageStyle = styled.div`
   z-index: 0;
+  position: relative;
   margin: 0 0 0 auto;
   width: 1002px;
   height: 938px;
   ${sp`
+    width:100vw;
+    height:auto;
+  `}
+`;
+
+const PersonImageStyle = styled.div`
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  ${sp`
   width: 120%;
   height: auto;
-  margin-left: -10%;`}
+  margin-left: -10%
+`};
+`;
+
+const FrameImageStyle = styled.div`
+  position: absolute;
+  animation-name: Frame-Animation;
+  animation-iteration-count;
+  animation-duration: 1s;
+  width:1025px;
+  height:1030px;
+  ${sp`
+    width: 120%;
+    height: auto;
+    margin-left: -10%
+  `}
 `;
 
 const MainVisual = () => {
+  const imageRef = useRef(null);
+  useEffect(() => {
+    gsap.to(imageRef.current, {
+      attr: {
+        d: svgPathChange,
+      },
+      duration: 10,
+      repeat: -1,
+      yoyo: true,
+    });
+  }, []);
   return (
     <MainVisualStyle>
       <ImageStyle>
-        <Image
-          src="/assets/MainVisual.png"
-          alt="alful engineer recruitment"
-          width={1002}
-          height={938}
-          sizes="100vw"
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-        />
+        <PersonImageStyle>
+          <Image
+            src="/assets/MainVisualPerson.png"
+            alt="aiful engineer recruitment"
+            width={1000}
+            height={940}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+          />
+        </PersonImageStyle>
+        <FrameImageStyle>
+          <svg viewBox="0 0 1025 1030" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path ref={imageRef} fillRule="evenodd" clipRule="evenodd" d={svgPath} fill="#16223F" />
+          </svg>
+        </FrameImageStyle>
       </ImageStyle>
       <TextStyle>
         <h2>
@@ -81,7 +123,6 @@ const MainVisual = () => {
         </h2>
         <p>AIFUL ENGINEER RECRUITMENT</p>
       </TextStyle>
-      <FollowBanner />
     </MainVisualStyle>
   );
 };

@@ -3,7 +3,7 @@ import { sp } from '../../styles/breakPoint';
 
 const FollowBannerStyle = styled.button`
   position: fixed;
-  z-index: 5;
+  z-index: 30;
   top: 70vh;
   right: 5px;
   display: inline-grid;
