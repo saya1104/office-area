@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 import { productData, AwsData } from '../../../features/domains/constants/ProductConstants';
+import { sp } from '../../../styles/breakPoint';
 import DevelopmentColumn from '../../elements/DevelopmentColumn';
 import EachPageTop from '../../elements/EachPageTop';
 import { SubTitle } from '../../elements/SubTitle';
 
 const Wrapper = styled.div`
-  margin: 0 8vw 0 8vw;
+  margin: 0 8vw;
+  ${sp`
+    margin:0 3vw;
+  `};
 `;
 
 const MarginStyle = styled.div`

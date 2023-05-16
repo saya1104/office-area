@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { tablet } from '../../styles/breakPoint';
 
 const ListStyle = styled.div`
   position: absolute;
@@ -23,7 +24,9 @@ const ListStyle = styled.div`
 	 line-height: 30px;
 	 width:200px;
   }
-
+  ${tablet`
+  	display:none			
+  `}
 `;
 
 type Props = {

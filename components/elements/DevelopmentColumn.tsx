@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { sp, spMin, tablet } from '../../styles/breakPoint';
 import type { ProductConstants } from '../../features/domains/constants/ProductConstants';
 
 const Wrapper = styled.div`
@@ -9,7 +10,13 @@ const Wrapper = styled.div`
   margin: 50px 0 100px 0;
 `;
 
-const DetailStyle = styled.div``;
+const DetailStyle = styled.div`
+  ${tablet`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  `}
+`;
 
 const HeadLine = styled.div`
   display: flex;
@@ -21,6 +28,10 @@ const HeadLine = styled.div`
     width: 250px;
     justify-content: center;
   }
+  ${tablet`
+    width:90vw;
+    height:50px;
+  `}
 `;
 
 const CompanyNameStyle = styled.div`
@@ -42,6 +53,19 @@ const CompanyNameStyle = styled.div`
     width: 120px;
     background: #fff7da;
   }
+  ${sp`
+    height:20px;
+    width:80px;
+    min-width:70px;
+    &.isAiful {
+      width: 100px;
+      min-width:90px;
+    }
+    p{
+      margin:5px 0;
+      font-size:12px
+    }
+  `}
 `;
 
 const TitleStyle = styled.div`
@@ -53,9 +77,21 @@ const TitleStyle = styled.div`
     font-size: 20px;
     color: #16223f;
   }
+  br {
+    display: none;
+  }
   &.isNotCompany {
     margin-left: 0;
   }
+  ${spMin`
+  text-align:center;
+  br{
+    display:block;
+  }
+  P{
+    font-size:17px;
+  }
+  `}
 `;
 
 const TextStyle = styled.div`
@@ -67,11 +103,27 @@ const TextStyle = styled.div`
     font-size: 18px;
     line-height: 30px;
   }
+  ${tablet`
+    width:90vw;
+  `}
 `;
 
 const PcImageStyle = styled.div`
   margin-right: 10vw;
   width: 440px;
+  ${tablet`
+   display:none;
+  `}
+`;
+
+const SpImageStyle = styled.div`
+  display: none;
+  ${tablet`
+    display: block;
+    text-align: center;
+    max-width: 546px;
+    margin: 50px 0 0 0 ;
+  `}
 `;
 
 const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstants) => {
@@ -84,7 +136,7 @@ const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstan
       setisAiful(!isAiful);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [companyName]);
+  }, []);
   return (
     <Wrapper>
       <PcImageStyle>
@@ -111,6 +163,19 @@ const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstan
             <p>{title}</p>
           </TitleStyle>
         </HeadLine>
+        <SpImageStyle>
+          <Image
+            src={src}
+            alt="DevelopmentColunm"
+            width={150}
+            height={150}
+            sizes="50vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+          />
+        </SpImageStyle>
         <TextStyle>
           <p>{children}</p>
         </TextStyle>

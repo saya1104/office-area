@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { accodionData } from '../../../features/domains/constants/AccordionConstants';
-import { tablet } from '../../../styles/breakPoint';
+import { spMin, tablet } from '../../../styles/breakPoint';
 import AboutTeamAccordion from '../../elements/AboutTeamAccordion';
 import EachPageTop from '../../elements/EachPageTop';
 
@@ -29,6 +29,18 @@ const ImageSpStyle = styled.div`
     max-width: 546px;
     margin: 0 auto;
   `}
+`;
+
+const BrStyled = styled.div`
+  span {
+    display: inline-block;
+  }
+  br {
+    display: none;
+    ${spMin`
+     display:block;
+    `}
+  }
 `;
 
 function AboutTeamDetails() {
@@ -71,11 +83,11 @@ function AboutTeamDetails() {
             }}
           />
         </ImageStyle>
-        <div>
+        <BrStyled>
           {accodionData.map((item, index) => (
             <AboutTeamAccordion title={item.title} subTitle={item.subTitle} detail={item.detail} key={index} />
           ))}
-        </div>
+        </BrStyled>
       </Wrapper>
     </>
   );

@@ -55,6 +55,9 @@ const SubTitleStyle = styled.div`
     font-size:25px;
     margin-bottom:0;
     color: #4ef4ff;
+    span {
+      display: block;
+    }
   }
   ${sp`
   width:90vw;
