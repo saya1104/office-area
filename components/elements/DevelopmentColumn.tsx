@@ -83,7 +83,8 @@ const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstan
     } else if (companyName !== 'アイフル') {
       setisAiful(!isAiful);
     }
-  }, [companyName, isAiful, isNotCompany]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [companyName]);
   return (
     <Wrapper>
       <PcImageStyle>

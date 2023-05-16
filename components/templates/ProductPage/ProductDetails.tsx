@@ -8,6 +8,10 @@ const Wrapper = styled.div`
   margin: 0 8vw 0 8vw;
 `;
 
+const MarginStyle = styled.div`
+  margin-top: 200px;
+`;
+
 function ProductDetails() {
   return (
     <>
@@ -22,7 +26,9 @@ function ProductDetails() {
             {item.children}
           </DevelopmentColumn>
         ))}
-        <SubTitle>開発環境</SubTitle>
+        <MarginStyle>
+          <SubTitle>開発環境</SubTitle>
+        </MarginStyle>
         {AwsData.map((item, index) => (
           <DevelopmentColumn src={item.src} title={item.title} key={index}>
             {item.children}
