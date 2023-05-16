@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import type { ProductConstants } from '../../features/domains/constants/ProductConstants';
@@ -16,6 +17,10 @@ const HeadLine = styled.div`
   background: #b7c4e5;
   width: 450px;
   height: 65px;
+  &.isNotCompany {
+    width: 250px;
+    justify-content: center;
+  }
 `;
 
 const CompanyNameStyle = styled.div`
@@ -33,6 +38,10 @@ const CompanyNameStyle = styled.div`
     font-size: 15px;
     color: #16223f;
   }
+  &.isAiful {
+    width: 120px;
+    background: #fff7da;
+  }
 `;
 
 const TitleStyle = styled.div`
@@ -43,6 +52,9 @@ const TitleStyle = styled.div`
     font-weight: bold;
     font-size: 20px;
     color: #16223f;
+  }
+  &.isNotCompany {
+    margin-left: 0;
   }
 `;
 
@@ -63,6 +75,15 @@ const PcImageStyle = styled.div`
 `;
 
 const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstants) => {
+  const [isAiful, setisAiful] = useState(false);
+  const [isNotCompany, setisNotCompany] = useState(false);
+  useEffect(() => {
+    if (!companyName) {
+      setisNotCompany(!isNotCompany);
+    } else if (companyName !== 'アイフル') {
+      setisAiful(!isAiful);
+    }
+  }, [companyName, isAiful, isNotCompany]);
   return (
     <Wrapper>
       <PcImageStyle>
@@ -79,11 +100,13 @@ const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstan
         />
       </PcImageStyle>
       <DetailStyle>
-        <HeadLine>
-          <CompanyNameStyle>
-            <p>{companyName}</p>
-          </CompanyNameStyle>
-          <TitleStyle>
+        <HeadLine className={isNotCompany ? 'isNotCompany' : ''}>
+          {!isNotCompany && (
+            <CompanyNameStyle className={isAiful ? 'isAiful' : ''}>
+              <p>{companyName}</p>
+            </CompanyNameStyle>
+          )}
+          <TitleStyle className={isNotCompany ? 'isNotCompany' : ''}>
             <p>{title}</p>
           </TitleStyle>
         </HeadLine>

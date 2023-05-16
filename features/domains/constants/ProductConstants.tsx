@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 export type ProductConstants = {
   src: string;
-  companyName: ReactNode;
+  companyName?: ReactNode;
   title: ReactNode;
   children: ReactNode;
 };
@@ -49,5 +49,14 @@ export const productData: ProductConstants[] = [
     title: 'アイフル Web コンテンツ (HP)',
     children:
       'アイフルWebコンテンツ（HP）の説明。アイフルWebコンテンツ（HP）の説明。アイフルWebコンテンツ（HP）の説明。アイフルWebコンテンツ（HP）の説明。アイフルWebコンテンツ（HP）の説明。アイフルWebコンテンツ（HP）の説明。アイフルWebコンテンツ（HP）の説明。',
+  },
+];
+
+export const AwsData: ProductConstants[] = [
+  {
+    src: 'assets/Aws.png',
+    title: 'AWS環境構築',
+    children:
+      'Web受付コンタクトセンターでの申込フォーム (AppForm / PC AppForm) から申込をしたお客様情報の管理および、メール / SMS を使用してお客様と双方向のコミュニケーションが取れるアプリケーションの構築。',
   },
 ];
