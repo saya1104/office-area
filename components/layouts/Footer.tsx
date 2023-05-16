@@ -133,7 +133,7 @@ const Footer = () => {
         <ListStyle>TOP</ListStyle>
         <ListStyle onClick={() => router.push('/AboutPage')}>ABOUT TEAM</ListStyle>
         <ListStyle onClick={() => router.push('/AboutPage#TeamCoreValues')}>TEAM CORE VALUES</ListStyle>
-        <ListStyle>PRODUCT</ListStyle>
+        <ListStyle onClick={() => router.push('/ProductPage')}>PRODUCT</ListStyle>
         <ListStyle>MEMBER</ListStyle>
         <ListStyle>RECRUIT</ListStyle>
       </UlStyle>

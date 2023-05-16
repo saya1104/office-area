@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { sp, tablet } from '../../../styles/breakPoint';
 import { pcMin } from '../../../styles/breakPoint';
 import ReadMore from '../../elements/ReadMore';
+import { useRouter } from 'next/router';
 
 const ProductStyle = styled.div`
   position: relative;
@@ -88,6 +89,7 @@ const WaveSpStyle = styled.div`
 `;
 
 const Product = () => {
+  const router = useRouter();
   return (
     <>
       <ProductStyle>
@@ -137,7 +139,7 @@ const Product = () => {
             開発プロダクト紹介テキスト。 開発プロダクト紹介テキスト。
             開発プロダクト紹介テキスト。開発プロダクト紹介テキスト。
           </p>
-          <ReadMore />
+          <ReadMore onClick={() => router.push('/ProductPage')} />
         </TextStyle>
         <ImagePcStyle>
           <Image
