@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { ListConstants } from '../../../features/domains/constants/ListConstants';
-import { sp } from '../../../styles/breakPoint';
+import { tablet } from '../../../styles/breakPoint';
 import { ProductList } from '../../elements/ProductList';
 
 const Wrapper = styled.div`
@@ -11,20 +12,31 @@ const Wrapper = styled.div`
 const WavePcStyle = styled.div`
   display: block;
   z-index: -1;
-  ${sp`
+  ${tablet`
   display: none;
+  &.isOpen{
+    margin-bottom:800px;
+  }
 `}
 `;
 
 const WaveSpStyle = styled.div`
   display: none;
-  ${sp`
+  ${tablet`
+  height:650px;
   display: block;
   z-index: -1;
+  &.isOpen{
+    margin-bottom:800px;
+  }
 `}
 `;
 
 function TechnologySection() {
+  const [isOpen, setIsOpen] = useState(false);
+  const onClickAccordionToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <Wrapper>
       <WavePcStyle>
@@ -40,7 +52,7 @@ function TechnologySection() {
           }}
         />
       </WavePcStyle>
-      <WaveSpStyle>
+      <WaveSpStyle className={isOpen ? 'isOpen' : ''}>
         <Image
           src="/assets/PRODUCT_wave_SP.png"
           alt="alful engineer recruitment"
@@ -53,7 +65,12 @@ function TechnologySection() {
           }}
         />
       </WaveSpStyle>
-      <ProductList ListData={ListConstants.data} />
+      <ProductList
+        ListData={ListConstants.data}
+        isOpenData={ListConstants.isOpenData}
+        onClick={onClickAccordionToggle}
+        isOpen={isOpen}
+      />
     </Wrapper>
   );
 }
