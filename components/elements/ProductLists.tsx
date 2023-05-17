@@ -61,7 +61,6 @@ const ReadMoreStyle = styled.div`
     align-items: center;
     justify-content: space-evenly;
     margin:0 auto;
-    align-items: center;
     border-radius: 50px;
     border: 0.15rem solid #ffffff;
     width:210px;
@@ -82,8 +81,9 @@ const ButtonStyle = styled.div`
     content: '';
     width: 13px; /* くの字を山なりに見た時、左側の長さ */
     height: 13px; /* くの字を山なりに見た時、右側の長さ */
-    border-top: 2px solid #ffffff; /* くの字を山なりに見た時、左側の太さと色 */
-    border-right: 2px solid #ffffff; /* くの字を山なりに見た時、右側の太さと色 */
+    border: 2px solid #ffffff;
+    border-bottom-width: 0;
+    border-left-width: 0;
     transform: rotate(135deg);
     &.isOpen {
       margin:5px 0 0 0 ;
@@ -99,7 +99,7 @@ type Props = {
   onClick: React.MouseEventHandler<HTMLDivElement>;
 };
 
-export const ProductList: React.FC<Props> = (props) => {
+export const ProductLists: React.FC<Props> = (props) => {
   const { ListData, isOpenData, isOpen, onClick } = props;
   return (
     <>

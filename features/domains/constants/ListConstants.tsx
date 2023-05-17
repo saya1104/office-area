@@ -1,10 +1,10 @@
 type List = {
-  data: string[];
+  technologyData: string[];
   isOpenData: string[];
 };
 
 export const ListConstants: List = {
-  data: ['Python', 'Ruby', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'PHP', 'Java', 'Swift'],
+  technologyData: ['Python', 'Ruby', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'PHP', 'Java', 'Swift'],
   isOpenData: [
     'Kotlin',
     'Django',

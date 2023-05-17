@@ -64,7 +64,7 @@ export const productData: ProductConstants[] = [
   },
 ];
 
-export const AwsData: ProductConstants[] = [
+export const AWSData: ProductConstants[] = [
   {
     src: 'assets/Aws.png',
     title: 'AWS環境構築',

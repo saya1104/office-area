@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { ListConstants } from '../../../features/domains/constants/ListConstants';
 import { tablet } from '../../../styles/breakPoint';
-import { ProductList } from '../../elements/ProductList';
+import { ProductLists } from '../../elements/ProductLists';
 
 const Wrapper = styled.div`
   position: relative;
@@ -65,8 +65,8 @@ function TechnologySection() {
           }}
         />
       </WaveSpStyle>
-      <ProductList
-        ListData={ListConstants.data}
+      <ProductLists
+        ListData={ListConstants.technologyData}
         isOpenData={ListConstants.isOpenData}
         onClick={onClickAccordionToggle}
         isOpen={isOpen}

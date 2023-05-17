@@ -142,7 +142,7 @@ const DetailStyle = styled.div`
 `;
 
 const AboutTeamAccordion = ({ title, subTitle, detail }: AccordionType) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const onClickAccordionToggle = () => {
     setIsOpen(!isOpen);

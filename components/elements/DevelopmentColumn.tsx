@@ -24,7 +24,7 @@ const HeadLine = styled.div`
   background: #b7c4e5;
   width: 450px;
   height: 65px;
-  &.isNotCompany {
+  &.isCompany {
     width: 250px;
     justify-content: center;
   }
@@ -80,7 +80,7 @@ const TitleStyle = styled.div`
   br {
     display: none;
   }
-  &.isNotCompany {
+  &.isCompany {
     margin-left: 0;
   }
   ${spMin`
@@ -127,13 +127,13 @@ const SpImageStyle = styled.div`
 `;
 
 const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstants) => {
-  const [isAiful, setisAiful] = useState(false);
-  const [isNotCompany, setisNotCompany] = useState(false);
+  const [isAiful, setIsAiful] = useState<boolean>(false);
+  const [isCompany, setIsCompany] = useState<boolean>(false);
   useEffect(() => {
     if (!companyName) {
-      setisNotCompany(!isNotCompany);
+      setIsCompany(!isCompany);
     } else if (companyName !== 'アイフル') {
-      setisAiful(!isAiful);
+      setIsAiful(!isAiful);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -153,13 +153,13 @@ const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstan
         />
       </PcImageStyle>
       <DetailStyle>
-        <HeadLine className={isNotCompany ? 'isNotCompany' : ''}>
-          {!isNotCompany && (
+        <HeadLine className={isCompany ? 'isCompany' : ''}>
+          {!isCompany && (
             <CompanyNameStyle className={isAiful ? 'isAiful' : ''}>
               <p>{companyName}</p>
             </CompanyNameStyle>
           )}
-          <TitleStyle className={isNotCompany ? 'isNotCompany' : ''}>
+          <TitleStyle className={isCompany ? 'isCompany' : ''}>
             <p>{title}</p>
           </TitleStyle>
         </HeadLine>

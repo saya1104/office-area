@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { productData, AwsData } from '../../../features/domains/constants/ProductConstants';
+import { productData, AWSData } from '../../../features/domains/constants/ProductConstants';
 import { sp } from '../../../styles/breakPoint';
 import DevelopmentColumn from '../../elements/DevelopmentColumn';
 import EachPageTop from '../../elements/EachPageTop';
@@ -33,7 +33,7 @@ function ProductDetails() {
         <MarginStyle>
           <SubTitle>開発環境</SubTitle>
         </MarginStyle>
-        {AwsData.map((item, index) => (
+        {AWSData.map((item, index) => (
           <DevelopmentColumn src={item.src} title={item.title} key={index}>
             {item.children}
           </DevelopmentColumn>
