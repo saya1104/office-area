@@ -113,7 +113,7 @@ const ImageSpMinStyle = styled.div`
 type Props = {
   TitleChildren?: ReactNode;
   SubTitleChildren?: ReactNode;
-  children: ReactNode;
+  children?: ReactNode;
   src: string;
 };
 
