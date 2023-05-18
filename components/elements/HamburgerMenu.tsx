@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { pcMin, sp } from '../../styles/breakPoint';
@@ -51,7 +50,6 @@ const Container = styled.div<Props>`
 `;
 
 const HamburgerMenu: React.FC<Props> = (props) => {
-  const router = useRouter();
   return (
     <Container onClick={props.onClick} isOpen={props.isOpen}>
       <ul>
