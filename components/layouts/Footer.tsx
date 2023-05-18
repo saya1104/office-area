@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import styled from 'styled-components';
 import AifulLogo from '../../public/assets/AifulLogo.svg';
 import { sp, spMin } from '../../styles/breakPoint';
@@ -53,7 +53,6 @@ const ListStyle = styled.li`
   justify-content: space-around;
   min-width: 180px;
   font-size: 20px;
-  cursor: pointer;
   &::before {
     content: '';
     position: absolute;
@@ -122,7 +121,6 @@ const PagetopLink = styled.a`
 `;
 
 const Footer = () => {
-  const router = useRouter();
   return (
     <FooterStyle>
       <LogoStyle>
@@ -130,10 +128,26 @@ const Footer = () => {
         <p>アイフルエンジニア採用サイト</p>
       </LogoStyle>
       <UlStyle>
-        <ListStyle>TOP</ListStyle>
-        <ListStyle onClick={() => router.push('/AboutPage')}>ABOUT TEAM</ListStyle>
-        <ListStyle onClick={() => router.push('/AboutPage#TeamCoreValues')}>TEAM CORE VALUES</ListStyle>
-        <ListStyle onClick={() => router.push('/ProductPage')}>PRODUCT</ListStyle>
+        <ListStyle>
+          <Link href={'/'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            TOP
+          </Link>
+        </ListStyle>
+        <ListStyle>
+          <Link href={'/AboutPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            ABOUT TEAM
+          </Link>
+        </ListStyle>
+        <ListStyle>
+          <Link href={'/AboutPage#TeamCoreValues'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            TEAM CORE VALUES
+          </Link>
+        </ListStyle>
+        <ListStyle>
+          <Link href={'/ProductPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            PRODUCT
+          </Link>
+        </ListStyle>
         <ListStyle>MEMBER</ListStyle>
         <ListStyle>RECRUIT</ListStyle>
       </UlStyle>

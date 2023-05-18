@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { productData, AWSData } from '../../../features/domains/constants/ProductConstants';
 import { sp } from '../../../styles/breakPoint';
-import DevelopmentColumn from '../../elements/DevelopmentColumn';
+import DevelopedProducts from '../../elements/DevelopedProducts';
 import EachPageTop from '../../elements/EachPageTop';
 import { SubTitle } from '../../elements/SubTitle';
 
@@ -26,17 +26,17 @@ function ProductDetails() {
       <Wrapper>
         <SubTitle>内製開発システム・アプリ</SubTitle>
         {productData.map((item, index) => (
-          <DevelopmentColumn src={item.src} companyName={item.companyName} title={item.title} key={index}>
+          <DevelopedProducts src={item.src} companyName={item.companyName} title={item.title} key={index}>
             {item.children}
-          </DevelopmentColumn>
+          </DevelopedProducts>
         ))}
         <MarginStyle>
           <SubTitle>開発環境</SubTitle>
         </MarginStyle>
         {AWSData.map((item, index) => (
-          <DevelopmentColumn src={item.src} title={item.title} key={index}>
+          <DevelopedProducts src={item.src} title={item.title} key={index}>
             {item.children}
-          </DevelopmentColumn>
+          </DevelopedProducts>
         ))}
       </Wrapper>
     </>

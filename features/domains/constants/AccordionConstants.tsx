@@ -15,7 +15,8 @@ export const accodionData: AccordionType[] = [
     title: 'VISION',
     subTitle: (
       <>
-        <span>私たちが目指す社会</span>
+        私たちが目指す社会
+        <br className="isPc" />
         For Colorful Life.
         <br />
         自分の色が輝く社会に

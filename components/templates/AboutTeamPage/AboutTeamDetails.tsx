@@ -37,6 +37,9 @@ const BrStyled = styled.div`
   }
   br {
     display: none;
+    &.isPc {
+      display: block;
+    }
     ${spMin`
      display:block;
     `}

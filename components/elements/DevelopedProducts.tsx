@@ -126,14 +126,14 @@ const SpImageStyle = styled.div`
   `}
 `;
 
-const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstants) => {
+const DevelopedProducts = ({ src, companyName, title, children }: ProductConstants) => {
   const [isAiful, setIsAiful] = useState<boolean>(false);
   const [isCompany, setIsCompany] = useState<boolean>(false);
   useEffect(() => {
     if (!companyName) {
-      setIsCompany(!isCompany);
+      setIsCompany((prev) => !prev);
     } else if (companyName !== 'アイフル') {
-      setIsAiful(!isAiful);
+      setIsAiful((prev) => !prev);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -184,4 +184,4 @@ const DevelopmentColumn = ({ src, companyName, title, children }: ProductConstan
   );
 };
 
-export default DevelopmentColumn;
+export default DevelopedProducts;
