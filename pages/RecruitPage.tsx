@@ -1,7 +1,7 @@
-import Header from '../components/layouts/Header';
 import Footer from '../components/layouts/Footer';
-import TopVisual from '../components/templates/RecruitPage/TopVisual';
+import Header from '../components/layouts/Header';
 import Table from '../components/templates/RecruitPage/Table';
+import TopVisual from '../components/templates/RecruitPage/TopVisual';
 
 function RecruitPage() {
   return (
