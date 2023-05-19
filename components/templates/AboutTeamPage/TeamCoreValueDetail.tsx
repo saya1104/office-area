@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { TitleGradationStyle } from '../../../styles/Styled';
 import { spMin, tablet, sp } from '../../../styles/breakPoint';
+import { SubTitle } from '../../elements/SubTitle';
 
 const SectionStyle = styled.div`
   display: flex;
@@ -33,6 +34,12 @@ const TeamCoreValueStyle = styled.div`
       margin: 10px;
     `}
   }
+  br {
+    display: none;
+    ${tablet`
+      display:block;
+    `}
+  }
 `;
 
 const TitleStyle = styled.div`
@@ -45,19 +52,6 @@ const TitleStyle = styled.div`
       text-align: center;
       margin-bottom:10px;
       font-size: 10vw;
-    `}
-  }
-`;
-
-const SubTitle = styled.div`
-  border-bottom: solid 2px #ff318f;
-  p {
-    line-height: 1.5;
-    color: #ff318f;
-    font-size: 40px;
-    margin: 70px 0 20px 0;
-    ${sp`
-      font-size:30px;
     `}
   }
 `;
@@ -104,7 +98,9 @@ const TeamCoreValueDetail = () => {
             <h2>TEAM CORE VALUES</h2>
           </TitleStyle>
           <SubTitle>
-            <p>アイフルエンジニアチームの特徴</p>
+            アイフルエンジニア
+            <br />
+            チームの特徴
           </SubTitle>
           <SpPersonImageStyle>
             <Image
@@ -159,9 +155,7 @@ const TeamCoreValueDetail = () => {
           />
         </PcTeamCoreImageStyle>
         <TeamCoreValueStyle>
-          <SubTitle>
-            <p>チームの目指す姿</p>
-          </SubTitle>
+          <SubTitle>チームの目指す姿</SubTitle>
           <SpTeamCoreImageStyle>
             <Image
               src="/assets/TeamCoreValuesImage.svg"

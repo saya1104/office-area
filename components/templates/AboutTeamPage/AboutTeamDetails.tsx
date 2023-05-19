@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { accodionData } from '../../../features/domains/constants/AccordionConstants';
-import { tablet } from '../../../styles/breakPoint';
+import { spMin, tablet } from '../../../styles/breakPoint';
 import AboutTeamAccordion from '../../elements/AboutTeamAccordion';
 import EachPageTop from '../../elements/EachPageTop';
 
@@ -31,6 +31,21 @@ const ImageSpStyle = styled.div`
   `}
 `;
 
+const BrStyled = styled.div`
+  span {
+    display: inline-block;
+  }
+  br {
+    display: none;
+    &.isPc {
+      display: block;
+    }
+    ${spMin`
+     display:block;
+    `}
+  }
+`;
+
 function AboutTeamDetails() {
   return (
     <>
@@ -39,9 +54,10 @@ function AboutTeamDetails() {
         TitleChildren={'ABOUT TEAM'}
         src="/assets/AboutTeamImage.png"
       >
-        誰かと比べることで感じてしまう 負の感情を、社会から無くしたい。
+        誰かと比べることで感じてしまう負の感情を、社会から無くしたい。
+        <br />
         私たちのサービスにより、少しでも多くのお客様の感情を満たし、
-        自然と輝いてもらうためにVISION・MISSION・VALUEを理念に掲げ、 「自分の色が輝く社会」 の実現を目指します。
+        自然と輝いてもらうためにVISION・MISSION・VALUEを理念に掲げ、「自分の色が輝く社会」の実現を目指します。
       </EachPageTop>
       <ImageSpStyle>
         <Image
@@ -70,11 +86,11 @@ function AboutTeamDetails() {
             }}
           />
         </ImageStyle>
-        <div>
+        <BrStyled>
           {accodionData.map((item, index) => (
             <AboutTeamAccordion title={item.title} subTitle={item.subTitle} detail={item.detail} key={index} />
           ))}
-        </div>
+        </BrStyled>
       </Wrapper>
     </>
   );

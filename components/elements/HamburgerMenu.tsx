@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { pcMin, sp } from '../../styles/breakPoint';
 
@@ -27,7 +27,6 @@ const Container = styled.div<Props>`
     opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
     transform: ${({ isOpen }) => (isOpen ? 'translateY(-100%)' : 'translateY(0)')};
     transition: all 0.3s 0.8s;
-    cursor: pointer;
     ${pcMin`
     margin-bottom: 60px;
     `}
@@ -51,13 +50,24 @@ const Container = styled.div<Props>`
 `;
 
 const HamburgerMenu: React.FC<Props> = (props) => {
-  const router = useRouter();
   return (
     <Container onClick={props.onClick} isOpen={props.isOpen}>
       <ul>
-        <li onClick={() => router.push('/AboutPage')}>ABOUT TEAM</li>
-        <li onClick={() => router.push('/AboutPage#TeamCoreValues')}>TEAM CORE VALUES</li>
-        <li>PRODUCT</li>
+        <li>
+          <Link href={'/AboutPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            ABOUT TEAM
+          </Link>
+        </li>
+        <li>
+          <Link href={'/AboutPage#TeamCoreValues'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            TEAM CORE VALUES
+          </Link>
+        </li>
+        <li>
+          <Link href={'/ProductPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            PRODUCT
+          </Link>
+        </li>
         <li>MEMBER</li>
         <li>RECRUIT</li>
       </ul>

@@ -8,11 +8,10 @@ import HamburgerMenu from '../elements/HamburgerMenu';
 const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
-  margin-top: 29px;
-  margin-left: 35px;
+  margin: 29px 2vw 0 0;
+  margin-left: 2vw;
   ${spMin`
     margin-top: 10px;
-    margin-left: 10px;
   `}
 `;
 

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { sp, tablet } from '../../../styles/breakPoint';
 import { pcMin } from '../../../styles/breakPoint';
@@ -88,6 +89,7 @@ const WaveSpStyle = styled.div`
 `;
 
 const Product = () => {
+  const router = useRouter();
   return (
     <>
       <ProductStyle>
@@ -137,7 +139,7 @@ const Product = () => {
             開発プロダクト紹介テキスト。 開発プロダクト紹介テキスト。
             開発プロダクト紹介テキスト。開発プロダクト紹介テキスト。
           </p>
-          <ReadMore />
+          <ReadMore onClick={() => router.push('/ProductPage')} />
         </TextStyle>
         <ImagePcStyle>
           <Image

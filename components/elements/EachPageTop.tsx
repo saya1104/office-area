@@ -9,16 +9,13 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
-import { sp, spMin, tablet } from '../../styles/breakPoint';
+import { spMin, tablet } from '../../styles/breakPoint';
 
 const SectionStyle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-  ${tablet`
-    margin: 50px 8%;
-  `}
 `;
 
 const AboutTeamStyle = styled.div`
@@ -26,14 +23,15 @@ const AboutTeamStyle = styled.div`
   width: 570px;
   min-width: 300px;
   margin: 0 5%;
-  ${sp`
-    margin: 0 6%;
+  ${tablet`
+  width:auto;
+  margin: 0 0 0 8%;
   `}
   ${spMin`
     width: auto;
-    margin: auto;
   `}
-h3 {
+  }
+  h3 {
     font-weight: 600;
     ${spMin`
       margin-left: 20px;
@@ -44,24 +42,27 @@ h3 {
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
-
+    ${tablet`
+      margin:10px 15% 50px 0
+    `}
     ${spMin`
-      margin: 10px 10px 10px 10px;
+      margin: 10px 8% 50px 0;
     `}
   }
 `;
 
 const TitleStyle = styled.div`
+  margin-right: 8%;
   h2 {
     white-space: normal;
+    width: fit-content;
     ${GradationStyle}
     font-weight: 200;
     font-size: 60px;
-    ${spMin`
-      text-align: center;
-      margin-bottom:10px;
+    ${tablet`
+      margin: 0 auto 20px auto;
       font-size: 10vw;
-    `}
+    `};
   }
 `;
 
@@ -71,8 +72,8 @@ const SubTitleStyle = styled.div`
     color: #ff388a;
     margin-bottom: 0;
   }
-  ${spMin`
-    margin:30px 10px 0px 10px
+  ${tablet`
+    margin:30px 8% 0px 0
   `}
 `;
 
@@ -80,18 +81,15 @@ const ImagePcStyle = styled.div`
   width: 666px;
   display: block;
   ${tablet`
-    min-width: 280px;
-  `}
-  ${sp`
     display: none;
   `}
 `;
 
 const ImageSpStyle = styled.div`
   display: none;
-  ${sp`
+  ${tablet`
     display: block;
-    width: 260px;
+    width: 600px;
     height: auto;
     min-width: 240px;
     margin: 0 0 0 auto;
@@ -138,24 +136,24 @@ const EachPageTop: React.FC<Props> = (props) => {
             }}
           />
         </ImageSpMinStyle>
+        <ImageSpStyle>
+          <Image
+            src={src}
+            alt="ABOUT TEAM"
+            width={382}
+            height={442}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+          />
+        </ImageSpStyle>
         <SubTitleStyle>
           <a>{SubTitleChildren}</a>
         </SubTitleStyle>
         <p>{children}</p>
       </AboutTeamStyle>
-      <ImageSpStyle>
-        <Image
-          src={src}
-          alt="ABOUT TEAM"
-          width={382}
-          height={442}
-          sizes="100vw"
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-        />
-      </ImageSpStyle>
       <ImagePcStyle>
         <Image
           src={src}
