@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react';
 
 export type AccordionType = {
-  title: ReactNode;
+  title: string;
   subTitle: ReactNode;
   detail: {
-    title?: ReactNode;
-    subtitle?: ReactNode;
-    text: ReactNode;
+    title?: string;
+    subtitle?: string;
+    text: string;
   }[];
 };
 
