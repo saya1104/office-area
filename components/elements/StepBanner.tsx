@@ -1,14 +1,10 @@
-import styled from 'styled-components';
-import { sp } from '../../styles/breakPoint';
-import type { StepBannerType } from '../../features/domains/constants/StepBannerConstants';
 import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import type { StepBannerType } from '../../features/domains/constants/StepBannerConstants';
 
 const Wrapper = styled.div`
   display: flex;
-  margin: 0 8vw;
-  ${sp`
-    margin:0 3vw;
-  `};
+  margin: 0;
 `;
 
 const TitleWrapper = styled.div``;
@@ -79,10 +75,10 @@ const HeadlineStyle = styled.div`
 const StepBanner = ({ title, headline, text }: StepBannerType) => {
   const [isBorder, setIsBorder] = useState<boolean>(false);
   useEffect(() => {
-    if (headline === '内定') {
+    if (headline === '内定' && isBorder === false) {
       setIsBorder((pref) => !pref);
     }
-  }, []);
+  }, [headline, isBorder]);
   return (
     <>
       <Wrapper>

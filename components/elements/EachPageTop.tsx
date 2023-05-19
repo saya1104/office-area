@@ -5,7 +5,7 @@
 */
 }
 
-import type { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
@@ -16,6 +16,12 @@ const SectionStyle = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
+  &.isOpen {
+    ${tablet`
+    display:block;
+  
+  `}
+  }
 `;
 
 const AboutTeamStyle = styled.div`
@@ -117,8 +123,14 @@ type Props = {
 
 const EachPageTop: React.FC<Props> = (props) => {
   const { TitleChildren, SubTitleChildren, children, src } = props;
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  useEffect(() => {
+    if (SubTitleChildren === undefined && isOpen === false) {
+      setIsOpen((pref) => !pref);
+    }
+  }, [SubTitleChildren, isOpen]);
   return (
-    <SectionStyle>
+    <SectionStyle className={isOpen ? 'isOpen' : ''}>
       <AboutTeamStyle>
         <TitleStyle>
           <h2>{TitleChildren}</h2>

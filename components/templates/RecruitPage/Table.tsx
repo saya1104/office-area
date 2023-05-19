@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { sp } from '../../../styles/breakPoint';
+import { SubTitle } from '../../elements/SubTitle';
 
 const Wrapper = styled.div`
   margin: 0 8vw;
@@ -9,8 +10,8 @@ const Wrapper = styled.div`
 `;
 
 const TableStyle = styled.table`
-  width: 84vw;
   margin-top 50px;
+  width: 84vw;
   border: 2px solid;
   border-color: #596480;
   border-radius:50px;
@@ -81,6 +82,7 @@ const TableStyle = styled.table`
 const Table = () => {
   return (
     <Wrapper>
+      <SubTitle>選考フロー</SubTitle>
       <TableStyle>
         <tbody>
           <tr>
