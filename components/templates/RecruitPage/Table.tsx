@@ -33,46 +33,49 @@ const TableStyle = styled.table`
 	}
   }
   td {
-    border-left:2px solid;
-    border-color: #596480;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
     li {
-      font-weight: 400px;
+      border-spacing: 0;
+      border-left: 2px solid;
+      border-color: #596480;
+      font-weight: 400;
       font-size: 18px;
-      line-height: 30px;
+      line-height: 40px;
       padding-left: 40px;
-      
+      margin-bottom:-2px;
     }
     p{
+      border-left: 2px solid;
+      border-color: #596480;
       padding-left:35px;
       font-weight: 400px;
       font-size: 18px;
       line-height: 30px;
       margin:0;
+      margin-bottom:-2px;
     }
     &.td-top {	
-      margin-top: 40px;
-	    padding-top:30px;
+	    padding-top:70px;
     }
     &.td-bottom {
-      margin-bottom: 40px;
-	    padding-bottom:30px;
+	    padding-bottom:70px;
+      border-bottom: 2px solid;
+      border-color: #596480;
+    }
+    &.td-last {
+	    padding-bottom:70px;
     }
     &.only-td{
-      margin:40px 0 40px 0;
-      padding:30px 0 40px;
+      padding:70px 0 70px;
+      border-bottom: 2px solid;
+      border-color: #596480;
     }
   }
   ${sp`
 	width:94vw;
 	`} ;
-`;
-
-const BorderBottom = styled.div`
-  border-bottom: 2px solid;
-  border-color: #596480;
 `;
 
 const Table = () => {
@@ -109,35 +112,32 @@ const Table = () => {
             <td>
               <li>単身赴任手当：月42,000円</li>
             </td>
-            <BorderBottom>
-              <td className="td-bottom">
-                <li>帰宅手当：毎月1回自宅まで交通費を全額負担（単身者のみ）</li>
-              </td>
-            </BorderBottom>
+
+            <td className="td-bottom">
+              <li>帰宅手当：毎月1回自宅まで交通費を全額負担（単身者のみ）</li>
+            </td>
           </tr>
           <tr>
             <th>
               <p>昇給・賞与</p>
             </th>
-            <BorderBottom>
-              <td className="only-td">
-                <p>昇給年1回、賞与年2回（1回あたり平均3ヵ月程度。6月・12月支給）</p>
-              </td>
-            </BorderBottom>
+
+            <td className="only-td">
+              <p>昇給年1回、賞与年2回（1回あたり平均3ヵ月程度。6月・12月支給）</p>
+            </td>
           </tr>
           <tr>
             <th>
               <p>勤務形態</p>
             </th>
-            <BorderBottom>
-              <td className="only-td">
-                <p>
-                  リモートワーク
-                  <br />
-                  スーパーフレックス（コアタイムレス）
-                </p>
-              </td>
-            </BorderBottom>
+
+            <td className="only-td">
+              <p>
+                リモートワーク
+                <br />
+                スーパーフレックス（コアタイムレス）
+              </p>
+            </td>
           </tr>
           <tr>
             <th>
@@ -161,11 +161,10 @@ const Table = () => {
             <td>
               <li>積立有給休暇（最大60日）</li>
             </td>
-            <BorderBottom>
-              <td className="td-bottom">
-                <li>育児休暇、看護休暇、介護休暇、結婚休暇、産前産後休暇、慶弔休暇、災害休暇 等</li>
-              </td>
-            </BorderBottom>
+
+            <td className="td-bottom">
+              <li>育児休暇、看護休暇、介護休暇、結婚休暇、産前産後休暇、慶弔休暇、災害休暇 等</li>
+            </td>
           </tr>
           <tr>
             <th className="border-none">
@@ -205,7 +204,7 @@ const Table = () => {
             <td>
               <li>各種社会保険完備</li>
             </td>
-            <td className="td-bottom">
+            <td className="td-last">
               <li>書籍購入補助</li>
             </td>
           </tr>
