@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 export type ProductConstants = {
   src: string;
-  companyName?: string;
+  companyName?: ReactNode;
   title: ReactNode;
   children: string;
 };
