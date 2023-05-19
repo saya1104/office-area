@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { sp } from '../../styles/breakPoint';
 
 type Props = {
   isOpen: boolean;
@@ -14,10 +13,7 @@ const ButtonStyle = styled.button<Props>`
   background: transparent;
   border: none;
   cursor: pointer;
-  margin-right: 35px;
-  ${sp`
-    margin-right:10px;
-  `}
+  margin-right: 2vw;
 
   span {
     position: absolute;

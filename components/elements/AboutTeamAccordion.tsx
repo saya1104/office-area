@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { sp } from '../../styles/breakPoint';
 import type { AccordionType } from '../../features/domains/constants/AccordionConstants';
@@ -55,6 +55,9 @@ const SubTitleStyle = styled.div`
     font-size:25px;
     margin-bottom:0;
     color: #4ef4ff;
+    span {
+      display: block;
+    }
   }
   ${sp`
   width:90vw;
@@ -139,7 +142,7 @@ const DetailStyle = styled.div`
 `;
 
 const AboutTeamAccordion = ({ title, subTitle, detail }: AccordionType) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const onClickAccordionToggle = () => {
     setIsOpen(!isOpen);
@@ -162,11 +165,11 @@ const AboutTeamAccordion = ({ title, subTitle, detail }: AccordionType) => {
       {isOpen && (
         <DetailStyle>
           {detail.map((item, index) => (
-            <>
-              <h3 key={index}>{item.title}</h3>
-              <h4 key={index}>{item.subtitle}</h4>
-              <p key={index}>{item.text}</p>
-            </>
+            <React.Fragment key={index}>
+              <h3>{item.title}</h3>
+              <h4>{item.subtitle}</h4>
+              <p>{item.text}</p>
+            </React.Fragment>
           ))}
         </DetailStyle>
       )}
