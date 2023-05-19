@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { sp } from '../../../styles/breakPoint';
+import { sp, tablet } from '../../../styles/breakPoint';
 import { SubTitle } from '../../elements/SubTitle';
 
 const Wrapper = styled.div`
@@ -18,12 +18,17 @@ const TableStyle = styled.table`
   border-spacing:0;
   th {
     position: relative;
-    width: 25%;;
+    width: 25%;
     border-bottom: 2px solid;
     border-color: #596480;
     &.border-none{
       border-bottom:0px;
     }
+    ${tablet`
+    width:70%;
+    display:block;
+    border:0;
+    `}
 	p {
 		position: absolute;
 		color: #ff318f;
@@ -31,6 +36,11 @@ const TableStyle = styled.table`
 		top: 70px;
 		left: 70px;
 		margin: 0;
+    ${tablet`
+    display:block;
+    top:20px;
+    left:30px;
+    `}
 	}
   }
   td {
@@ -38,6 +48,7 @@ const TableStyle = styled.table`
     flex-flow: column;
     justify-content: space-between;
     li {
+  
       border-spacing: 0;
       border-left: 2px solid;
       border-color: #596480;
@@ -46,6 +57,13 @@ const TableStyle = styled.table`
       line-height: 40px;
       padding-left: 40px;
       margin-bottom:-2px;
+      margin-left: 1.4em;
+	    text-indent: -1.4em;
+      ${tablet`
+        border:0;
+        padding:0 20px;
+      
+      `}
     }
     p{
       border-left: 2px solid;
@@ -56,6 +74,10 @@ const TableStyle = styled.table`
       line-height: 30px;
       margin:0;
       margin-bottom:-2px;
+      ${tablet`
+        border:0;
+        padding-left:20px;
+      `}
     }
     &.td-top {	
 	    padding-top:70px;
@@ -96,7 +118,7 @@ const Table = () => {
               <li>
                 住宅手当：持家の場合 月25,000円支給
                 <br />
-                &emsp;&nbsp;賃貸の場合上寮（自己負担:9,000円）、借上社宅（自己負担:賃料の28%~50%）（条件有）
+                賃貸の場合上寮（自己負担:9,000円）、借上社宅（自己負担:賃料の28%~50%）（条件有）
               </li>
             </td>
             <td>
@@ -176,7 +198,7 @@ const Table = () => {
               <li>
                 階層別研修、戦略対応研修、選択型研修、選抜型研修
                 <br />
-                &emsp;&nbsp;中途採用者は別途入社後2日間の研修あり
+                中途採用者は別途入社後2日間の研修あり
               </li>
             </td>
             <td>

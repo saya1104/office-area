@@ -19,6 +19,7 @@ const OmissionStyle = styled.div`
   margin-top: 100px;
   p {
     margin: 0;
+    line-height: 30px;
   }
 `;
 

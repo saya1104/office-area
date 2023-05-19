@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { tablet } from '../../styles/breakPoint';
 import type { StepBannerType } from '../../features/domains/constants/StepBannerConstants';
 
 const Wrapper = styled.div`
@@ -30,10 +31,19 @@ const BorderStyle = styled.div`
   width: 0;
   height: 150px;
   border: 1px solid;
-  color: #4ef4ff;
+  border-color: #4ef4ff;
   &.isBorder {
     display: none;
   }
+  ${tablet`
+    width:100%;
+    border-right:0;
+    border-top:0;
+    border-bottom:0;
+  &.isBorder {
+    display: block;
+  }
+  `}
 `;
 
 const DashedWrapper = styled.div`
@@ -41,6 +51,9 @@ const DashedWrapper = styled.div`
   height: 40px;
   width: 200px;
   margin-left: 30px;
+  ${tablet`
+    display:none;
+  `}
 `;
 
 const DashedStyle = styled.div`
@@ -54,22 +67,44 @@ const DashedStyle = styled.div`
   height: 0;
 `;
 
-const DetailWrapper = styled.div`
+const PcDetailWrapper = styled.div`
   margin-left: 20px;
   p {
     margin: 10px 0 0 0;
   }
+  ${tablet`
+    display:none;
+  `}
 `;
 
-const HeadlineStyle = styled.div`
+const PcHeadlineStyle = styled.div`
   display: flex;
-
   align-items: center;
   height: 40px;
   h3 {
     margin: 0;
     font-size: 25px;
   }
+  ${tablet`
+    display:none;
+  `}
+`;
+
+const SpDetailWrapper = styled.div`
+  display: none;
+  ${tablet`
+    display:block;
+    h3 {
+    margin: 0 0 0 20px;
+    padding-top:20px;
+    font-size: 25px;
+    }
+    p {
+    margin: 0 0 0 20px;
+    padding-top:20px;
+    line-height:30px;
+    }
+  `}
 `;
 
 const StepBanner = ({ title, headline, text }: StepBannerType) => {
@@ -86,17 +121,22 @@ const StepBanner = ({ title, headline, text }: StepBannerType) => {
           <TitleStyle>
             <p>{title}</p>
           </TitleStyle>
-          <BorderStyle className={isBorder ? 'isBorder' : ''} />
+          <BorderStyle className={isBorder ? 'isBorder' : ''}>
+            <SpDetailWrapper>
+              <h3>{headline}</h3>
+              <p>{text}</p>
+            </SpDetailWrapper>
+          </BorderStyle>
         </TitleWrapper>
         <DashedWrapper>
           <DashedStyle />
         </DashedWrapper>
-        <DetailWrapper>
-          <HeadlineStyle>
+        <PcDetailWrapper>
+          <PcHeadlineStyle>
             <h3>{headline}</h3>
-          </HeadlineStyle>
+          </PcHeadlineStyle>
           <p>{text}</p>
-        </DetailWrapper>
+        </PcDetailWrapper>
       </Wrapper>
     </>
   );

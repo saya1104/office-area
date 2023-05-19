@@ -1,3 +1,4 @@
+import { FollowBanner } from '../components/elements/FollowBanner';
 import Footer from '../components/layouts/Footer';
 import Header from '../components/layouts/Header';
 import Guide from '../components/templates/RecruitPage/Guide';
@@ -13,6 +14,7 @@ function RecruitPage() {
       <Table />
       <SelectionFlow />
       <Guide />
+      <FollowBanner />
       <Footer />
     </>
   );
