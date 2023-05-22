@@ -29,19 +29,19 @@ const TableStyle = styled.table`
     display:block;
     border:0;
     `}
-	p {
-		position: absolute;
-		color: #ff318f;
-		font-size: 20px;
-		top: 70px;
-		left: 70px;
-		margin: 0;
-    ${tablet`
-    display:block;
-    top:20px;
-    left:30px;
-    `}
-	}
+    p {
+      position: absolute;
+      color: #ff318f;
+      font-size: 20px;
+      top: 70px;
+      left: 70px;
+      margin: 0;
+      ${tablet`
+      display:block;
+      top:20px;
+      left:30px;
+      `}
+	  }
   }
   td {
     display: flex;
@@ -49,8 +49,7 @@ const TableStyle = styled.table`
     justify-content: space-between;
     li {
       border-spacing: 0;
-      border-left: 2px solid;
-      border-color: #596480;
+      border-left: 2px solid #596480;
       font-weight: 400;
       font-size: 18px;
       line-height: 40px;
@@ -61,7 +60,6 @@ const TableStyle = styled.table`
         border:0;
         padding:0 20px;
         margin-left:1.4em;
-      
       `}
     }
     p{
@@ -71,8 +69,7 @@ const TableStyle = styled.table`
       font-weight: 400px;
       font-size: 18px;
       line-height: 30px;
-      margin:0;
-      margin-bottom:-2px;
+      margin:0 0 -2px 0;
       ${tablet`
         border:0;
       `}
@@ -90,8 +87,7 @@ const TableStyle = styled.table`
     }
     &.only-td{
       padding:70px 0 70px;
-      border-bottom: 2px solid;
-      border-color: #596480;
+      border-bottom: 2px solid #596480;
     }
   }
   ${sp`

@@ -30,8 +30,7 @@ const BorderStyle = styled.div`
   margin: 0 auto;
   width: 0;
   height: 150px;
-  border: 1px solid;
-  border-color: #4ef4ff;
+  border: 1px solid #4ef4ff;
   &.isBorder {
     display: none;
   }
@@ -111,7 +110,7 @@ const StepBanner = ({ title, headline, text }: StepBannerType) => {
   const [isBorder, setIsBorder] = useState<boolean>(false);
   useEffect(() => {
     if (headline === '内定' && isBorder === false) {
-      setIsBorder((pref) => !pref);
+      setIsBorder((prev) => !prev);
     }
   }, [headline, isBorder]);
   return (

@@ -19,7 +19,6 @@ const SectionStyle = styled.div`
   &.isOpen {
     ${tablet`
     display:block;
-  
   `}
   }
 `;
@@ -126,7 +125,7 @@ const EachPageTop: React.FC<Props> = (props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   useEffect(() => {
     if (SubTitleChildren === undefined && isOpen === false) {
-      setIsOpen((pref) => !pref);
+      setIsOpen((prev) => !prev);
     }
   }, [SubTitleChildren, isOpen]);
   return (

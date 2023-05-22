@@ -5,7 +5,7 @@ export type GuideType = {
   text: ReactNode;
 };
 
-export const GuideText: GuideType[] = [
+export const GuideTexts: GuideType[] = [
   {
     headline: '通報相談者',
     text: '当社選考にエントリーした方',
