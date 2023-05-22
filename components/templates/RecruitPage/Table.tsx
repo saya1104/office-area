@@ -48,7 +48,6 @@ const TableStyle = styled.table`
     flex-flow: column;
     justify-content: space-between;
     li {
-  
       border-spacing: 0;
       border-left: 2px solid;
       border-color: #596480;
@@ -57,11 +56,11 @@ const TableStyle = styled.table`
       line-height: 40px;
       padding-left: 40px;
       margin-bottom:-2px;
-      margin-left: 1.4em;
 	    text-indent: -1.4em;
       ${tablet`
         border:0;
         padding:0 20px;
+        margin-left:1.4em;
       
       `}
     }
