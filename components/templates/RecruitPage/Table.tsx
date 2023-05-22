@@ -67,7 +67,7 @@ const TableStyle = styled.table`
     p{
       border-left: 2px solid;
       border-color: #596480;
-      padding-left:35px;
+      padding-left:20px;
       font-weight: 400px;
       font-size: 18px;
       line-height: 30px;
@@ -75,7 +75,6 @@ const TableStyle = styled.table`
       margin-bottom:-2px;
       ${tablet`
         border:0;
-        padding-left:20px;
       `}
     }
     &.td-top {	
