@@ -14,6 +14,16 @@ const SubTitleStyle = styled.div`
       font-size:25px;
     `}
   }
+  br {
+    &.br-sp {
+      display: none;
+    }
+    ${sp`
+      &.br-sp{
+        display:block;
+      }
+    `}
+  }
 `;
 
 type Props = {
