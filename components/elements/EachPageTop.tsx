@@ -5,7 +5,7 @@
 */
 }
 
-import { ReactNode, useEffect, useState } from 'react';
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
@@ -16,7 +16,7 @@ const SectionStyle = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-  &.isOpen {
+  &.isBlock {
     ${tablet`
     display:block;
   `}
@@ -114,25 +114,19 @@ const ImageSpMinStyle = styled.div`
 `;
 
 type Props = {
-  TitleChildren?: ReactNode;
-  SubTitleChildren?: ReactNode;
+  title?: string;
+  subTitle?: string;
   children?: ReactNode;
   src: string;
 };
 
 const EachPageTop: React.FC<Props> = (props) => {
-  const { TitleChildren, SubTitleChildren, children, src } = props;
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  useEffect(() => {
-    if (SubTitleChildren === undefined && isOpen === false) {
-      setIsOpen((prev) => !prev);
-    }
-  }, [SubTitleChildren, isOpen]);
+  const { title, subTitle, children, src } = props;
   return (
-    <SectionStyle className={isOpen ? 'isOpen' : ''}>
+    <SectionStyle className={subTitle === undefined ? 'isBlock' : ''}>
       <AboutTeamStyle>
         <TitleStyle>
-          <h2>{TitleChildren}</h2>
+          <h2>{title}</h2>
         </TitleStyle>
         <ImageSpMinStyle>
           <Image
@@ -161,7 +155,7 @@ const EachPageTop: React.FC<Props> = (props) => {
           />
         </ImageSpStyle>
         <SubTitleStyle>
-          <a>{SubTitleChildren}</a>
+          <a>{subTitle}</a>
         </SubTitleStyle>
         <p>{children}</p>
       </AboutTeamStyle>

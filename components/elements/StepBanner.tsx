@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { tablet } from '../../styles/breakPoint';
 import type { StepBannerType } from '../../features/domains/constants/StepBannerConstants';
@@ -15,7 +14,7 @@ const TitleStyle = styled.div`
   height: 40px;
   background: #4ef4ff;
   position: relative;
-  p {
+  span {
     font-weight:900;
     margin:0;
     position: absolute;
@@ -24,6 +23,7 @@ const TitleStyle = styled.div`
     transform: translateY(-50%) translateX(-50%);
     -webkit- transform: translateY(-50%) translateX(-50%);
     color: #16223f;
+    white-space: pre;
   }
 `;
 const BorderStyle = styled.div`
@@ -31,7 +31,7 @@ const BorderStyle = styled.div`
   width: 0;
   height: 150px;
   border: 1px solid #4ef4ff;
-  &.isBorder {
+  &.isHidden {
     display: none;
   }
   ${tablet`
@@ -39,7 +39,7 @@ const BorderStyle = styled.div`
     border-right:0;
     border-top:0;
     border-bottom:0;
-  &.isBorder {
+  &.isHidden {
     display: block;
   }
   `}
@@ -107,20 +107,12 @@ const SpDetailWrapper = styled.div`
 `;
 
 const StepBanner = ({ title, headline, text }: StepBannerType) => {
-  const [isBorder, setIsBorder] = useState<boolean>(false);
-  useEffect(() => {
-    if (headline === '内定' && isBorder === false) {
-      setIsBorder((prev) => !prev);
-    }
-  }, [headline, isBorder]);
   return (
     <>
       <Wrapper>
         <TitleWrapper>
-          <TitleStyle>
-            <p>{title}</p>
-          </TitleStyle>
-          <BorderStyle className={isBorder ? 'isBorder' : ''}>
+          <TitleStyle>{title}</TitleStyle>
+          <BorderStyle className={headline === '内定' ? 'isHidden' : ''}>
             <SpDetailWrapper>
               <h3>{headline}</h3>
               <p>{text}</p>
