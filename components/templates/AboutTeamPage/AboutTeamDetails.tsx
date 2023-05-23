@@ -50,8 +50,8 @@ function AboutTeamDetails() {
   return (
     <>
       <EachPageTop
-        SubTitleChildren={'自分の色が輝く社会に'}
         TitleChildren={'ABOUT TEAM'}
+        SubTitleChildren={'自分の色が輝く社会に'}
         src="/assets/AboutTeamImage.png"
       >
         誰かと比べることで感じてしまう負の感情を、社会から無くしたい。
