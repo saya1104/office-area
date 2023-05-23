@@ -69,7 +69,11 @@ const HamburgerMenu: React.FC<Props> = (props) => {
           </Link>
         </li>
         <li>MEMBER</li>
-        <li>RECRUIT</li>
+        <li>
+          <Link href={'/RecruitPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            RECRUIT
+          </Link>
+        </li>
       </ul>
     </Container>
   );

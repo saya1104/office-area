@@ -16,6 +16,11 @@ const SectionStyle = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
+  &.isBlock {
+    ${tablet`
+    display:block;
+  `}
+  }
 `;
 
 const AboutTeamStyle = styled.div`
@@ -109,19 +114,19 @@ const ImageSpMinStyle = styled.div`
 `;
 
 type Props = {
-  TitleChildren?: ReactNode;
-  SubTitleChildren?: ReactNode;
-  children: ReactNode;
+  title?: string;
+  subTitle?: string;
+  children?: ReactNode;
   src: string;
 };
 
 const EachPageTop: React.FC<Props> = (props) => {
-  const { TitleChildren, SubTitleChildren, children, src } = props;
+  const { title, subTitle, children, src } = props;
   return (
-    <SectionStyle>
+    <SectionStyle className={subTitle === undefined ? 'isBlock' : ''}>
       <AboutTeamStyle>
         <TitleStyle>
-          <h2>{TitleChildren}</h2>
+          <h2>{title}</h2>
         </TitleStyle>
         <ImageSpMinStyle>
           <Image
@@ -150,7 +155,7 @@ const EachPageTop: React.FC<Props> = (props) => {
           />
         </ImageSpStyle>
         <SubTitleStyle>
-          <a>{SubTitleChildren}</a>
+          <a>{subTitle}</a>
         </SubTitleStyle>
         <p>{children}</p>
       </AboutTeamStyle>
