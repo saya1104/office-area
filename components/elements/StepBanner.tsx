@@ -36,9 +36,7 @@ const BorderStyle = styled.div`
   }
   ${tablet`
     width:100%;
-    border-right:0;
-    border-top:0;
-    border-bottom:0;
+    border-width:0 0 0 1px;
   &.isHidden {
     display: block;
   }
