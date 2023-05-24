@@ -28,7 +28,7 @@ export const MemberConstants: Membertypes[] = [
     position: 'フロントエンドエンジニア',
   },
   {
-    imageSrc: '/assets/InterviewMoroda.png',
+    imageSrc: '/assets/InterviewTominaga.png',
     imageAlt: 'T.M/20XX年入社 iOSアプリエンジニア',
     message1: '新規事業企画を経て、',
     message2: 'プロモーション戦略を担当。',

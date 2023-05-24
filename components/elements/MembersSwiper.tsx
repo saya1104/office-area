@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Pagination } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { MemberConstants } from '../../features/domains/constants/MemberConstants';
 
@@ -13,6 +13,7 @@ const InterviewCardStyle = styled.div`
   text-align: center;
   width: fit-content;
   padding-right: 5px;
+  transition-timing-function: linear;
 `;
 
 const InterviewImageStyle = styled.div`
@@ -65,22 +66,25 @@ const MembersSwiper = () => {
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
+      modules={[Pagination, Autoplay]}
       className="mySwiper"
+      loop={true}
+      speed={6000}
+      autoplay={{
+        delay: 0,
+      }}
       breakpoints={{
         770: {
           slidesPerView: 2,
           spaceBetween: 50,
         },
-        1066: {
-          slidesPerView: 3,
-          spaceBetween: 50,
-        },
+
         1445: {
           slidesPerView: 4,
           spaceBetween: 50,
         },
       }}
+      style={{ margin: 0, width: '100%' }}
     >
       {MemberConstants.map((item, index) => {
         return (

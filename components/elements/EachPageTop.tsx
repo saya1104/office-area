@@ -48,7 +48,7 @@ const AboutTeamStyle = styled.div`
     font-size: 18px;
     line-height: 30px;
     ${tablet`
-      margin:10px 15% 50px 0
+      margin:10px 8% 50px 0
     `}
     ${spMin`
       margin: 10px 8% 50px 0;
