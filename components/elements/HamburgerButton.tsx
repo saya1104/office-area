@@ -13,7 +13,6 @@ const ButtonStyle = styled.button<Props>`
   background: transparent;
   border: none;
   cursor: pointer;
-  margin-right: 2vw;
 
   span {
     position: absolute;

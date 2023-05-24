@@ -6,6 +6,7 @@ import { MemberConstants } from '../../features/domains/constants/MemberConstant
 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 const InterviewCardStyle = styled.div`
   display: flex;
@@ -89,36 +90,38 @@ const MembersSwiper = () => {
       {MemberConstants.map((item, index) => {
         return (
           <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center' }}>
-            <InterviewCardStyle>
-              <InterviewImageStyle>
-                <Image
-                  src={item.imageSrc}
-                  alt={item.imageAlt}
-                  width={280}
-                  height={387}
-                  sizes="100vw"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                  }}
-                />
-              </InterviewImageStyle>
-              <InterviewTextStyle>
-                <SquareStyle>
+            <Link href={`InterviewPage/${item.href}`} style={{ textDecoration: 'none', color: '#ffffff' }}>
+              <InterviewCardStyle>
+                <InterviewImageStyle>
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    width={280}
+                    height={387}
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
+                  />
+                </InterviewImageStyle>
+                <InterviewTextStyle>
+                  <SquareStyle>
+                    <p>
+                      {item.message1}
+                      <br />
+                      {item.message2}
+                    </p>
+                    <span></span>
+                  </SquareStyle>
                   <p>
-                    {item.message1}
+                    {item.name} / {item.hireYear}年 入社
                     <br />
-                    {item.message2}
+                    {item.position}
                   </p>
-                  <span></span>
-                </SquareStyle>
-                <p>
-                  {item.name} / {item.hireYear}年 入社
-                  <br />
-                  {item.position}
-                </p>
-              </InterviewTextStyle>
-            </InterviewCardStyle>
+                </InterviewTextStyle>
+              </InterviewCardStyle>
+            </Link>
           </SwiperSlide>
         );
       })}

@@ -3,14 +3,16 @@ import styled from 'styled-components';
 import { MemberConstants } from '../../../../features/domains/constants/MemberConstants';
 import { sp } from '../../../../styles/breakPoint';
 import EachPageTop from '../../../elements/EachPageTop';
+import Link from 'next/link';
 
 const Wrapper = styled.div`
-  margin: 100px 8vw 0 8vw;
+  margin: 100px 3vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   ${sp`
+    display:block;
     margin:0 3vw;
   `};
 `;
@@ -21,6 +23,9 @@ const InterviewCardStyle = styled.div`
   text-align: center;
   width: fit-content;
   padding: 0 10px 50px 10px;
+  ${sp`
+  margin:0 auto
+  `}
 `;
 
 const InterviewImageStyle = styled.div`
@@ -72,36 +77,38 @@ function Top() {
       <Wrapper>
         {MemberConstants.map((item, index) => {
           return (
-            <InterviewCardStyle key={index}>
-              <InterviewImageStyle>
-                <Image
-                  src={item.imageSrc}
-                  alt={item.imageAlt}
-                  width={280}
-                  height={387}
-                  sizes="100vw"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                  }}
-                />
-              </InterviewImageStyle>
-              <InterviewTextStyle>
-                <SquareStyle>
+            <Link href={`/InterviewPage/${item.href}`} style={{ textDecoration: 'none', color: '#ffffff' }}>
+              <InterviewCardStyle key={index}>
+                <InterviewImageStyle>
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
+                    width={280}
+                    height={387}
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
+                  />
+                </InterviewImageStyle>
+                <InterviewTextStyle>
+                  <SquareStyle>
+                    <p>
+                      {item.message1}
+                      <br />
+                      {item.message2}
+                    </p>
+                    <span></span>
+                  </SquareStyle>
                   <p>
-                    {item.message1}
+                    {item.name} / {item.hireYear}年 入社
                     <br />
-                    {item.message2}
+                    {item.position}
                   </p>
-                  <span></span>
-                </SquareStyle>
-                <p>
-                  {item.name} / {item.hireYear}年 入社
-                  <br />
-                  {item.position}
-                </p>
-              </InterviewTextStyle>
-            </InterviewCardStyle>
+                </InterviewTextStyle>
+              </InterviewCardStyle>
+            </Link>
           );
         })}
       </Wrapper>
