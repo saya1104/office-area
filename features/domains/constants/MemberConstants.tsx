@@ -1,4 +1,15 @@
-export const MemberIntroductions = [
+export type Membertypes = {
+  imageSrc: string;
+  imageAlt: string;
+  message1: string;
+  message2: string;
+  name: string;
+  hireYear: string;
+  position: string;
+  href: string;
+};
+
+export const MemberConstants: Membertypes[] = [
   {
     imageSrc: '/assets/InterviewOta.png',
     imageAlt: 'Y.O/2021年入社 AWSチーム チーフエンジニア',
@@ -7,6 +18,7 @@ export const MemberIntroductions = [
     name: 'Y.O',
     hireYear: '2021',
     position: 'AWSチーム チーフエンジニア',
+    href: 'OtaYuji',
   },
   {
     imageSrc: '/assets/InterviewWang.png',
@@ -16,24 +28,17 @@ export const MemberIntroductions = [
     name: 'C.W',
     hireYear: '2022',
     position: 'フロントエンドエンジニア',
+    href: '',
   },
   {
-    imageSrc: '/assets/InterviewMoroda.png',
+    imageSrc: '/assets/InterviewTominaga.png',
     imageAlt: 'T.M/20XX年入社 iOSアプリエンジニア',
     message1: '新規事業企画を経て、',
     message2: 'プロモーション戦略を担当。',
     name: 'T.M',
     hireYear: '20XX',
     position: 'iOSアプリエンジニア',
-  },
-  {
-    imageSrc: '/assets/InterviewChacon.png',
-    imageAlt: 'D.C/20XX年入社 フルスタックエンジニア',
-    message1: '新規事業企画を経て、',
-    message2: 'プロモーション戦略を担当。',
-    name: 'D.C',
-    hireYear: '20XX',
-    position: 'フルスタックエンジニア',
+    href: '',
   },
   {
     imageSrc: '/assets/InterviewOu.png',
@@ -43,5 +48,6 @@ export const MemberIntroductions = [
     name: 'K.O',
     hireYear: '2022',
     position: 'バックエンドエンジニア',
+    href: '',
   },
 ];

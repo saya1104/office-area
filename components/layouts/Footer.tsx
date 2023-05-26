@@ -148,7 +148,11 @@ const Footer = () => {
             PRODUCT
           </Link>
         </ListStyle>
-        <ListStyle>MEMBER</ListStyle>
+        <ListStyle>
+          <Link href={'/InterviewPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            INTERVIEW
+          </Link>
+        </ListStyle>
         <ListStyle>
           <Link href={'/RecruitPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             RECRUIT

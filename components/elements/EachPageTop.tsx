@@ -16,11 +16,9 @@ const SectionStyle = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-  &.isBlock {
-    ${tablet`
+  ${tablet`
     display:block;
   `}
-  }
 `;
 
 const AboutTeamStyle = styled.div`
@@ -48,7 +46,7 @@ const AboutTeamStyle = styled.div`
     font-size: 18px;
     line-height: 30px;
     ${tablet`
-      margin:10px 15% 50px 0
+      margin:10px 8% 50px 0
     `}
     ${spMin`
       margin: 10px 8% 50px 0;
@@ -123,7 +121,7 @@ type Props = {
 const EachPageTop: React.FC<Props> = (props) => {
   const { title, subTitle, children, src } = props;
   return (
-    <SectionStyle className={subTitle === undefined ? 'isBlock' : ''}>
+    <SectionStyle>
       <AboutTeamStyle>
         <TitleStyle>
           <h2>{title}</h2>
