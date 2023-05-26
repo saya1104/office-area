@@ -3,18 +3,18 @@ import styled from 'styled-components';
 import { sp, tablet } from '../../styles/breakPoint';
 import type { InterViewType } from '../../features/domains/constants/InterView/InterViewType';
 
-const Wrappr = styled.div`
+const Wrapper = styled.div`
   margin: 100px 8vw 0 8vw;
   display: flex;
   justify-content: space-between;
-  &.isreverse {
+  &.isReverse {
     flex-direction: row-reverse;
   }
   ${tablet`
-	display:inline-block;
+  display:inline-block;
   `}
   ${sp`
-   margin:100px 3vw 0 3vw;
+  margin:100px 3vw 0 3vw;
   `}
 `;
 
@@ -24,7 +24,7 @@ const PcImageWrapper = styled.div`
   align-items: center;
   width: 40vw;
   ${tablet`
-	display:none;
+  display:none;
   `}
 `;
 
@@ -40,11 +40,11 @@ const CommentStyle = styled.div`
   width: 40vw;
   position: relative;
   ${tablet`
-	width:84vw;
-	margin:0;
+  width:84vw;
+  margin:0;
   `}
   ${sp`
-	width:94vw;
+  width:94vw;
   `}
 `;
 const NumberStyle = styled.div`
@@ -72,8 +72,8 @@ const DetailStyle = styled.div`
     margin: 0;
     font-size: 30px;
     ${tablet`
-	margin-top:50px;
-  `}
+    margin-top:50px;
+    `}
   }
   p {
     line-height: 30px;
@@ -83,13 +83,13 @@ const DetailStyle = styled.div`
   `}
 `;
 
-export const MembersInterview = ({ number, subTitle, text, src }: InterViewType) => {
+export const MemberInterviews = ({ number, subTitle, text, src, alt }: InterViewType) => {
   return (
-    <Wrappr className={number === '02' ? 'isreverse' : ''}>
+    <Wrapper className={number === '02' ? 'isReverse' : ''}>
       <PcImageWrapper>
         <Image
           src={src}
-          alt="Member Image"
+          alt={alt}
           width={382}
           height={442}
           sizes="100vw"
@@ -108,7 +108,7 @@ export const MembersInterview = ({ number, subTitle, text, src }: InterViewType)
           <SpImageWrapper>
             <Image
               src={src}
-              alt="Member Image"
+              alt={alt}
               width={382}
               height={442}
               sizes="100vw"
@@ -121,6 +121,6 @@ export const MembersInterview = ({ number, subTitle, text, src }: InterViewType)
           <p>{text}</p>
         </DetailStyle>
       </CommentStyle>
-    </Wrappr>
+    </Wrapper>
   );
 };

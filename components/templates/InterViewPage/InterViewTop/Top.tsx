@@ -1,9 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { MemberConstants } from '../../../../features/domains/constants/MemberConstants';
 import { sp } from '../../../../styles/breakPoint';
 import EachPageTop from '../../../elements/EachPageTop';
-import Link from 'next/link';
 
 const Wrapper = styled.div`
   margin: 100px 3vw;
@@ -77,8 +77,8 @@ function Top() {
       <Wrapper>
         {MemberConstants.map((item, index) => {
           return (
-            <Link href={`/InterviewPage/${item.href}`} style={{ textDecoration: 'none', color: '#ffffff' }}>
-              <InterviewCardStyle key={index}>
+            <Link href={`/InterviewPage/${item.href}`} style={{ textDecoration: 'none', color: '#ffffff' }} key={index}>
+              <InterviewCardStyle>
                 <InterviewImageStyle>
                   <Image
                     src={item.imageSrc}

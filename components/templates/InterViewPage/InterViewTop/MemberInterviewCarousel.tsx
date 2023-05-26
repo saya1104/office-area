@@ -4,9 +4,7 @@ import { sp } from '../../../../styles/breakPoint';
 import MembersSwiper from '../../../elements/MembersSwiper';
 
 const Wrapper = styled.div`
-  margin-top: 300px;
-  margin-bottom: 400px;
-
+  margin: 300px 0 400px 0;
   position: relative;
   h3 {
     text-align: center;
@@ -26,14 +24,14 @@ const PcWaveStyle = styled.div`
 const SpWaveStyle = styled.div`
   display: none;
   ${sp`
-top: -10vw;
+  top: -10vw;
   display:block;
   position: absolute;
   z-index: -1;
   `}
 `;
 
-function Swiper() {
+function MemberInterviewCarousel() {
   return (
     <Wrapper>
       <PcWaveStyle>
@@ -68,4 +66,4 @@ function Swiper() {
   );
 }
 
-export default Swiper;
+export default MemberInterviewCarousel;

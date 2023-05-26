@@ -19,7 +19,7 @@
   },
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Strictest",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/templates/InterViewPage/InterViewTop"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/templates/InterviewPage/InterviewTop"],
   "exclude": ["node_modules"],
   "extends": "@tsconfig/next-strictest/tsconfig.json"
 }

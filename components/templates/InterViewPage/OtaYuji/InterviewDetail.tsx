@@ -1,11 +1,18 @@
-import { OtaYujiText } from '../../../../features/domains/constants/InterView/OtaYujiText';
-import { MembersInterview } from '../../../elements/MembersInterview';
+import { OtaYujiInterview } from '../../../../features/domains/constants/InterView/OtaYujiInterview';
+import { MemberInterviews } from '../../../elements/MemberInterviews';
 
 function InterviewDetail() {
   return (
     <>
-      {OtaYujiText.map((item, index) => (
-        <MembersInterview number={item.number} subTitle={item.subTitle} text={item.text} src={item.src} key={index} />
+      {OtaYujiInterview.map((item, index) => (
+        <MemberInterviews
+          number={item.number}
+          subTitle={item.subTitle}
+          text={item.text}
+          src={item.src}
+          alt={item.alt}
+          key={index}
+        />
       ))}
     </>
   );

@@ -5,4 +5,5 @@ export type InterViewType = {
   subTitle: string;
   text: ReactNode;
   src: string;
+  alt: string;
 };

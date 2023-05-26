@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,7 +7,6 @@ import { MemberConstants } from '../../features/domains/constants/MemberConstant
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import Link from 'next/link';
 
 const InterviewCardStyle = styled.div`
   display: flex;

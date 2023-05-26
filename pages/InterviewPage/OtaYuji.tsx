@@ -1,8 +1,8 @@
 import Footer from '../../components/layouts/Footer';
 import Header from '../../components/layouts/Header';
-import Swiper from '../../components/templates/InterViewPage/InterViewTop/Swiper';
-import InterviewDetail from '../../components/templates/InterViewPage/OtaYuji/InterviewDetail';
-import Top from '../../components/templates/InterViewPage/OtaYuji/Top';
+import MemberInterviewCarousel from '../../components/templates/InterviewPage/InterviewTop/MemberInterviewCarousel';
+import InterviewDetail from '../../components/templates/InterviewPage/OtaYuji/InterviewDetail';
+import Top from '../../components/templates/InterviewPage/OtaYuji/Top';
 
 function OtaYuji() {
   return (
@@ -10,7 +10,7 @@ function OtaYuji() {
       <Header />
       <Top />
       <InterviewDetail />
-      <Swiper />
+      <MemberInterviewCarousel />
       <Footer />
     </>
   );
