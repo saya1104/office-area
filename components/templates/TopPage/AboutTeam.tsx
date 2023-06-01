@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { GradationStyle } from '../../../styles/Styled';
-import { sp, spMin, tablet } from '../../../styles/breakPoint';
+import { sp } from '../../../styles/breakPoint';
 import ReadMore from '../../elements/ReadMore';
 
 const SectionStyle = styled.div`
@@ -10,32 +10,31 @@ const SectionStyle = styled.div`
   margin-top: 200px;
   justify-content: space-between;
   align-items: center;
+  ${sp`
+   display:block;
+   margin:200px 0 0 30px;;
+  `}
 `;
 
 const AboutTeamStyle = styled.div`
   position: relative;
-  width: 516px;
+  width: 500px;
   min-width: 300px;
   margin: 0 10%;
   ${sp`
-    margin: 0 6%;
+    margin: 0;
+    width:auto;
   `}
-  ${spMin`
-    width: auto;
-    margin: auto;
-  `}
-h3 {
+
+  h3 {
     font-weight: 600;
-    ${spMin`
-      margin-left: 20px;
-    `}
   }
   p {
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
-    ${spMin`
-      margin: 30px;
+    ${sp`
+     margin-right:30px;
     `}
   }
 `;
@@ -53,34 +52,17 @@ const ReadMoreStyle = styled.div`
 const ImagePcStyle = styled.div`
   width: 666px;
   display: block;
-  ${tablet`
-    min-width: 280px;
-  `}
   ${sp`
-    display: none;
+   display:none;
   `}
 `;
 
 const ImageSpStyle = styled.div`
   display: none;
   ${sp`
-    display: block;
-    width: 260px;
-    height: auto;
-    min-width: 240px;
     margin: 0 0 0 auto;
-  `}
-  ${spMin`
-    display: none;
-  `}
-`;
-
-const ImageSpMinStyle = styled.div`
-  display: none;
-  ${spMin`
     display: block;
-    max-width: 380px;
-    margin: 0 0 0 auto;
+    max-width:500px;
   `}
 `;
 
@@ -92,9 +74,9 @@ const AboutTeam = () => {
         <h3>
           <Gradation>ABOUT TEAM</Gradation>
         </h3>
-        <ImageSpMinStyle>
+        <ImageSpStyle>
           <Image
-            src="/assets/AboutTeamImageSp.png"
+            src="/assets/AboutTeamImage.png"
             alt="ABOUT TEAM"
             width={382}
             height={442}
@@ -104,7 +86,7 @@ const AboutTeam = () => {
               height: 'auto',
             }}
           />
-        </ImageSpMinStyle>
+        </ImageSpStyle>
         <p>
           テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
           テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。
@@ -114,19 +96,6 @@ const AboutTeam = () => {
           <ReadMore onClick={() => router.push('/AboutPage')} />
         </ReadMoreStyle>
       </AboutTeamStyle>
-      <ImageSpStyle>
-        <Image
-          src="/assets/AboutTeamImageSp.png"
-          alt="ABOUT TEAM"
-          width={382}
-          height={442}
-          sizes="100vw"
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-        />
-      </ImageSpStyle>
       <ImagePcStyle>
         <Image
           src="/assets/AboutTeamImage.png"

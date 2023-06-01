@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { sp, tablet } from '../../../styles/breakPoint';
-import { pcMin } from '../../../styles/breakPoint';
 import ReadMore from '../../elements/ReadMore';
+import { GradationStyle } from '../../../styles/Styled';
 
 const ProductStyle = styled.div`
   position: relative;
@@ -11,14 +11,16 @@ const ProductStyle = styled.div`
 
 const TextStyle = styled.div`
   position: absolute;
-  top: 40%;
+  top: 20vw;
   left: 10%;
   width: 35%;
+  max-width: 500px;
   height: auto;
   ${tablet`
-  width: 42%
+  width: 42%;
   `}
   ${sp`
+  max-width:none;
   top: 12%;
   left: auto;
   width: auto;
@@ -27,28 +29,17 @@ const TextStyle = styled.div`
   h3 {
     font-size: 34px;
     font-weight: 600;
-    ${pcMin`
-    font-size: 2.7vw;
-    `}
-    ${sp`
-    font-size: 34px;
-    `}
   }
   p {
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 7%;
-    ${tablet`
-    font-size: 1.8vw;
-    line-height: 3.2vw;
-    `}
-    ${sp`
-    margin-top: 10vw;
-    font-size: 3.4vw;
-    line-height: 7vw;
-    `}
   }
+`;
+
+const Gradation = styled.span`
+  ${GradationStyle}
 `;
 
 const ImagePcStyle = styled.div`
@@ -57,7 +48,8 @@ const ImagePcStyle = styled.div`
   top: 23%;
   right: 10%;
   ${tablet`
-  width: 30%;
+  margin-top:12vw;
+  width: 35%;
   `}
   ${sp`
   display: none;
@@ -67,8 +59,10 @@ const ImagePcStyle = styled.div`
 const ImageSpStyle = styled.div`
   display: none;
   ${sp`
-  display: block;
-  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;    
 `}
 `;
 
@@ -120,19 +114,23 @@ const Product = () => {
           />
         </WaveSpStyle>
         <TextStyle>
-          <h3>PRODUCT</h3>
+          <h3>
+            <Gradation>PRODUCT</Gradation>
+          </h3>
           <ImageSpStyle>
-            <Image
-              src="/assets/ProductImage.svg"
-              alt="ProductImage"
-              width={609}
-              height={478}
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
-            />
+            <div>
+              <Image
+                src="/assets/ProductImage.svg"
+                alt="ProductImage"
+                width={609}
+                height={478}
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
+            </div>
           </ImageSpStyle>
           <p>
             開発プロダクト紹介テキスト。開発プロダクト紹介テキスト。開発プロダクト紹介テキスト。開発プロダクト紹介テキスト。

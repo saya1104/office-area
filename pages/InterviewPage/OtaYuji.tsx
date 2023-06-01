@@ -1,14 +1,14 @@
 import Footer from '../../components/layouts/Footer';
 import Header from '../../components/layouts/Header';
 import MemberInterviewCarousel from '../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
-import Top from '../../components/templates/InterViewPage/InterViewTop/Top';
 import InterviewDetail from '../../components/templates/InterViewPage/OtaYuji/InterviewDetail';
+import OtaYujiTop from '../../components/templates/InterViewPage/OtaYuji/OtaYujiTop';
 
 function OtaYuji() {
   return (
     <>
       <Header />
-      <Top />
+      <OtaYujiTop />
       <InterviewDetail />
       <MemberInterviewCarousel />
       <Footer />
