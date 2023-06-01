@@ -98,7 +98,7 @@ const TableStyle = styled.table`
 const Table = () => {
   return (
     <Wrapper>
-      <SubTitle>選考フロー</SubTitle>
+      <SubTitle>募集要項</SubTitle>
       <TableStyle>
         <tbody>
           <tr>

@@ -20,7 +20,6 @@ const SectionStyle = styled.div`
 const TeamCoreValuesStyle = styled.div`
   position: relative;
   width: 500px;
-  min-width: 300px;
   ${sp`
   width: auto;
   margin: 0;
@@ -52,7 +51,7 @@ const ImageSpStyle = styled.div`
   display: none;
   ${sp`
   display: block;
-  max-width: 546px;
+  max-width: 400px;
   margin: 0 auto;
 `}
 `;

@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function Top() {
+function OtaYujiTop() {
   return (
     <Wrapper>
       <EachPageTop title="Ota Yuji" subTitle="AWSテックリード & Ruby エンジニア" src="../assets/Main_Ota_Yuji.png">
@@ -19,4 +19,4 @@ function Top() {
   );
 }
 
-export default Top;
+export default OtaYujiTop;
