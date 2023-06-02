@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { spMin } from '../../styles/breakPoint';
 import HamburgerButton from '../elements/HamburgerButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
-import Link from 'next/link';
 
 const HeaderStyle = styled.header`
   display: flex;
