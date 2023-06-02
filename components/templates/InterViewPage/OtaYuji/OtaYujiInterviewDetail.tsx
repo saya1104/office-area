@@ -1,10 +1,10 @@
-import { OtaYujiInterview } from '../../../../features/domains/constants/InterView/OtaYujiInterview';
+import { OtaYujiConstants } from '../../../../features/domains/constants/InterView/OtaYujiConstants';
 import { MemberInterviews } from '../../../elements/MemberInterviews';
 
-function InterviewDetail() {
+function OtaYujiInterviewDetail() {
   return (
     <>
-      {OtaYujiInterview.map((item, index) => (
+      {OtaYujiConstants.map((item, index) => (
         <MemberInterviews
           number={item.number}
           subTitle={item.subTitle}
@@ -18,4 +18,4 @@ function InterviewDetail() {
   );
 }
 
-export default InterviewDetail;
+export default OtaYujiInterviewDetail;

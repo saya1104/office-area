@@ -85,7 +85,7 @@ const DetailStyle = styled.div`
 
 export const MemberInterviews = ({ number, subTitle, text, src, alt }: InterViewType) => {
   return (
-    <Wrapper className={number === '02' ? 'isReverse' : ''}>
+    <Wrapper className={number === '02' || number === '04' ? 'isReverse' : ''}>
       <PcImageWrapper>
         <Image
           src={src}

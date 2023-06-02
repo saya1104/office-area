@@ -1,19 +1,18 @@
 import Footer from '../../components/layouts/Footer';
 import Header from '../../components/layouts/Header';
 import MemberInterviewCarousel from '../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
-import OtaYujiInterviewDetail from '../../components/templates/InterViewPage/OtaYuji/OtaYujiInterviewDetail';
-import OtaYujiTop from '../../components/templates/InterViewPage/OtaYuji/OtaYujiTop';
-
-function OtaYuji() {
+import OuKinhouInterviewDetail from '../../components/templates/InterViewPage/OuKinhou/OuKinhouInterviewDetail';
+import OuKinhouTop from '../../components/templates/InterViewPage/OuKinhou/OuKinhouTop';
+function TominagaRyo() {
   return (
     <>
       <Header />
-      <OtaYujiTop />
-      <OtaYujiInterviewDetail />
+      <OuKinhouTop />
+      <OuKinhouInterviewDetail />
       <MemberInterviewCarousel />
       <Footer />
     </>
   );
 }
 
-export default OtaYuji;
+export default TominagaRyo;

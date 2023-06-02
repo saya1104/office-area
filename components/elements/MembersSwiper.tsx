@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -58,6 +59,7 @@ const SquareStyle = styled.div`
 `;
 
 const MembersSwiper = () => {
+  const router = useRouter();
   return (
     <Swiper
       // 一度に表示するスライドの数
@@ -90,7 +92,10 @@ const MembersSwiper = () => {
       {MemberConstants.map((item, index) => {
         return (
           <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center' }}>
-            <Link href={`InterviewPage/${item.href}`} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            <Link
+              href={router.pathname === 'InterviewPage/' ? `${item.href}` : `/InterviewPage/${item.href}`}
+              style={{ textDecoration: 'none', color: '#ffffff' }}
+            >
               <InterviewCardStyle>
                 <InterviewImageStyle>
                   <Image

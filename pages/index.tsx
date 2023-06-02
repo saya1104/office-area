@@ -7,6 +7,7 @@ import MainVisual from '../components/templates/TopPage/MainVisual';
 import Product from '../components/templates/TopPage/Product';
 import Recruit from '../components/templates/TopPage/Recruit';
 import TeamCoreValues from '../components/templates/TopPage/TeamCoreValues';
+import { FollowBanner } from '../components/elements/FollowBanner';
 
 //Recruitがpostionの影響により高さが認識されなくなったため、marginで調整
 const FooterMargin = styled.div`
@@ -17,6 +18,7 @@ function Home() {
   return (
     <>
       <Header />
+      <FollowBanner />
       <MainVisual />
       <AboutTeam />
       <TeamCoreValues />
