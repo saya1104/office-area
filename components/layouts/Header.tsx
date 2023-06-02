@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { spMin } from '../../styles/breakPoint';
 import HamburgerButton from '../elements/HamburgerButton';
 import HamburgerMenu from '../elements/HamburgerMenu';
+import Link from 'next/link';
 
 const HeaderStyle = styled.header`
   display: flex;
@@ -24,7 +25,9 @@ const Header = () => {
   return (
     <HeaderStyle>
       <h1>
-        <Image src="/assets/AifulLogo.svg" alt="アイフル" width={131} height={57} />
+        <Link href="/">
+          <Image src="/assets/AifulLogo.svg" alt="アイフル" width={131} height={57} />
+        </Link>
       </h1>
       <HamburgerButton isOpen={isOpen} onClick={handleToggle} />
       <HamburgerMenu isOpen={isOpen} onClick={handleToggle} />

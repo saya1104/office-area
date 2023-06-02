@@ -54,6 +54,11 @@ const HamburgerMenu: React.FC<Props> = (props) => {
     <Container onClick={props.onClick} isOpen={props.isOpen}>
       <ul>
         <li>
+          <Link href={'/'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            TOP
+          </Link>
+        </li>
+        <li>
           <Link href={'/AboutPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             ABOUT TEAM
           </Link>
