@@ -4,7 +4,8 @@ import Header from '../../components/layouts/Header';
 import MemberInterviewCarousel from '../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
 import OuKinhouInterviewDetail from '../../components/templates/InterViewPage/OuKinhou/OuKinhouInterviewDetail';
 import OuKinhouTop from '../../components/templates/InterViewPage/OuKinhou/OuKinhouTop';
-function TominagaRyo() {
+
+function OuKinhou() {
   return (
     <>
       <Header />
@@ -17,4 +18,4 @@ function TominagaRyo() {
   );
 }
 
-export default TominagaRyo;
+export default OuKinhou;

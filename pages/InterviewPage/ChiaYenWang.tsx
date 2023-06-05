@@ -5,7 +5,7 @@ import ChiaYenWangInterviewDetail from '../../components/templates/InterViewPage
 import ChiaYenWangTop from '../../components/templates/InterViewPage/ChiaYenWang/ChiaYenWangTop';
 import MemberInterviewCarousel from '../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
 
-function OtaYuji() {
+function ChiaYenWang() {
   return (
     <>
       <Header />
@@ -18,4 +18,4 @@ function OtaYuji() {
   );
 }
 
-export default OtaYuji;
+export default ChiaYenWang;
