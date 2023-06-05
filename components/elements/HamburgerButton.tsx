@@ -8,7 +8,7 @@ type Props = {
 const ButtonStyle = styled.button<Props>`
   position: relative;
   width: 38px;
-  height: 27px;
+  height: 45px;
   z-index: 101;
   background: transparent;
   border: none;
@@ -16,7 +16,7 @@ const ButtonStyle = styled.button<Props>`
 
   span {
     position: absolute;
-    top: 28;
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
@@ -31,11 +31,11 @@ const ButtonStyle = styled.button<Props>`
       transform: ${({ isOpen }) => (isOpen ? 'translate(0, 0) rotate(-45deg)' : 'translate(0, -15px)')};
     }
     &:nth-child(2) {
-      transform: ${({ isOpen }) => (isOpen ? 'translate(0, 0) rotate(45deg)' : 'translate(0, 15px)')};
+      transform: translate(0, 15px);
+      display: ${({ isOpen }) => (isOpen ? 'none' : 'inline')};
     }
     &:nth-child(3) {
-      transform: translate(0, 0);
-      display: ${({ isOpen }) => (isOpen ? 'none' : 'inline')};
+      transform: ${({ isOpen }) => (isOpen ? 'translate(0, 0) rotate(45deg)' : 'translate(0, 0px)')};
     }
   }
 `;
