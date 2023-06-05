@@ -7,6 +7,7 @@ import MainVisual from '../components/templates/TopPage/MainVisual';
 import Product from '../components/templates/TopPage/Product';
 import Recruit from '../components/templates/TopPage/Recruit';
 import TeamCoreValues from '../components/templates/TopPage/TeamCoreValues';
+import { useLoading } from '../features/domains/hooks/useLoading';
 
 //Recruitがpostionの影響により高さが認識されなくなったため、marginで調整
 const FooterMargin = styled.div`
@@ -14,6 +15,8 @@ const FooterMargin = styled.div`
 `;
 
 function Home() {
+  const { isLoading } = useLoading();
+  if (isLoading) return null;
   return (
     <>
       <Header />

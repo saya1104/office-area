@@ -61,6 +61,8 @@ const EntryButtonStyle = styled.div`
   a {
     font-size: 25px;
     font-weight: 700;
+    color: inherit;
+    text-decoration: none;
   }
 `;
 
@@ -96,7 +98,13 @@ const Recruit = () => {
           募集要項テキストがここに入ります。募集要項テキストがここに入ります。募集要項テキストがここに入ります。募集要項テキストがここに入ります。
         </p>
         <EntryButtonStyle>
-          <a>ENTRY</a>
+          <a
+            href="https://hrmos.co/pages/aifulgroup/jobs?category=1825093156045836289"
+            target="_blank"
+            rel="noreferrer"
+          >
+            ENTRY
+          </a>
         </EntryButtonStyle>
       </RecruitTextStyle>
       <RecruitRightImageStyle>

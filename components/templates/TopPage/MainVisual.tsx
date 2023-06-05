@@ -69,11 +69,9 @@ const PersonImageStyle = styled.div`
 
 const FrameImageStyle = styled.div`
   position: absolute;
-  animation-name: Frame-Animation;
-  animation-iteration-count;
-  animation-duration: 1s;
-  width:1025px;
-  height:1030px;
+
+  width: 1025px;
+  height: 1030px;
   ${sp`
     width: 120%;
     height: auto;
