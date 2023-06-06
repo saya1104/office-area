@@ -7,7 +7,6 @@ const FollowBannerStyle = styled.button`
   top: 70vh;
   right: 5px;
   display: inline-grid;
-  color: #fff;
   width: 180px;
   height: 180px;
   border-radius: 50%;
@@ -17,35 +16,13 @@ const FollowBannerStyle = styled.button`
   transform: rotate(-60deg);
   margin-right: 35px;
   cursor: pointer;
+  border: none;
   ${sp`
     top: 75vh;
     width: 110px;
     height: 110px;
     margin-right:10px
   `}
-  }
-  span {
-    transform: rotate(60deg);
-    position: relative;
-    &::before {
-      content: '';
-      width: 130px;
-      height: 3px;
-      position: absolute;
-      top: 20px;
-      right: 80px;
-      background-color: #16223f;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 14.5px;
-      left: 115px;
-      border-style: solid;
-      border-width: 7px 0 7px 10px;
-      border-color: transparent transparent transparent #16223f;
-    }
-  }
 `;
 
 const ArrowStyle = styled.p`
@@ -103,7 +80,9 @@ const ArrowStyle = styled.p`
 
 export const FollowBanner = () => {
   return (
-    <FollowBannerStyle>
+    <FollowBannerStyle
+      onClick={() => window.open('https://hrmos.co/pages/aifulgroup/jobs?category=1825093156045836289')}
+    >
       <ArrowStyle>
         キャリア採用 <br />
         ENTRY
