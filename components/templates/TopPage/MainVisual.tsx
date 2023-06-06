@@ -69,7 +69,6 @@ const PersonImageStyle = styled.div`
 
 const FrameImageStyle = styled.div`
   position: absolute;
-
   width: 1025px;
   height: 1030px;
   ${sp`

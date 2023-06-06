@@ -1,7 +1,6 @@
 import useSWR from 'swr';
 
 export const useLoading = () => {
-  setTimeout(() => {});
   const fetcher = (url: string) => fetch(url).then((res) => res.json());
   const { data, error } = useSWR(`/`, fetcher);
 
