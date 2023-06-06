@@ -93,7 +93,7 @@ const MembersSwiper = () => {
         return (
           <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center' }}>
             <Link
-              href={router.pathname === 'InterviewPage/' ? `${item.href}` : `/InterviewPage/${item.href}`}
+              href={router.pathname === 'interview/' ? `${item.href}` : `/interview/${item.href}`}
               style={{ textDecoration: 'none', color: '#ffffff' }}
             >
               <InterviewCardStyle>

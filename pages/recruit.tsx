@@ -6,7 +6,7 @@ import SelectionFlow from '../components/templates/RecruitPage/SelectionFlow';
 import Table from '../components/templates/RecruitPage/Table';
 import TopVisual from '../components/templates/RecruitPage/TopVisual';
 
-function RecruitPage() {
+function recruit() {
   return (
     <>
       <Header />
@@ -20,4 +20,4 @@ function RecruitPage() {
   );
 }
 
-export default RecruitPage;
+export default recruit;

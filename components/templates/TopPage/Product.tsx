@@ -135,7 +135,7 @@ const Product = () => {
           <p>
             お客様に提供する価値を向上させるために、サービスの利便性を日々追求しています。開発するシステムは多岐に渡り、WEBサイトやWEBアプリケーションに限らず、スマートフォンアプリやそれらを支えるインフラに至るまで、内製化を推進している真っ最中。既存の手法にとらわれず、モダンな技術を積極的に採用していくチャレンジングな環境で開発が行われています。
           </p>
-          <ReadMore onClick={() => router.push('/ProductPage')} />
+          <ReadMore onClick={() => router.push('/product')} />
         </TextStyle>
         <ImagePcStyle>
           <Image

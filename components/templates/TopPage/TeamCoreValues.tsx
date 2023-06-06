@@ -95,7 +95,7 @@ const TeamCoreValues = () => {
           (見続ける/見る)ための「羅針盤」が必要です。アイフルエンジニアチームでは、VMV
           (経営理念)に準拠させた「チームコアバリュー」を掲げ、心理的安全性の担保を中心に据えています。さまざまな個性を尊重しながら、自律型チームの運営に取り組んでいる最中です。
         </p>
-        <ReadMore onClick={() => router.push('/AboutPage#TeamCoreValues')} />
+        <ReadMore onClick={() => router.push('/about#TeamCoreValues')} />
       </TeamCoreValuesStyle>
     </SectionStyle>
   );
