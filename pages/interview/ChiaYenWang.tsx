@@ -5,7 +5,7 @@ import ChiaYenWangInterviewDetail from '../../components/templates/InterViewPage
 import ChiaYenWangTop from '../../components/templates/InterViewPage/ChiaYenWang/ChiaYenWangTop';
 import MemberInterviewCarousel from '../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
 
-function ChiaYenWang() {
+function chiayenwang() {
   return (
     <>
       <Header />
@@ -18,4 +18,4 @@ function ChiaYenWang() {
   );
 }
 
-export default ChiaYenWang;
+export default chiayenwang;

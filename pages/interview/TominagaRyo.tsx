@@ -5,7 +5,7 @@ import MemberInterviewCarousel from '../../components/templates/InterViewPage/In
 import TominagaRyoInterviewDetail from '../../components/templates/InterViewPage/TominagaRyo/TominagaRyoInterviewDetail';
 import TominagaRyoTop from '../../components/templates/InterViewPage/TominagaRyo/TominagaRyoTop';
 
-function TominagaRyo() {
+function tominagaryo() {
   return (
     <>
       <Header />
@@ -18,4 +18,4 @@ function TominagaRyo() {
   );
 }
 
-export default TominagaRyo;
+export default tominagaryo;

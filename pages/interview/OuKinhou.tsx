@@ -5,7 +5,7 @@ import MemberInterviewCarousel from '../../components/templates/InterViewPage/In
 import OuKinhouInterviewDetail from '../../components/templates/InterViewPage/OuKinhou/OuKinhouInterviewDetail';
 import OuKinhouTop from '../../components/templates/InterViewPage/OuKinhou/OuKinhouTop';
 
-function OuKinhou() {
+function oukinhou() {
   return (
     <>
       <Header />
@@ -18,4 +18,4 @@ function OuKinhou() {
   );
 }
 
-export default OuKinhou;
+export default oukinhou;

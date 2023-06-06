@@ -5,7 +5,7 @@ import MemberInterviewCarousel from '../../components/templates/InterViewPage/In
 import OtaYujiInterviewDetail from '../../components/templates/InterViewPage/OtaYuji/OtaYujiInterviewDetail';
 import OtaYujiTop from '../../components/templates/InterViewPage/OtaYuji/OtaYujiTop';
 
-function OtaYuji() {
+function otayuji() {
   return (
     <>
       <Header />
@@ -18,4 +18,4 @@ function OtaYuji() {
   );
 }
 
-export default OtaYuji;
+export default otayuji;
