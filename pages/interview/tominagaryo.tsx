@@ -1,4 +1,3 @@
-import { FollowBanner } from '../../components/elements/FollowBanner';
 import Footer from '../../components/layouts/Footer';
 import Header from '../../components/layouts/Header';
 import MemberInterviewCarousel from '../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
@@ -9,7 +8,6 @@ function tominagaryo() {
   return (
     <>
       <Header />
-      <FollowBanner />
       <TominagaRyoTop />
       <TominagaRyoInterviewDetail />
       <MemberInterviewCarousel />
