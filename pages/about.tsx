@@ -4,7 +4,7 @@ import Header from '../components/layouts/Header';
 import AboutTeamDetails from '../components/templates/AboutTeamPage/AboutTeamDetails';
 import TeamCoreValueDetail from '../components/templates/AboutTeamPage/TeamCoreValueDetail';
 
-function AboutPage() {
+function about() {
   return (
     <>
       <Header />
@@ -16,4 +16,4 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default about;

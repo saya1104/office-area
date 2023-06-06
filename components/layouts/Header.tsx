@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { spMin } from '../../styles/breakPoint';
 import HamburgerButton from '../elements/HamburgerButton';
@@ -24,7 +25,9 @@ const Header = () => {
   return (
     <HeaderStyle>
       <h1>
-        <Image src="/assets/AifulLogo.svg" alt="アイフル" width={131} height={57} />
+        <Link href="/">
+          <Image src="/assets/AifulLogo.svg" alt="アイフル" width={131} height={57} />
+        </Link>
       </h1>
       <HamburgerButton isOpen={isOpen} onClick={handleToggle} />
       <HamburgerMenu isOpen={isOpen} onClick={handleToggle} />

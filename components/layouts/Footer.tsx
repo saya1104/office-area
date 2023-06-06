@@ -134,27 +134,27 @@ const Footer = () => {
           </Link>
         </ListStyle>
         <ListStyle>
-          <Link href={'/AboutPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+          <Link href={'/about'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             ABOUT TEAM
           </Link>
         </ListStyle>
         <ListStyle>
-          <Link href={'/AboutPage#TeamCoreValues'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+          <Link href={'/about#TeamCoreValues'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             TEAM CORE VALUES
           </Link>
         </ListStyle>
         <ListStyle>
-          <Link href={'/ProductPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+          <Link href={'/product'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             PRODUCT
           </Link>
         </ListStyle>
         <ListStyle>
-          <Link href={'/InterviewPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+          <Link href={'/interview'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             INTERVIEW
           </Link>
         </ListStyle>
         <ListStyle>
-          <Link href={'/RecruitPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+          <Link href={'/recruit'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             RECRUIT
           </Link>
         </ListStyle>

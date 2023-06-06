@@ -77,7 +77,7 @@ function Top() {
       <Wrapper>
         {MemberConstants.map((item, index) => {
           return (
-            <Link href={`/InterviewPage/${item.href}`} style={{ textDecoration: 'none', color: '#ffffff' }} key={index}>
+            <Link href={`/interview/${item.href}`} style={{ textDecoration: 'none', color: '#ffffff' }} key={index}>
               <InterviewCardStyle>
                 <InterviewImageStyle>
                   <Image

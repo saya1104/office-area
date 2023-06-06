@@ -54,23 +54,28 @@ const HamburgerMenu: React.FC<Props> = (props) => {
     <Container onClick={props.onClick} isOpen={props.isOpen}>
       <ul>
         <li>
-          <Link href={'/AboutPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+          <Link href={'/'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            TOP
+          </Link>
+        </li>
+        <li>
+          <Link href={'/about'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             ABOUT TEAM
           </Link>
         </li>
         <li>
-          <Link href={'/AboutPage#TeamCoreValues'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+          <Link href={'/about#TeamCoreValues'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             TEAM CORE VALUES
           </Link>
         </li>
         <li>
-          <Link href={'/ProductPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+          <Link href={'/product'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             PRODUCT
           </Link>
         </li>
         <li>MEMBER</li>
         <li>
-          <Link href={'/RecruitPage'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+          <Link href={'/recruit'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             RECRUIT
           </Link>
         </li>

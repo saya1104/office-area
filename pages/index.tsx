@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FollowBanner } from '../components/elements/FollowBanner';
 import Footer from '../components/layouts/Footer';
 import Header from '../components/layouts/Header';
 import AboutTeam from '../components/templates/TopPage/AboutTeam';
@@ -20,6 +21,7 @@ function Home() {
   return (
     <>
       <Header />
+      <FollowBanner />
       <MainVisual />
       <AboutTeam />
       <TeamCoreValues />

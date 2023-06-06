@@ -18,7 +18,7 @@ const SectionStyle = styled.div`
 
 const AboutTeamStyle = styled.div`
   position: relative;
-  width: 500px;
+  width: 520px;
   min-width: 300px;
   margin: 0 10%;
   ${sp`
@@ -88,12 +88,10 @@ const AboutTeam = () => {
           />
         </ImageSpStyle>
         <p>
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。
-          テキストが入ります。 テキストが入ります。
+          アイフルエンジニアチームはグループ会社を含む自社サービスや社内システムの内製化を推進するスペシャリスト集団です。現場から日々生まれるお客様のニーズを迅速かつ正確に捉え、お客様への提供価値の最大化に常にチャレンジしています。
         </p>
         <ReadMoreStyle>
-          <ReadMore onClick={() => router.push('/AboutPage')} />
+          <ReadMore onClick={() => router.push('/about')} />
         </ReadMoreStyle>
       </AboutTeamStyle>
       <ImagePcStyle>

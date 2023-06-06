@@ -18,7 +18,7 @@ export const MemberConstants: Membertypes[] = [
     name: 'Y.O',
     hireYear: '2021',
     position: 'AWSチーム チーフエンジニア',
-    href: 'OtaYuji',
+    href: 'otayuji',
   },
   {
     imageSrc: '/assets/InterviewWang.png',
@@ -28,7 +28,7 @@ export const MemberConstants: Membertypes[] = [
     name: 'C.W',
     hireYear: '2022',
     position: 'フロントエンドエンジニア',
-    href: '',
+    href: 'chiayenwang',
   },
   {
     imageSrc: '/assets/InterviewTominaga.png',
@@ -38,7 +38,7 @@ export const MemberConstants: Membertypes[] = [
     name: 'T.M',
     hireYear: '20XX',
     position: 'iOSアプリエンジニア',
-    href: '',
+    href: 'tominagaryo',
   },
   {
     imageSrc: '/assets/InterviewOu.png',
@@ -48,6 +48,6 @@ export const MemberConstants: Membertypes[] = [
     name: 'K.O',
     hireYear: '2022',
     position: 'バックエンドエンジニア',
-    href: '',
+    href: 'oukinhou',
   },
 ];

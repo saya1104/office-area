@@ -4,7 +4,7 @@ import Header from '../components/layouts/Header';
 import ProductDetails from '../components/templates/ProductPage/ProductDetails';
 import TechnologySection from '../components/templates/ProductPage/TechnologySection';
 
-function ProductPage() {
+function product() {
   return (
     <>
       <Header />
@@ -16,4 +16,4 @@ function ProductPage() {
   );
 }
 
-export default ProductPage;
+export default product;
