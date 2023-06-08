@@ -6,7 +6,12 @@ import { tablet } from '../../../styles/breakPoint';
 import { ProductLists } from '../../elements/ProductLists';
 
 const Wrapper = styled.div`
+  width: 100%;
+  height: auto;
   position: relative;
+  ${tablet`
+  background-color: #596480;
+  `}
 `;
 
 const WavePcStyle = styled.div`
@@ -14,21 +19,15 @@ const WavePcStyle = styled.div`
   z-index: -1;
   ${tablet`
   display: none;
-  &.isOpen{
-    margin-bottom:800px;
-  }
+
 `}
 `;
 
 const WaveSpStyle = styled.div`
   display: none;
   ${tablet`
-  height:650px;
   display: block;
   z-index: -1;
-  &.isOpen{
-    margin-bottom:800px;
-  }
 `}
 `;
 
@@ -47,30 +46,48 @@ function TechnologySection() {
           height={858}
           sizes="100vw"
           style={{
-            width: '100%',
+            width: '110%',
             height: 'auto',
           }}
+        />
+        <ProductLists
+          ListData={ListConstants.technologyData}
+          isOpenData={ListConstants.isOpenData}
+          onClick={onClickAccordionToggle}
+          isOpen={isOpen}
         />
       </WavePcStyle>
       <WaveSpStyle className={isOpen ? 'isOpen' : ''}>
         <Image
-          src="/assets/PRODUCT_wave_SP.png"
+          src="/assets/Wave_Top.png"
           alt="alful engineer recruitment"
-          width={390}
-          height={656}
+          width={1511}
+          height={858}
           sizes="100vw"
           style={{
             width: '100%',
             height: 'auto',
           }}
         />
+        <ProductLists
+          ListData={ListConstants.technologyData}
+          isOpenData={ListConstants.isOpenData}
+          onClick={onClickAccordionToggle}
+          isOpen={isOpen}
+        />
+        <Image
+          src="/assets/Wave_Bottom.png"
+          alt="alful engineer recruitment"
+          width={1511}
+          height={858}
+          sizes="100vw"
+          style={{
+            width: '100%',
+            height: 'auto',
+            marginBottom: '-5px',
+          }}
+        />
       </WaveSpStyle>
-      <ProductLists
-        ListData={ListConstants.technologyData}
-        isOpenData={ListConstants.isOpenData}
-        onClick={onClickAccordionToggle}
-        isOpen={isOpen}
-      />
     </Wrapper>
   );
 }

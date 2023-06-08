@@ -60,7 +60,6 @@ const SquareStyle = styled.div`
 
 const MembersSwiper = () => {
   const viewWidth = document.documentElement.clientWidth;
-  console.log(viewWidth);
   const router = useRouter();
   return (
     <Swiper

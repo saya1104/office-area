@@ -11,7 +11,7 @@ import { useLoading } from '../features/domains/hooks/useLoading';
 
 //Recruitがpostionの影響により高さが認識されなくなったため、marginで調整
 const FooterMargin = styled.div`
-  margin-top: 500px;
+  margin-top: 100px;
 `;
 
 function Home() {
