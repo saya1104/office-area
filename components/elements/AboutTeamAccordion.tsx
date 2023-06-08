@@ -1,27 +1,28 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { sp } from '../../styles/breakPoint';
+import { tablet } from '../../styles/breakPoint';
 import type { AccordionType } from '../../features/domains/constants/AccordionConstants';
 
 const Wrapper = styled.div`
-  width: 580px;
-  ${sp`
-    margin-top:150px;
+  width: 40vw;
+  max-width: 580px;
+  ${tablet`
+    margin-top:50px;
     width:90vw;
     min-width:280px
   `}
 `;
 const AccordionMenuStyle = styled.div`
-  width: 580px;
+  max-width: 580px;
   background: #16223f;
   position: relative;
-  ${sp`
+  ${tablet`
     width:90vw;
     min-width:280px;
   `};
 `;
 const TitleStyle = styled.div`
-  width: 140px;
+  max-width: 140px;
   height: 40px;
   background: #4ef4ff;
   position: relative;
@@ -47,19 +48,18 @@ const FlexStyle = styled.div`
 `;
 
 const SubTitleStyle = styled.div`
-  margin-top: 10px;
-  margin-right:0
-  width: 540px;
+  margin: 10px 10px 0 0;
+  max-width: 580px;
   white-space: pre-wrap;
   p {
-    font-size:25px;
-    margin-bottom:0;
+    font-size: 25px;
+    margin-bottom: 0;
     color: #4ef4ff;
     span {
       display: block;
     }
   }
-  ${sp`
+  ${tablet`
   width:90vw;
   min-width:280px;
     p{
@@ -81,13 +81,13 @@ const PcButtonStyle = styled.div`
     margin-bottom: 0;
     transform: rotate(315deg);
   }
-  ${sp`
+  ${tablet`
   display: none;
   `}
 `;
 
 const SpButtonStyle = styled.div`
-  ${sp`
+  ${tablet`
   position: absolute;
   top:100%; 
   right:0%;
@@ -126,7 +126,7 @@ const DetailStyle = styled.div`
     font-weight: 200;
     font-size: 20px;
     color: #b7c4e5;
-    ${sp`
+    ${tablet`
     display:block;
     margin: 10px 0 0 0;
     `}

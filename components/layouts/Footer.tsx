@@ -7,7 +7,7 @@ import { sp, tablet } from '../../styles/breakPoint';
 const FooterStyle = styled.footer`
   position: relative;
   padding: 45px 100px 80px 100px;
-  margin-top: 100px;
+  margin-top: 300px;
 
   ${tablet`
     padding: 45px 20px 80px 20px;

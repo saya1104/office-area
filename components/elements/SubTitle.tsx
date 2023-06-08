@@ -8,7 +8,7 @@ const SubTitleStyle = styled.div`
     line-height: 1.5;
     color: #ff318f;
     font-size: 40px;
-    margin: 70px 0 20px 0;
+    margin: 100px 0 20px 0;
     font-weight: 200;
     ${sp`
       font-size:25px;
