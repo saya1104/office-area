@@ -7,11 +7,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const InterviewStyle = styled.div`
-  margin: 100px auto;
+  margin: 0 auto 50px auto;
   text-align: center;
   max-width: 700px;
   width: 70%;
   ${sp`
+  margin: 0 auto 50px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
