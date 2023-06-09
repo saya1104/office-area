@@ -6,15 +6,16 @@ const RecruitStyle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 100px;
   ${sp`
   display: inline;
-  position: relative;
   `}
 `;
 
 const RecruitLeftImageStyle = styled.div`
   ${sp`
-  max-width: 354px;
+  max-width: 250px;
+  margin:200px 0 -50px -60px ;
 `}
 `;
 
@@ -25,14 +26,8 @@ const RecruitTextStyle = styled.div`
   min-width: 350px;
   ${sp`
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
   min-width: auto;
-  position: absolute;
-  top: 280px;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   `}
   h3 {
     background: linear-gradient(90deg, #ff318f 32.75%, #ff7d53 67.17%);
@@ -68,11 +63,9 @@ const EntryButtonStyle = styled.div`
 
 const RecruitRightImageStyle = styled.div`
   ${sp`
-  max-width: 339px;
-  margin: 0 0 0 auto;
-  position: absolute;
-  top: 550px;
-  right: 0;
+  max-width: 200px;
+  margin: -80px 0 0 auto;
+
 `}
 `;
 

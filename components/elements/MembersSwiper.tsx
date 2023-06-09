@@ -59,35 +59,36 @@ const SquareStyle = styled.div`
 `;
 
 const MembersSwiper = () => {
+  const viewWidth = document.documentElement.clientWidth;
   const router = useRouter();
   return (
     <Swiper
       // 一度に表示するスライドの数
       slidesPerView={1}
       // スライド間の余白
-      spaceBetween={50}
       pagination={{
         clickable: true,
       }}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
-      loop={true}
       speed={6000}
+      loop={viewWidth < 1450}
+      watchOverflow={true}
       autoplay={{
         delay: 0,
       }}
       breakpoints={{
         770: {
           slidesPerView: 2,
-          spaceBetween: 50,
+        },
+        1100: {
+          slidesPerView: 3,
         },
 
         1445: {
           slidesPerView: 4,
-          spaceBetween: 50,
         },
       }}
-      style={{ margin: 0, width: '100%' }}
     >
       {MemberConstants.map((item, index) => {
         return (

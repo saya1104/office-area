@@ -1,4 +1,3 @@
-import { FollowBanner } from '../components/elements/FollowBanner';
 import Footer from '../components/layouts/Footer';
 import Header from '../components/layouts/Header';
 import ProductDetails from '../components/templates/ProductPage/ProductDetails';
@@ -10,7 +9,6 @@ function product() {
       <Header />
       <ProductDetails />
       <TechnologySection />
-      <FollowBanner />
       <Footer />
     </>
   );

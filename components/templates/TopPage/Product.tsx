@@ -9,32 +9,32 @@ const ProductStyle = styled.div`
   position: relative;
 `;
 
-const TextStyle = styled.div`
-  position: absolute;
-  top: 20vw;
-  left: 10%;
-  width: 35%;
-  max-width: 520px;
-  height: auto;
+const Flex = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 10vw 30vw;
   ${tablet`
-  width: 42%;
-  `}
+   margin: 0 8vw 30vw;
+  `} ${sp`
+    margin: 0 30px 60vw; 
+  `};
+`;
+
+const TextStyle = styled.div`
+  width: 500px;
   ${sp`
-  max-width:none;
-  top: 12%;
-  left: auto;
   width: auto;
-  margin: 0 30px;
+  margin: 0;
   `}
   h3 {
-    font-size: 34px;
     font-weight: 600;
   }
   p {
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
-    margin-bottom: 7%;
   }
 `;
 
@@ -43,14 +43,8 @@ const Gradation = styled.span`
 `;
 
 const ImagePcStyle = styled.div`
-  position: absolute;
-  width: 38%;
-  top: 23%;
-  right: 10%;
-  ${tablet`
-  margin-top:12vw;
-  width: 35%;
-  `}
+  margin-left: 8%;
+
   ${sp`
   display: none;
   `}
@@ -67,9 +61,17 @@ const ImageSpStyle = styled.div`
 `;
 
 const WavePcStyle = styled.div`
+  position: absolute;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
   display: block;
   z-index: -1;
+  ${tablet`
+   width:120vw;
+   right:0.5%;
+  `}
   ${sp`
+  width:100vw;
   display: none;
 `}
 `;
@@ -77,6 +79,9 @@ const WavePcStyle = styled.div`
 const WaveSpStyle = styled.div`
   display: none;
   ${sp`
+  position: absolute;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
   display: block;
   z-index: -1;
 `}
@@ -87,69 +92,71 @@ const Product = () => {
   return (
     <>
       <ProductStyle>
-        <WavePcStyle>
-          <Image
-            src="/assets/TopProductWavePc.svg"
-            alt="TopProductWave"
-            width={1514}
-            height={968}
-            sizes="100vw"
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </WavePcStyle>
-        <WaveSpStyle>
-          <Image
-            src="/assets/TopProductWaveSp.svg"
-            alt="TopProductWave"
-            width={390}
-            height={889}
-            sizes="100vw"
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </WaveSpStyle>
-        <TextStyle>
-          <h3>
-            <Gradation>PRODUCT</Gradation>
-          </h3>
-          <ImageSpStyle>
-            <div>
-              <Image
-                src="/assets/ProductImage.svg"
-                alt="ProductImage"
-                width={609}
-                height={478}
-                sizes="100vw"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                }}
-              />
-            </div>
-          </ImageSpStyle>
-          <p>
-            お客様に提供する価値を向上させるために、サービスの利便性を日々追求しています。開発するシステムは多岐に渡り、WEBサイトやWEBアプリケーションに限らず、スマートフォンアプリやそれらを支えるインフラに至るまで、内製化を推進している真っ最中。既存の手法にとらわれず、モダンな技術を積極的に採用していくチャレンジングな環境で開発が行われています。
-          </p>
-          <ReadMore onClick={() => router.push('/product')} />
-        </TextStyle>
-        <ImagePcStyle>
-          <Image
-            src="/assets/ProductImage.svg"
-            alt="ProductImage"
-            width={609}
-            height={478}
-            sizes="100vw"
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </ImagePcStyle>
+        <Flex>
+          <TextStyle>
+            <h3>
+              <Gradation>PRODUCT</Gradation>
+            </h3>
+            <ImageSpStyle>
+              <div>
+                <Image
+                  src="/assets/ProductImage.svg"
+                  alt="ProductImage"
+                  width={609}
+                  height={478}
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
+                />
+              </div>
+            </ImageSpStyle>
+            <p>
+              お客様に提供する価値を向上させるために、サービスの利便性を日々追求しています。開発するシステムは多岐に渡り、WEBサイトやWEBアプリケーションに限らず、スマートフォンアプリやそれらを支えるインフラに至るまで、内製化を推進している真っ最中。既存の手法にとらわれず、モダンな技術を積極的に採用していくチャレンジングな環境で開発が行われています。
+            </p>
+            <ReadMore onClick={() => router.push('/product')} />
+          </TextStyle>
+          <ImagePcStyle>
+            <Image
+              src="/assets/ProductImage.svg"
+              alt="ProductImage"
+              width={609}
+              height={478}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+          </ImagePcStyle>
+          <WavePcStyle>
+            <Image
+              src="/assets/TopProductWavePc.svg"
+              alt="TopProductWave"
+              width={1514}
+              height={968}
+              sizes="100vw"
+              style={{
+                width: '110%',
+                height: 'auto',
+              }}
+            />
+          </WavePcStyle>
+          <WaveSpStyle>
+            <Image
+              src="/assets/TopProductWaveSp.svg"
+              alt="TopProductWave"
+              width={390}
+              height={889}
+              sizes="100vw"
+              style={{
+                width: '110%',
+                height: 'auto',
+              }}
+            />
+          </WaveSpStyle>
+        </Flex>
       </ProductStyle>
     </>
   );

@@ -2,15 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import AifulLogo from '../../public/assets/AifulLogo.svg';
-import { sp, spMin } from '../../styles/breakPoint';
+import { sp, tablet } from '../../styles/breakPoint';
 
 const FooterStyle = styled.footer`
   position: relative;
-  padding: 45px 100px 80px 100px;
-  margin-top: 100px;
+  padding: 45px 100px 80px;
+  margin-top: 300px;
 
-  ${spMin`
-    padding: 45px 20px 80px 20px;
+  ${tablet`
+    padding: 45px 20px 80px ;
   `}
 `;
 
@@ -107,10 +107,11 @@ const ArrowStyle = styled.div`
   right: 100px;
   bottom: 60px;
 
-  ${sp`
+  ${tablet`
     position: initial;
     width: 100px;
-    margin: 0 0 0 auto;
+    margin: -60px 0 0 auto;
+
   `}
 `;
 

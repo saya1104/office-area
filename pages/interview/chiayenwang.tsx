@@ -1,4 +1,3 @@
-import { FollowBanner } from '../../components/elements/FollowBanner';
 import Footer from '../../components/layouts/Footer';
 import Header from '../../components/layouts/Header';
 import ChiaYenWangInterviewDetail from '../../components/templates/InterViewPage/ChiaYenWang/ChiaYenWangInterviewDetail';
@@ -9,7 +8,6 @@ function chiayenwang() {
   return (
     <>
       <Header />
-      <FollowBanner />
       <ChiaYenWangTop />
       <ChiaYenWangInterviewDetail />
       <MemberInterviewCarousel />
