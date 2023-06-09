@@ -8,7 +8,7 @@ import EachPageTop from '../../elements/EachPageTop';
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
-  margin: 100px 8vw 200px;
+  margin: 100px 8vw 400px;
   ${tablet`
     margin:100px 3vw 200px ;
   `};

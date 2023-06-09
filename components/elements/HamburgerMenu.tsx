@@ -43,7 +43,7 @@ const Container = styled.div<Props>`
     margin-left: 100px;
     `}
     ${sp`
-    margin-top: 230px;
+    margin-top: 100px;
     margin-left: 5px;
     `}
   }
@@ -64,16 +64,15 @@ const HamburgerMenu: React.FC<Props> = (props) => {
           </Link>
         </li>
         <li>
-          <Link href={'/about#TeamCoreValues'} style={{ textDecoration: 'none', color: '#ffffff' }}>
-            TEAM CORE VALUES
-          </Link>
-        </li>
-        <li>
           <Link href={'/product'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             PRODUCT
           </Link>
         </li>
-        <li>MEMBER</li>
+        <li>
+          <Link href={'/interview'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            INTERVIEW
+          </Link>
+        </li>
         <li>
           <Link href={'/recruit'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             RECRUIT

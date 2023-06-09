@@ -31,13 +31,7 @@ const UlStyle = styled.ul`
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  max-width: 900px;
-  width: 80%;
-  min-width: 600px;
-
-  li:nth-of-type(3) {
-    margin-right: 60px;
-  }
+  width: auto;
 
   ${sp`
     display: block;
@@ -104,7 +98,7 @@ const ArrowStyle = styled.div`
   flex-direction: column;
   align-items: center;
   position: absolute;
-  right: 100px;
+  right: 50px;
   bottom: 60px;
 
   ${tablet`
@@ -137,11 +131,6 @@ const Footer = () => {
         <ListStyle>
           <Link href={'/about'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             ABOUT TEAM
-          </Link>
-        </ListStyle>
-        <ListStyle>
-          <Link href={'/about#TeamCoreValues'} style={{ textDecoration: 'none', color: '#ffffff' }}>
-            TEAM CORE VALUES
           </Link>
         </ListStyle>
         <ListStyle>

@@ -61,10 +61,10 @@ const TitleStyle = styled.div`
     width: fit-content;
     ${GradationStyle}
     font-weight: 200;
-    font-size: 60px;
+    font-size: min(10vw, 60px);
     ${tablet`
       margin: 0 auto 20px auto;
-      font-size: 10vw;
+      
     `};
   }
 `;
