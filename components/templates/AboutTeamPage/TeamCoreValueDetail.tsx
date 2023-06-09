@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { TitleGradationStyle } from '../../../styles/Styled';
 import { spMin, tablet, sp } from '../../../styles/breakPoint';
 import { SubTitle } from '../../elements/SubTitle';
+import { TeamCoreValueSummary } from '../../layouts/TeamCoreValueSummary';
 
 const SectionStyle = styled.div`
   display: flex;
@@ -32,12 +33,6 @@ const TeamCoreValueStyle = styled.div`
 
     ${spMin`
       margin: 10px;
-    `}
-  }
-  br {
-    display: none;
-    ${tablet`
-      display:block;
     `}
   }
 `;
@@ -92,54 +87,10 @@ const SpTeamCoreImageStyle = styled.div`
 const TeamCoreValueDetail = () => {
   return (
     <>
-      <SectionStyle>
-        <TeamCoreValueStyle>
-          <TitleStyle id="TeamCoreValues">
-            <h2>TEAM CORE VALUES</h2>
-          </TitleStyle>
-          <SubTitle>
-            アイフルエンジニア
-            <br />
-            チームの特徴
-          </SubTitle>
-          <SpPersonImageStyle>
-            <Image
-              src="/assets/TeamCoreValuePerson.png"
-              alt="TeamCoreValuePerson"
-              width={646}
-              height={619}
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
-            />
-          </SpPersonImageStyle>
-          <p>
-            お客様への価値を追求するためには「誰もが率直な意見を言える環境づくり
-            (心理的安全性の担保)」が最も重要だと考えています。
-            <br />
-            ただし、それは単に居心地のよい職場や緊張感のない関係性などでは決してなく「お互いを尊重しながらも、全員が目指すべきゴールに向かって建設的な議論ができるチーム像」と捉えています。
-            <br />
-            <br />
-            こうした環境づくりの一環として「チームコアバリュー」をはじめ「リーダークラスのメンバーやプロジェクトごとの振り返りミーティング
-            (KPT)」や失敗から教訓を得る「ポストモーテム」などの特徴的な取り組みがあります。
-          </p>
-        </TeamCoreValueStyle>
-        <PcPersonImageStyle>
-          <Image
-            src="/assets/TeamCoreValuePerson.png"
-            alt="TeamCoreValuePerson"
-            width={646}
-            height={619}
-            sizes="100vw"
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </PcPersonImageStyle>
-      </SectionStyle>
+      <TitleStyle id="TeamCoreValues">
+        <h2>TEAM CORE VALUES</h2>
+      </TitleStyle>
+      <TeamCoreValueSummary />
       <SectionStyle>
         <PcTeamCoreImageStyle>
           <Image
