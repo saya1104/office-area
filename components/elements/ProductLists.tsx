@@ -33,7 +33,6 @@ const SpListStyle = styled.div`
   display: none;
   ${tablet`
   display:block;
-  position: absolute;
   width:90vw;
   top: 80px;
   margin:0 5vw;

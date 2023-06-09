@@ -26,5 +26,6 @@ export const ListConstants: List = {
     'esa',
     'miro',
     'draw.io',
+    'Salesforse',
   ],
 };

@@ -1,67 +1,44 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { sp } from '../../../../styles/breakPoint';
 import MembersSwiper from '../../../elements/MembersSwiper';
 
 const Wrapper = styled.div`
-  margin: 300px 0 400px 0;
   position: relative;
+  background-color: #596480;
   h3 {
     text-align: center;
     margin-bottom: 100px;
   }
 `;
 
-const PcWaveStyle = styled.div`
-  position: absolute;
-  z-index: -1;
-  top: -10vw;
-  ${sp`
-	display:none;
-  `}
-`;
-
-const SpWaveStyle = styled.div`
-  display: none;
-  ${sp`
-  top: -10vw;
-  display:block;
-  position: absolute;
-  z-index: -1;
-  `}
-`;
-
 function MemberInterviewCarousel() {
   return (
     <Wrapper>
-      <PcWaveStyle>
-        <Image
-          src="../assets/InterviewWavePc.png"
-          alt="Wave Image"
-          width={1512}
-          height={996}
-          sizes="100vw"
-          style={{
-            width: '100vw',
-            height: 'auto',
-          }}
-        />
-      </PcWaveStyle>
-      <SpWaveStyle>
-        <Image
-          src="../assets/InterviewWaveSp.png"
-          alt="Wave Image"
-          width={390}
-          height={858}
-          sizes="100vw"
-          style={{
-            width: '100vw',
-            height: 'auto',
-          }}
-        />
-      </SpWaveStyle>
+      <Image
+        src="/assets/Wave_Top.png"
+        alt="aiful engineer recruitment"
+        width={1511}
+        height={858}
+        sizes="100vw"
+        style={{
+          width: '100%',
+          height: 'auto',
+        }}
+      />
       <h3>MEMBER</h3>
       <MembersSwiper />
+      <Image
+        src="/assets/Wave_Bottom.png"
+        alt="aiful engineer recruitment"
+        width={1511}
+        height={858}
+        sizes="100vw"
+        style={{
+          width: '100%',
+          height: 'auto',
+          marginBottom: '-5px',
+        }}
+      />
     </Wrapper>
   );
 }

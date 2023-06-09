@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { sp } from '../../styles/breakPoint';
 
-const FollowBannerStyle = styled.button`
+const FollowBannerStyle = styled.button<Props>`
+  opacity: ${({ isBottom }) => (isBottom ? '0' : '')};
+  transition: opacity 0.5s;
   position: fixed;
   z-index: 30;
   top: 70vh;
@@ -18,7 +20,7 @@ const FollowBannerStyle = styled.button`
   cursor: pointer;
   border: none;
   ${sp`
-    top: 75vh;
+    top: 75vh; 
     width: 110px;
     height: 110px;
     margin-right:10px
@@ -78,10 +80,15 @@ const ArrowStyle = styled.p`
 	`}
 `;
 
-export const FollowBanner = () => {
+type Props = {
+  isBottom: boolean;
+};
+
+export const FollowBanner: React.FC<Props> = ({ isBottom }) => {
   return (
     <FollowBannerStyle
       onClick={() => window.open('https://hrmos.co/pages/aifulgroup/jobs?category=1825093156045836289')}
+      isBottom={isBottom}
     >
       <ArrowStyle>
         キャリア採用 <br />

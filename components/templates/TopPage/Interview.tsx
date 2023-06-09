@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const InterviewStyle = styled.div`
-  margin: 100px auto;
+  margin: 0 auto 50px;
   text-align: center;
   max-width: 700px;
   width: 70%;

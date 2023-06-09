@@ -7,15 +7,18 @@ import EachPageTop from '../../elements/EachPageTop';
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-  margin-bottom: 200px;
+  justify-content: space-evenly;
+  margin: 100px 8vw 200px;
+  ${tablet`
+    margin:100px 3vw 200px ;
+  `};
 `;
 
 const ImageStyle = styled.div`
   width: 546px;
   margin-top: 50px;
   display: block;
-  margin-right: 8%;
+  text-align: center;
   ${tablet`
     display: none;
   `}
@@ -26,8 +29,8 @@ const ImageSpStyle = styled.div`
   ${tablet`
     display: block;
     text-align: center;
-    max-width: 546px;
     margin: 0 auto;
+    max-width: 546px;
   `}
 `;
 
