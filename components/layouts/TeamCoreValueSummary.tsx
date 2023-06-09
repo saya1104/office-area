@@ -1,21 +1,35 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { tablet, sp } from '../../styles/breakPoint';
+import { TitleGradationStyle } from '../../styles/Styled';
+import { tablet, spMin } from '../../styles/breakPoint';
 import { SubTitle } from '../elements/SubTitle';
+import type { TeamCoreValueType } from '../../features/domains/constants/TeamCoreValueConstants';
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-  margin: 0 8vw;
-  ${sp`
-    margin:0 3vw;
-  `};
+  justify-content: space-evenly;
+  &.isReverse {
+    flex-direction: row-reverse;
+    margin-top: 100px;
+  }
+`;
+const TitleStyle = styled.div`
+  h2 {
+    white-space: normal;
+    ${TitleGradationStyle}
+    font-weight: 200;
+    font-size: 60px;
+    ${spMin`
+      text-align: center;
+      margin-bottom:10px;
+      font-size: 10vw;
+    `}
+  }
 `;
 
 const Summary = styled.div`
   width: 600px;
-  min-width: 300px;
-
+  min-width: 100px;
   p {
     font-size: 18px;
     font-weight: 400;
@@ -29,34 +43,39 @@ const PcImageStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 530px;
+  &.isReverse {
+    padding: 30px;
+  }
   ${tablet`
   display: none;
-  `}
+  `};
 `;
 
 const SpImageStyle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   display: none;
   ${tablet`
-   display: block;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+     &.isReverse {
+    padding: 40px;
+  }
   `}
 `;
 
-export const TeamCoreValueSummary = () => {
+export const TeamCoreValueSummary = ({ title, subtitle, text, src, alt }: TeamCoreValueType) => {
   return (
-    <Wrapper>
+    <Wrapper className={src === '/assets/TeamCoreValuesImage.svg' ? 'isReverse' : ''}>
       <Summary>
-        <SubTitle>
-          アイフルエンジニア
-          <br className="br-sp" />
-          チームの特徴
-        </SubTitle>
-        <SpImageStyle>
+        <TitleStyle id="TeamCoreValues">
+          <h2>{title}</h2>
+        </TitleStyle>
+        <SubTitle>{subtitle}</SubTitle>
+        <SpImageStyle className={src === '/assets/TeamCoreValuesImage.svg' ? 'isReverse' : ''}>
           <Image
-            src="/assets/TeamCoreValuePerson.png"
-            alt="TeamCoreValuePerson"
+            src={src}
+            alt={alt}
             width={646}
             height={619}
             sizes="100vw"
@@ -66,21 +85,12 @@ export const TeamCoreValueSummary = () => {
             }}
           />
         </SpImageStyle>
-        <p>
-          お客様への価値を追求するためには「誰もが率直な意見を言える環境づくり
-          (心理的安全性の担保)」が最も重要だと考えています。
-          <br />
-          ただし、それは単に居心地のよい職場や緊張感のない関係性などでは決してなく「お互いを尊重しながらも、全員が目指すべきゴールに向かって建設的な議論ができるチーム像」と捉えています。
-          <br />
-          <br />
-          こうした環境づくりの一環として「チームコアバリュー」をはじめ「リーダークラスのメンバーやプロジェクトごとの振り返りミーティング
-          (KPT)」や失敗から教訓を得る「ポストモーテム」などの特徴的な取り組みがあります。
-        </p>
+        {text}
       </Summary>
-      <PcImageStyle>
+      <PcImageStyle className={src === '/assets/TeamCoreValuesImage.svg' ? 'isReverse' : ''}>
         <Image
-          src="/assets/TeamCoreValuePerson.png"
-          alt="TeamCoreValuePerson"
+          src={src}
+          alt={alt}
           width={646}
           height={619}
           sizes="100vw"
