@@ -8,10 +8,9 @@ import EachPageTop from '../../elements/EachPageTop';
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 200px;
-  margin: 100px 8vw 200px 8vw;
+  margin: 100px 8vw 200px;
   ${tablet`
-    margin:100px 3vw 200px 3vw;
+    margin:100px 3vw 200px ;
   `};
 `;
 

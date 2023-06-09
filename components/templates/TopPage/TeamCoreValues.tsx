@@ -7,14 +7,14 @@ import ReadMore from '../../elements/ReadMore';
 
 const SectionStyle = styled.div`
   display: flex;
-  margin: 200px 10vw 30vw 10vw;
+  margin: 200px 10vw 30vw;
   justify-content: space-around;
   align-items: center;
   ${tablet`
-  margin: 200px 8vw 30vw 8vw ;
+  margin: 200px 8vw 30vw  ;
   `}
   ${sp`
-  margin: 200px 30px 50vw 30px;
+  margin: 200px 30px 50vw ;
   `}
 `;
 const TeamCoreValuesStyle = styled.div`

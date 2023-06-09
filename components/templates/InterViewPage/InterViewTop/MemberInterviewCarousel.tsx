@@ -16,7 +16,7 @@ function MemberInterviewCarousel() {
     <Wrapper>
       <Image
         src="/assets/Wave_Top.png"
-        alt="alful engineer recruitment"
+        alt="aiful engineer recruitment"
         width={1511}
         height={858}
         sizes="100vw"
@@ -29,7 +29,7 @@ function MemberInterviewCarousel() {
       <MembersSwiper />
       <Image
         src="/assets/Wave_Bottom.png"
-        alt="alful engineer recruitment"
+        alt="aiful engineer recruitment"
         width={1511}
         height={858}
         sizes="100vw"

@@ -14,13 +14,12 @@ const Flex = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 10vw 30vw 10vw;
+  margin: 0 10vw 30vw;
   ${tablet`
-    margin: 0 8vw 30vw 8vw;
-  `}
-  ${sp`
-    margin: 0 30px 60vw 30px;
-  `}
+   margin: 0 8vw 30vw;
+  `} ${sp`
+    margin: 0 30px 60vw; 
+  `};
 `;
 
 const TextStyle = styled.div`
@@ -83,8 +82,6 @@ const WaveSpStyle = styled.div`
   position: absolute;
   width: 100vw;
   margin: 0 calc(50% - 50vw);
-  display: block;
-  z-index: -1;
   display: block;
   z-index: -1;
 `}

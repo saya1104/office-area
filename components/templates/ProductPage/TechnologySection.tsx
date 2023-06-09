@@ -41,7 +41,7 @@ function TechnologySection() {
       <WavePcStyle>
         <Image
           src="/assets/PRODUCT_wave_PC.png"
-          alt="alful engineer recruitment"
+          alt="aiful engineer recruitment"
           width={1511}
           height={858}
           sizes="100vw"
@@ -60,7 +60,7 @@ function TechnologySection() {
       <WaveSpStyle className={isOpen ? 'isOpen' : ''}>
         <Image
           src="/assets/Wave_Top.png"
-          alt="alful engineer recruitment"
+          alt="aiful engineer recruitment"
           width={1511}
           height={858}
           sizes="100vw"
@@ -77,7 +77,7 @@ function TechnologySection() {
         />
         <Image
           src="/assets/Wave_Bottom.png"
-          alt="alful engineer recruitment"
+          alt="aiful engineer recruitment"
           width={1511}
           height={858}
           sizes="100vw"

@@ -72,7 +72,7 @@ const MembersSwiper = () => {
       modules={[Pagination, Autoplay]}
       className="mySwiper"
       speed={6000}
-      loop={viewWidth < 1450 ? true : false}
+      loop={viewWidth < 1450}
       watchOverflow={true}
       autoplay={{
         delay: 0,
