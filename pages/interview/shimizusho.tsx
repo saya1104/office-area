@@ -1,10 +1,10 @@
 import Footer from '../../components/layouts/Footer';
 import Header from '../../components/layouts/Header';
 import MemberInterviewCarousel from '../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
-import TominagaRyoInterviewDetail from '../../components/templates/InterViewPage/TominagaRyo/TominagaRyoInterviewDetail';
-import TominagaRyoTop from '../../components/templates/InterViewPage/TominagaRyo/TominagaRyoTop';
+import TominagaRyoInterviewDetail from '../../components/templates/InterViewPage/ShimizuSho/ShimizuShoInterviewDetail';
+import TominagaRyoTop from '../../components/templates/InterViewPage/ShimizuSho/ShimizuShoTop';
 
-function tominagaryo() {
+function shimizusho() {
   return (
     <>
       <Header />
@@ -16,4 +16,4 @@ function tominagaryo() {
   );
 }
 
-export default tominagaryo;
+export default shimizusho;

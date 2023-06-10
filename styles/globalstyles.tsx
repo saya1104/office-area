@@ -28,6 +28,10 @@ h3 {
   font-size: 34px;
 }
 
+p{
+  text-align: justify;
+  text-justify: inter-ideograph;
+
 .swiper {
   width: 80%;
 }

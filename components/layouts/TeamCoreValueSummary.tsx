@@ -8,6 +8,7 @@ import type { TeamCoreValueType } from '../../features/domains/constants/TeamCor
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   &.isReverse {
     flex-direction: row-reverse;
     margin-top: 100px;

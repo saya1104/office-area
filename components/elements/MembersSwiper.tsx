@@ -74,6 +74,8 @@ const MembersSwiper = () => {
       speed={6000}
       loop={viewWidth < 1450}
       watchOverflow={true}
+      preventClicks={false}
+      preventClicksPropagation={false}
       autoplay={{
         delay: 0,
       }}

@@ -31,14 +31,14 @@ export const MemberConstants: Membertypes[] = [
     href: 'chiayenwang',
   },
   {
-    imageSrc: '/assets/InterviewTominaga.png',
+    imageSrc: '/assets/InterviewShimizu.png',
     imageAlt: 'T.M/20XX年入社 iOSアプリエンジニア',
     message1: '新規事業企画を経て、',
     message2: 'プロモーション戦略を担当。',
     name: 'T.M',
     hireYear: '20XX',
     position: 'iOSアプリエンジニア',
-    href: 'tominagaryo',
+    href: 'shimizusho',
   },
   {
     imageSrc: '/assets/InterviewOu.png',

@@ -23,7 +23,7 @@ const SectionStyle = styled.div`
 
 const AboutTeamStyle = styled.div`
   position: relative;
-  width: 570px;
+  width: 600px;
   min-width: 300px;
   margin: 0 5%;
   ${tablet`

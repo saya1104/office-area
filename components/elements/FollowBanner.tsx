@@ -36,6 +36,7 @@ const ArrowStyle = styled.p`
   position: relative;
   margin-top: 0px;
   margin-bottom: 0px;
+  text-align: center;
   &::before {
     content: '';
     margin: auto;

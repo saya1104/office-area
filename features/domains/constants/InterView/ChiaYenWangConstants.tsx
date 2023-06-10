@@ -11,15 +11,15 @@ export const ChiaYenWangConstants: InterViewType[] = [
         入社の決め手は当時、面接してくださった方々の人柄や雰囲気がよかったこと、そしてReactをはじめとするモダンな技術に触れられる環境があったことです。これまではマークアップを中心に取り組んできた自分にとって不安は多少ありましたが、自分の希望と一致していたからこそ、良いギャップだと捉えることが出来たんだと思います。
       </>
     ),
-    src: '../assets/Chaia_Yen_Wang01.png',
-    alt: 'ChaiaYenWang01',
+    src: '../assets/Chia_Yen_Wang01.png',
+    alt: 'ChiaYenWang01',
   },
   {
     number: '02',
     subTitle: '現在の仕事内容',
     text: 'JavaScript をベースに React や Next.js などのフレームワークを使って Web システム制作に携わっています。前職と比べて HTML や CSS を直接扱うことはほとんど無くなりました。新しい機能の実装やテスト、コードレビュー、バックエンド API への接続など、毎日新しいことの連続で勉強あるのみです。頻度はそれほど高くありませんが HP や LP 制作や改修の案件もちらほらと依頼があるので、過去の経験を活かせる瞬間があるのは嬉しいですね。',
-    src: '../assets/Chaia_Yen_Wang02.png',
-    alt: 'ChaiaYenWang02',
+    src: '../assets/Chia_Yen_Wang02.png',
+    alt: 'ChiaYenWang02',
   },
   {
     number: '03',
@@ -31,8 +31,8 @@ export const ChiaYenWangConstants: InterViewType[] = [
         また、勉強好きで向上心のある人が多く、学びや気付きを積極的にチームにシェアする文化があります。チームでコードを書いたり、コードの品質について議論したり、自分以外の人から色んな視点でのフィードバックがもらえる環境が整っていることも特徴的ですね。
       </>
     ),
-    src: '../assets/Chaia_Yen_Wang03.png',
-    alt: 'ChaiaYenWang03',
+    src: '../assets/Chia_Yen_Wang03.png',
+    alt: 'ChiaYenWang03',
   },
   {
     number: '04',
@@ -44,7 +44,7 @@ export const ChiaYenWangConstants: InterViewType[] = [
         当たり前のことかも知れないですが、チームで開発する以上は一人ひとりがお客様のことを想って開発しないと、本当に良いものは作れないと考えています。
       </>
     ),
-    src: '../assets/Chaia_Yen_Wang04.png',
-    alt: 'ChaiaYenWang04',
+    src: '../assets/Chia_Yen_Wang04.png',
+    alt: 'ChiaYenWang04',
   },
 ];

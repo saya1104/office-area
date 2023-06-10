@@ -49,18 +49,19 @@ const CommentStyle = styled.div`
 `;
 const NumberStyle = styled.div`
   position: absolute;
-  top: 20px;
+  top: 65px;
   left: 10px;
   z-index: -1;
   h3 {
-    font: 145px Inria Sans;
+    font: Inria Sans;
+    font-size: 105px;
     font-weight: 700;
     color: #ff328f;
     margin: 0;
     opacity: 0.3;
   }
   ${tablet`
-	top:-120px;
+	top:-80px;
   `}
 `;
 
