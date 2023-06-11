@@ -41,7 +41,7 @@ const AboutTeamStyle = styled.div`
     `}
   }
   p {
-    margin-top: 5px;
+    margin:0;
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
@@ -70,7 +70,7 @@ const TitleStyle = styled.div`
 `;
 
 const SubTitleStyle = styled.div`
-  margin-top: 15px;
+  margin: 30px 0;
   a {
     color: #ff388a;
     margin-bottom: 0;

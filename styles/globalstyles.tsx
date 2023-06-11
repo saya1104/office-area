@@ -31,6 +31,7 @@ h3 {
 p{
   text-align: justify;
   text-justify: inter-ideograph;
+}
 
 .swiper {
   width: 80%;

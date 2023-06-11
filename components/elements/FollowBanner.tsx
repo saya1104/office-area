@@ -3,6 +3,7 @@ import { sp } from '../../styles/breakPoint';
 
 const FollowBannerStyle = styled.button<Props>`
   opacity: ${({ isBottom }) => (isBottom ? '0' : '')};
+  pointer-events: ${({ isBottom }) => (isBottom ? 'none' : '')};
   transition: opacity 0.5s;
   position: fixed;
   z-index: 30;
