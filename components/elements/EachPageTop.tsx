@@ -9,7 +9,7 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
-import { spMin, tablet } from '../../styles/breakPoint';
+import { sp, spMin, tablet } from '../../styles/breakPoint';
 
 const SectionStyle = styled.div`
   display: flex;
@@ -51,6 +51,14 @@ const AboutTeamStyle = styled.div`
     ${spMin`
       margin: 10px 8% 50px 0;
     `}
+  }
+  br{
+    &.br-sp{
+      display:none;
+      ${sp`
+        display:block
+      `}
+    }
   }
 `;
 

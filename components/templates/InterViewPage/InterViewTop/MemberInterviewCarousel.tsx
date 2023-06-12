@@ -23,6 +23,7 @@ function MemberInterviewCarousel() {
         style={{
           width: '100%',
           height: 'auto',
+          marginTop: '-5px',
         }}
       />
       <h3>MEMBER</h3>

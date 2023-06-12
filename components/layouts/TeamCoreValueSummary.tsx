@@ -71,10 +71,10 @@ const PcImageStyle = styled.div`
 const SpImageStyle = styled.div`
   display: none;
   ${tablet`
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-     &.isReverse {
+    &.isReverse {
     padding: 40px;
   }
   `}

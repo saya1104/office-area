@@ -55,8 +55,9 @@ function AboutTeamDetails() {
       <EachPageTop subTitle={'自分の色が輝く社会に'} title={'ABOUT TEAM'} src="/assets/AboutTeamImage.png">
         誰かと比べることで感じてしまう負の感情を、社会から無くしたい。
         <br />
-        私たちのサービスにより、少しでも多くのお客様の感情を満たし、
-        自然と輝いてもらうためにVISION・MISSION・VALUEを理念に掲げ、「自分の色が輝く社会」の実現を目指します。
+        私たちのサービスにより、少しでも多くのお客様の感情を満たし、 自然と輝いてもらうために
+        <br className="br-sp" />
+        VISION・MISSION・VALUEを理念に掲げ、「自分の色が輝く社会」の実現を目指します。
       </EachPageTop>
       <ImageSpStyle>
         <Image

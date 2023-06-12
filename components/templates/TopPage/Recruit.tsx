@@ -27,7 +27,7 @@ const RecruitTextStyle = styled.div`
   ${sp`
   display:block;
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
   min-width: auto;
   `}
   h3 {
@@ -41,6 +41,9 @@ const RecruitTextStyle = styled.div`
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
+    ${sp`
+       text-align: left;
+    `}
   }
 `;
 

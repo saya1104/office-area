@@ -157,7 +157,7 @@ const Product = () => {
               height={889}
               sizes="100vw"
               style={{
-                width: '100%',
+                width: '110%',
                 height: 'auto',
               }}
             />
