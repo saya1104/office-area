@@ -63,8 +63,7 @@ const TableStyle = styled.table`
       `}
     }
     p{
-      border-left: 2px solid;
-      border-color: #596480;
+      border-left: 2px solid #596480;
       padding:0 20px;
       font-weight: 400px;
       font-size: 18px;

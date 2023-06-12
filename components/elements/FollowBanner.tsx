@@ -35,8 +35,7 @@ const ArrowStyle = styled.p`
   line-height: 30px;
   transform: rotate(60deg);
   position: relative;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0;
   text-align: center;
   &::before {
     content: '';

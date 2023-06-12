@@ -36,15 +36,12 @@ const Container = styled.div<Props>`
     `}
   }
   ul {
-    margin-top: 200px;
-    margin-left: 140px;
+    margin: 200px 0 0 140px;
     ${pcMin`
-    margin-top: 180px;
-    margin-left: 100px;
+    margin: 180px 0 0 100px;
     `}
     ${sp`
-    margin-top: 100px;
-    margin-left: 5px;
+    margin:100px 0 0 5px;
     `}
   }
 `;

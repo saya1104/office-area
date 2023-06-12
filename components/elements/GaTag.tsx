@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-export const GaTag = () => {
+export const GATag = () => {
   return (
     <HelmetProvider>
       <Helmet>
