@@ -4,6 +4,8 @@ const GlobalStyle = createGlobalStyle`
 html {
   min-height: 100%;
   position: relative;
+      overflow-x : hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -11,6 +13,8 @@ body {
   color: #FFF;
   font-size: 18px;
   font-family: 'Inter';
+  overflow-x : hidden;
+  -webkit-overflow-scrolling: touch;
   width: 100%;
 }
 

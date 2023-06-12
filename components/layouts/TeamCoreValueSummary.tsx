@@ -81,14 +81,15 @@ const SpImageStyle = styled.div`
 `;
 
 export const TeamCoreValueSummary = ({ title, subtitle, text, src, alt }: TeamCoreValueType) => {
+  const TeamCoreValueImage = '/assets/TeamCoreValuesImage.svg';
   return (
-    <Wrapper className={src === '/assets/TeamCoreValuesImage.svg' ? 'isReverse' : ''}>
+    <Wrapper className={src === TeamCoreValueImage ? 'isReverse' : ''}>
       <Summary>
         <TitleStyle id="TeamCoreValues">
           <h2>{title}</h2>
         </TitleStyle>
         <SubTitle>{subtitle}</SubTitle>
-        <SpImageStyle className={src === '/assets/TeamCoreValuesImage.svg' ? 'isReverse' : ''}>
+        <SpImageStyle className={src === TeamCoreValueImage ? 'isReverse' : ''}>
           <Image
             src={src}
             alt={alt}
@@ -103,7 +104,7 @@ export const TeamCoreValueSummary = ({ title, subtitle, text, src, alt }: TeamCo
         </SpImageStyle>
         {text}
       </Summary>
-      <PcImageStyle className={src === '/assets/TeamCoreValuesImage.svg' ? 'isReverse' : ''}>
+      <PcImageStyle className={src === TeamCoreValueImage ? 'isReverse' : ''}>
         <Image
           src={src}
           alt={alt}

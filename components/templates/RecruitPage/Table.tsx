@@ -65,7 +65,7 @@ const TableStyle = styled.table`
     p{
       border-left: 2px solid;
       border-color: #596480;
-      padding-left:20px;
+      padding:0 20px;
       font-weight: 400px;
       font-size: 18px;
       line-height: 30px;
