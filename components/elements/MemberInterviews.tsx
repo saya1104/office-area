@@ -49,18 +49,18 @@ const CommentStyle = styled.div`
 `;
 const NumberStyle = styled.div`
   position: absolute;
-  top: 20px;
+  top: 65px;
   left: 10px;
   z-index: -1;
   h3 {
-    font: 145px Inria Sans;
+    font-size: 105px;
     font-weight: 700;
     color: #ff328f;
     margin: 0;
     opacity: 0.3;
   }
   ${tablet`
-	top:-120px;
+	top:-80px;
   `}
 `;
 
@@ -85,42 +85,44 @@ const DetailStyle = styled.div`
 
 export const MemberInterviews = ({ number, subTitle, text, src, alt }: InterViewType) => {
   return (
-    <Wrapper className={number === '02' || number === '04' ? 'isReverse' : ''}>
-      <PcImageWrapper>
-        <Image
-          src={src}
-          alt={alt}
-          width={382}
-          height={442}
-          sizes="100vw"
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-        />
-      </PcImageWrapper>
-      <CommentStyle>
-        <NumberStyle>
-          <h3>{number}</h3>
-        </NumberStyle>
-        <DetailStyle>
-          <h4>{subTitle}</h4>
-          <SpImageWrapper>
-            <Image
-              src={src}
-              alt={alt}
-              width={382}
-              height={442}
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto',
-              }}
-            />
-          </SpImageWrapper>
-          <p>{text}</p>
-        </DetailStyle>
-      </CommentStyle>
-    </Wrapper>
+    <>
+      <Wrapper className={number === '02' || number === '04' ? 'isReverse' : ''}>
+        <PcImageWrapper>
+          <Image
+            src={src}
+            alt={alt}
+            width={382}
+            height={442}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+          />
+        </PcImageWrapper>
+        <CommentStyle>
+          <NumberStyle>
+            <h3>{number}</h3>
+          </NumberStyle>
+          <DetailStyle>
+            <h4>{subTitle}</h4>
+            <SpImageWrapper>
+              <Image
+                src={src}
+                alt={alt}
+                width={382}
+                height={442}
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
+            </SpImageWrapper>
+            <p>{text}</p>
+          </DetailStyle>
+        </CommentStyle>
+      </Wrapper>
+    </>
   );
 };

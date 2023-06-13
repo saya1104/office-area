@@ -13,7 +13,7 @@ export const sp = (
   base: CSSObject | TemplateStringsArray,
   ...interpolations: SimpleInterpolation[]
 ): FlattenSimpleInterpolation => css`
-  @media (max-width: 768px) {
+  @media (max-width: 765px) {
     ${css(base, ...interpolations)}
   }
 `;

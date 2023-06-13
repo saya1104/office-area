@@ -6,13 +6,14 @@ const RecruitStyle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  margin: 100px 0;
   ${sp`
   display: inline;
   `}
 `;
 
 const RecruitLeftImageStyle = styled.div`
+  width: calc(100% / 3);
   ${sp`
   max-width: 250px;
   margin:200px 0 -50px -60px ;
@@ -20,13 +21,13 @@ const RecruitLeftImageStyle = styled.div`
 `;
 
 const RecruitTextStyle = styled.div`
-  display: block;
   text-align: center;
   width: 40%;
   min-width: 350px;
   ${sp`
+  display:block;
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
   min-width: auto;
   `}
   h3 {
@@ -36,9 +37,13 @@ const RecruitTextStyle = styled.div`
     margin-bottom: 60px;
   }
   p {
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
+    ${sp`
+       text-align: left;
+    `}
   }
 `;
 
@@ -62,6 +67,7 @@ const EntryButtonStyle = styled.div`
 `;
 
 const RecruitRightImageStyle = styled.div`
+  width: calc(100% / 3);
   ${sp`
   max-width: 200px;
   margin: -80px 0 0 auto;
@@ -88,7 +94,11 @@ const Recruit = () => {
       <RecruitTextStyle>
         <h3>RECRUIT</h3>
         <p>
-          募集要項テキストがここに入ります。募集要項テキストがここに入ります。募集要項テキストがここに入ります。募集要項テキストがここに入ります。
+          アイフルでは、一緒に働くメンバーを募集しています。
+          <br />
+          私たちと一緒に「お客様の暮らしを変える」より良いサービスを創っていきませんか？
+          <br />
+          みなさんのご応募をお待ちしています。
         </p>
         <EntryButtonStyle>
           <a

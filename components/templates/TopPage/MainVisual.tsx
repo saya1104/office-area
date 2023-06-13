@@ -10,7 +10,7 @@ const MainVisualStyle = styled.div`
   position: relative;
   ${sp`
   display: block;
-  height:150vw;
+  height:190vw;
   overflow: hidden;`}
 `;
 
@@ -18,22 +18,30 @@ const TextStyle = styled.div`
   position: absolute;
   top: 254px;
   left: 58px;
-  z-index: 1;
+  z-index: 10;
   ${sp`
   top:110vw;
   left: 0;
-  margin: 10px;
+  width:94vw;
+  height:auto;
+  margin: 3vw;
   `}
   h2 {
     ${GradationStyle}
-    white-space: nowrap;
+    font-size: 83px;
     ${tablet`
     font-size: 60px;
     `}
     ${sp`
-    font-size: 10vw;
-
+    font-size: 40px;
     `}
+    br {
+      &.br-sp {
+        ${sp`
+      display:none;
+      `}
+      }
+    }
   }
   p {
     font-size: 30px;
@@ -114,9 +122,9 @@ const MainVisual = () => {
       </ImageStyle>
       <TextStyle>
         <h2>
-          京都発の技術で
-          <br />
-          サービスを革新する
+          京都発の IT 金融グループ
+          <br className="br-sp" />
+          でサービスを革新する
         </h2>
         <p>AIFUL ENGINEER RECRUITMENT</p>
       </TextStyle>

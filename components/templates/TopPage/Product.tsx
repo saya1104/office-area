@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { GradationStyle } from '../../../styles/Styled';
-import { sp, tablet } from '../../../styles/breakPoint';
+import { sp, tablet, pcMin, spMin } from '../../../styles/breakPoint';
 import ReadMore from '../../elements/ReadMore';
 
 const ProductStyle = styled.div`
@@ -66,22 +66,28 @@ const WavePcStyle = styled.div`
   margin: 0 calc(50% - 50vw);
   display: block;
   z-index: -1;
+  ${pcMin`
+   width:110vw;
+   right:0.5%;
+  `}
   ${tablet`
    width:120vw;
    right:0.5%;
   `}
   ${sp`
-  width:100vw;
+   width:190vw;
+   right:-50%;
+`}
+  ${spMin`
   display: none;
 `}
 `;
 
 const WaveSpStyle = styled.div`
   display: none;
-  ${sp`
+  ${spMin`
   position: absolute;
   width: 100vw;
-  margin: 0 calc(50% - 50vw);
   display: block;
   z-index: -1;
 `}

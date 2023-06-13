@@ -3,6 +3,7 @@ import { sp } from '../../styles/breakPoint';
 
 const FollowBannerStyle = styled.button<Props>`
   opacity: ${({ isBottom }) => (isBottom ? '0' : '')};
+  pointer-events: ${({ isBottom }) => (isBottom ? 'none' : '')};
   transition: opacity 0.5s;
   position: fixed;
   z-index: 30;
@@ -34,8 +35,8 @@ const ArrowStyle = styled.p`
   line-height: 30px;
   transform: rotate(60deg);
   position: relative;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0;
+  text-align: center;
   &::before {
     content: '';
     margin: auto;

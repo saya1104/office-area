@@ -1,10 +1,10 @@
-import { TominagaRyoConstants } from '../../../../features/domains/constants/InterView/TominagaRyoConstants';
+import { ShimizuShoConstants } from '../../../../features/domains/constants/InterView/ShimizuShoConstants';
 import { MemberInterviews } from '../../../elements/MemberInterviews';
 
-function TominagaRyoInterviewDetail() {
+function ShimizuShoInterviewDetail() {
   return (
     <>
-      {TominagaRyoConstants.map((item, index) => (
+      {ShimizuShoConstants.map((item, index) => (
         <MemberInterviews
           number={item.number}
           subTitle={item.subTitle}
@@ -18,4 +18,4 @@ function TominagaRyoInterviewDetail() {
   );
 }
 
-export default TominagaRyoInterviewDetail;
+export default ShimizuShoInterviewDetail;

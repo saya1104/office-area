@@ -26,6 +26,8 @@ const InterviewImageStyle = styled.div`
 
 const InterviewTextStyle = styled.div`
   margin-top: 20px;
+  max-width: 280px;
+  height: 180px;
   & > p {
     color: #4ef4ff;
     font-size: 18px;
@@ -67,16 +69,20 @@ const MembersSwiper = () => {
       slidesPerView={1}
       // スライド間の余白
       pagination={{
+        type: 'bullets',
         clickable: true,
       }}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
       speed={6000}
       loop={viewWidth < 1450}
-      watchOverflow={true}
-      autoplay={{
-        delay: 0,
-      }}
+      autoplay={
+        viewWidth < 1450
+          ? {
+              delay: 0,
+            }
+          : false
+      }
       breakpoints={{
         770: {
           slidesPerView: 2,
@@ -121,7 +127,7 @@ const MembersSwiper = () => {
                     <span></span>
                   </SquareStyle>
                   <p>
-                    {item.name} / {item.hireYear}年 入社
+                    {item.name} / {item.hireYear}
                     <br />
                     {item.position}
                   </p>

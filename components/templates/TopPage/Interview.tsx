@@ -35,9 +35,6 @@ const Interview = () => {
         <h3>
           <Gradation>INTERVIEW</Gradation>
         </h3>
-        <p>
-          メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。メンバー紹介テキスト。
-        </p>
       </InterviewStyle>
       <MembersSwiper />
     </>

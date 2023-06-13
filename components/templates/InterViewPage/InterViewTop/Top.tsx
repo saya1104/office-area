@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   margin: 100px 3vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   ${sp`
     display:block;
@@ -36,6 +36,8 @@ const InterviewImageStyle = styled.div`
 
 const InterviewTextStyle = styled.div`
   margin-top: 20px;
+  max-width: 280px;
+  height: 180px;
   & > p {
     color: #4ef4ff;
     font-size: 18px;
@@ -72,7 +74,9 @@ function Top() {
   return (
     <>
       <EachPageTop title={'INTERVIEW'} subTitle={'社員インタビュー'} src="assets/InterView_Top.png">
-        エンジニアチームで活躍するチームメンバーを紹介します。
+        日々進化を続けるアイフルで、どのように仕事に向き合っているのか。
+        <br />
+        さまざまな分野で挑戦を続ける社員の声をお伝えします。
       </EachPageTop>
       <Wrapper>
         {MemberConstants.map((item, index) => {

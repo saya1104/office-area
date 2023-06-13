@@ -67,6 +67,7 @@ function TechnologySection() {
           style={{
             width: '100%',
             height: 'auto',
+            marginTop: '-5px',
           }}
         />
         <ProductLists

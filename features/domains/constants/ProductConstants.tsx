@@ -9,7 +9,7 @@ export type ProductConstants = {
 
 export const productData: ProductConstants[] = [
   {
-    src: 'assets/Sp_App.svg',
+    src: 'assets/Sp_App.png',
     companyName: 'アイフル',
     title: 'スマホアプリ',
     children:

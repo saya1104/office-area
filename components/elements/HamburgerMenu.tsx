@@ -36,15 +36,12 @@ const Container = styled.div<Props>`
     `}
   }
   ul {
-    margin-top: 200px;
-    margin-left: 140px;
+    margin: 200px 0 0 140px;
     ${pcMin`
-    margin-top: 180px;
-    margin-left: 100px;
+    margin: 180px 0 0 100px;
     `}
     ${sp`
-    margin-top: 230px;
-    margin-left: 5px;
+    margin:100px 0 0 5px;
     `}
   }
 `;
@@ -64,16 +61,15 @@ const HamburgerMenu: React.FC<Props> = (props) => {
           </Link>
         </li>
         <li>
-          <Link href={'/about#TeamCoreValues'} style={{ textDecoration: 'none', color: '#ffffff' }}>
-            TEAM CORE VALUES
-          </Link>
-        </li>
-        <li>
           <Link href={'/product'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             PRODUCT
           </Link>
         </li>
-        <li>MEMBER</li>
+        <li>
+          <Link href={'/interview'} style={{ textDecoration: 'none', color: '#ffffff' }}>
+            INTERVIEW
+          </Link>
+        </li>
         <li>
           <Link href={'/recruit'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             RECRUIT

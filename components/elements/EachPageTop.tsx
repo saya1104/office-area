@@ -9,7 +9,7 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { GradationStyle } from '../../styles/Styled';
-import { spMin, tablet } from '../../styles/breakPoint';
+import { sp, spMin, tablet } from '../../styles/breakPoint';
 
 const SectionStyle = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ const SectionStyle = styled.div`
 
 const AboutTeamStyle = styled.div`
   position: relative;
-  width: 570px;
+  width: 600px;
   min-width: 300px;
   margin: 0 5%;
   ${tablet`
@@ -41,7 +41,7 @@ const AboutTeamStyle = styled.div`
     `}
   }
   p {
-    margin-top: 5px;
+    margin:0;
     font-weight: 400px;
     font-size: 18px;
     line-height: 30px;
@@ -52,6 +52,14 @@ const AboutTeamStyle = styled.div`
       margin: 10px 8% 50px 0;
     `}
   }
+  br{
+    &.br-sp{
+      display:none;
+      ${sp`
+        display:block
+      `}
+    }
+  }
 `;
 
 const TitleStyle = styled.div`
@@ -61,16 +69,16 @@ const TitleStyle = styled.div`
     width: fit-content;
     ${GradationStyle}
     font-weight: 200;
-    font-size: 60px;
+    font-size: min(10vw, 60px);
     ${tablet`
       margin: 0 auto 20px auto;
-      font-size: 10vw;
+      
     `};
   }
 `;
 
 const SubTitleStyle = styled.div`
-  margin-top: 15px;
+  margin: 30px 0;
   a {
     color: #ff388a;
     margin-bottom: 0;
