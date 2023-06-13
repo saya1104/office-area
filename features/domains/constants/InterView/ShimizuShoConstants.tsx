@@ -15,21 +15,21 @@ export const ShimizuShoConstants: InterViewType[] = [
       </>
     ),
     src: '../assets/Shimizu_Sho01.png',
-    alt: 'ShimizuShoImpetus',
+    alt: 'ShimizuShoMotivation',
   },
   {
     number: '02',
     subTitle: '現在の仕事内容',
     text: '入社後すぐはバックエンドを担当していましたが、現在は AWS インフラチームで Web システムの構築や SRE 業務に携わっています。プロジェクトによっては、要件定義や設計のフォローに入ったりすることもありますよ。自分から手を挙げれば、柔軟にチャレンジできる環境が整っていると思います。そうやって自分の手掛けたシステムをお客様が使っている場面に直接立ち会えるのは、やはり嬉しいですね。唯一のギャップといえば、平均年齢の若いチームが多く、初めは馴染めるか少し心配だったぐらいで、技術面でのギャップは今のところ感じません。',
     src: '../assets/Shimizu_Sho02.png',
-    alt: 'ShimizuShoJob',
+    alt: 'ShimizuShoPosition',
   },
   {
     number: '03',
     subTitle: 'アイフルエンジニアチームの魅力',
     text: 'お客様志向の強いチームだと感じています。メンバーそれぞれが技術を手段としてフラットに捉えていて、お客様を第一に考えて、よりよいプロダクトを作ろうとしている。主体的に活動している人が本当に多いです。チームで意見を柔軟に取り入れたり、仕事の進め方そのものや新しい技術、ツールを提案したり。ナレッジを都度共有したり、ドキュメントを整備したり。今さえ良ければ OK という考え方ではなく、先にある未来を着実によくしていこうとしている。私の過去の経験では、リリースを優先するあまり、テストやナレッジ共有、エンジニア間のコミュニケーションが疎かにされがちだったことがあるので、細部まで品質を妥協しない文化が根付いているのは、とても魅力的だと言えますね。',
     src: '../assets/Shimizu_Sho03.png',
-    alt: 'ShimizuShoAttraction',
+    alt: 'AttractionOfAifulGroup',
   },
   {
     number: '04',
@@ -42,6 +42,6 @@ export const ShimizuShoConstants: InterViewType[] = [
       </>
     ),
     src: '../assets/Shimizu_Sho04.png',
-    alt: 'ShimizuShoRealization',
+    alt: 'ShimizuShoGoal',
   },
 ];

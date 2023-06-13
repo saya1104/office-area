@@ -14,7 +14,7 @@ export const OuKinhouConstants: InterViewType[] = [
       </>
     ),
     src: '../assets/Ou_Kinhou01.png',
-    alt: 'OuKinhouImpetus',
+    alt: 'OuKinhouMotivation',
   },
   {
     number: '02',
@@ -28,7 +28,7 @@ export const OuKinhouConstants: InterViewType[] = [
       </>
     ),
     src: '../assets/Ou_Kinhou02.png',
-    alt: 'OuKinhouJob',
+    alt: 'OuKinhouPosition',
   },
   {
     number: '03',
@@ -41,13 +41,13 @@ export const OuKinhouConstants: InterViewType[] = [
       </>
     ),
     src: '../assets/Ou_Kinhou03.png',
-    alt: 'OuKinhouAttraction',
+    alt: 'AttractionOfAifulGroup',
   },
   {
     number: '04',
     subTitle: 'アイフルで実現したいこと',
     text: 'アイフル公式サイトを「たくさんの人から好かれるユーザーフレンドリーなサービス」に成長させていきたいです。そのためにはサイト全体や一つひとつのパーツの UI に至るまでこだわり抜いて、お客様の UX (ユーザー体験) を向上させていく必要があると思いますし、そうした改善のサイクルをより細かく速く回していくためには、プログラムやインフラのパフォーマンス改善やいかに保守運用を効率化するか、といった観点も重要になってくるでしょう。これらを実現するためには、必要に応じてモダンな技術を取り入れていく姿勢が必要だと考えているので、既存のやり方にとらわれず、柔軟な発想を大切にしていきたいですね。',
     src: '../assets/Ou_Kinhou04.png',
-    alt: 'OuKinhouRealization',
+    alt: 'OuKinhouGoal',
   },
 ];

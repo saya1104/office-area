@@ -4,7 +4,7 @@ import { pcMin, sp, tablet } from '../../styles/breakPoint';
 import type { InterViewType } from '../../features/domains/constants/InterView/InterViewType';
 
 const Wrapper = styled.div`
-  margin: 100px 8vw 0 8vw;
+  margin: 100px 8vw 0;
   display: flex;
   justify-content: space-between;
 
