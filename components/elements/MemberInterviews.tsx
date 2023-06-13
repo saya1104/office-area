@@ -53,6 +53,7 @@ const NumberStyle = styled.div`
   left: 10px;
   z-index: -1;
   h3 {
+    font-family: 'Inria Sans', sans-serif;
     font-size: 105px;
     font-weight: 700;
     color: #ff328f;
