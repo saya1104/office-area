@@ -12,14 +12,14 @@ export const ChiaYenWangConstants: InterViewType[] = [
       </>
     ),
     src: '../assets/Chia_Yen_Wang01.png',
-    alt: 'ChiaYenWangImpetus',
+    alt: 'ChiaYenWangMotivation',
   },
   {
     number: '02',
     subTitle: '現在の仕事内容',
     text: 'JavaScript をベースに React や Next.js などのフレームワークを使って Web システム制作に携わっています。前職と比べて HTML や CSS を直接扱うことはほとんど無くなりました。新しい機能の実装やテスト、コードレビュー、バックエンド API への接続など、毎日新しいことの連続で勉強あるのみです。頻度はそれほど高くありませんが HP や LP 制作や改修の案件もちらほらと依頼があるので、過去の経験を活かせる瞬間があるのは嬉しいですね。',
     src: '../assets/Chia_Yen_Wang02.png',
-    alt: 'ChiaYenWangJob',
+    alt: 'ChiaYenWangPosition',
   },
   {
     number: '03',
@@ -32,7 +32,7 @@ export const ChiaYenWangConstants: InterViewType[] = [
       </>
     ),
     src: '../assets/Chia_Yen_Wang03.png',
-    alt: 'ChiaYenWangAttraction',
+    alt: 'AttractionOfAifulGroup',
   },
   {
     number: '04',
@@ -45,6 +45,6 @@ export const ChiaYenWangConstants: InterViewType[] = [
       </>
     ),
     src: '../assets/Chia_Yen_Wang04.png',
-    alt: 'ChiaYenWangRealization',
+    alt: 'ChiaYenWangGoal',
   },
 ];

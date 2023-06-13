@@ -20,10 +20,10 @@ function ShimizuShoTop() {
     <Wrapper>
       <EachPageTop
         title="Shimizu Sho"
-        subTitle="AWSテックリード & Ruby エンジニア"
+        subTitle="バックエンドエンジニア 兼 AWS エンジニア"
         src="../assets/Main_Shimizu_Sho.png"
       >
-        新設部署のスタートアップから携わり、組織を成長させたい。
+        最高のユーザー体験をつくるために、お客様と技術の架け橋になる。
       </EachPageTop>
     </Wrapper>
   );

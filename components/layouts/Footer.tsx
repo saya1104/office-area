@@ -109,7 +109,7 @@ const ArrowStyle = styled.div`
   `}
 `;
 
-const PagetopLink = styled.a`
+const PagetopLink = styled.p`
   color: #ff328f;
   text-decoration: none;
   margin-top: 50px;
@@ -149,10 +149,12 @@ const Footer = () => {
           </Link>
         </ListStyle>
       </UlStyle>
-      <ArrowStyle>
-        <ArrowUp />
-        <PagetopLink href="#">PAGE TOP</PagetopLink>
-      </ArrowStyle>
+      <Link href={'#'}>
+        <ArrowStyle>
+          <ArrowUp />
+          <PagetopLink>PAGE TOP</PagetopLink>
+        </ArrowStyle>
+      </Link>
     </FooterStyle>
   );
 };
