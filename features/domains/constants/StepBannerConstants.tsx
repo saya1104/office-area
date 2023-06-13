@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { ReactNode } from 'react';
 
 export type StepBannerType = {
@@ -10,7 +11,18 @@ export const StepBannerData: StepBannerType[] = [
   {
     title: <span>STEP 01</span>,
     headline: 'ご応募',
-    text: '当サイトのエントリーフォームからご応募ください。',
+    text: (
+      <>
+        <Link
+          href={'https://hrmos.co/pages/aifulgroup/jobs?category=1825093156045836289'}
+          target="_blank"
+          style={{ textDecoration: 'none', color: '#FF328F' }}
+        >
+          こちらのサイト
+        </Link>
+        からご応募ください
+      </>
+    ),
   },
   {
     title: <span>STEP 02</span>,

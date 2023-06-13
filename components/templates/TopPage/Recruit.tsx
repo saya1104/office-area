@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { sp } from '../../../styles/breakPoint';
 
@@ -58,11 +59,12 @@ const EntryButtonStyle = styled.div`
   ${sp`
   width: 200px;
   `}
-  a {
+  p {
     font-size: 25px;
     font-weight: 700;
     color: inherit;
     text-decoration: none;
+    margin: 0;
   }
 `;
 
@@ -100,15 +102,11 @@ const Recruit = () => {
           <br />
           みなさんのご応募をお待ちしています。
         </p>
-        <EntryButtonStyle>
-          <a
-            href="https://hrmos.co/pages/aifulgroup/jobs?category=1825093156045836289"
-            target="_blank"
-            rel="noreferrer"
-          >
-            ENTRY
-          </a>
-        </EntryButtonStyle>
+        <Link href={'/recruit'} style={{ textDecoration: 'none' }}>
+          <EntryButtonStyle>
+            <p> MORE</p>
+          </EntryButtonStyle>
+        </Link>
       </RecruitTextStyle>
       <RecruitRightImageStyle>
         <Image

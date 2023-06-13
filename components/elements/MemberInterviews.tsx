@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { sp, tablet } from '../../styles/breakPoint';
+import { pcMin, sp, tablet } from '../../styles/breakPoint';
 import type { InterViewType } from '../../features/domains/constants/InterView/InterViewType';
 
 const Wrapper = styled.div`
   margin: 100px 8vw 0 8vw;
   display: flex;
   justify-content: space-between;
+
   &.isReverse {
     flex-direction: row-reverse;
   }
@@ -49,7 +50,7 @@ const CommentStyle = styled.div`
 `;
 const NumberStyle = styled.div`
   position: absolute;
-  top: 65px;
+  top: 4vw;
   left: 10px;
   z-index: -1;
   h3 {
@@ -59,13 +60,16 @@ const NumberStyle = styled.div`
     margin: 0;
     opacity: 0.3;
   }
+  ${pcMin`
+   top:2vw;
+  `}
   ${tablet`
 	top:-80px;
   `}
 `;
 
 const DetailStyle = styled.div`
-  margin-top: 150px;
+  margin-top: 8.5vw;
   z-index: 10;
   h4 {
     line-height: 40px;
@@ -78,6 +82,9 @@ const DetailStyle = styled.div`
   p {
     line-height: 30px;
   }
+  ${pcMin`
+     margin-top: 8vw;
+  `}
   ${tablet`
 	margin:0;
   `}
