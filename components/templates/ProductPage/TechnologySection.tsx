@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { ListConstants } from '../../../features/domains/constants/ListConstants';
+import { ListConstants, IsOpenListConstants } from '../../../features/domains/constants/ListConstants';
 import { tablet } from '../../../styles/breakPoint';
 import { ProductLists } from '../../elements/ProductLists';
 
@@ -9,9 +9,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-  ${tablet`
   background-color: #596480;
-  `}
 `;
 
 const WavePcStyle = styled.div`
@@ -40,21 +38,34 @@ function TechnologySection() {
     <Wrapper>
       <WavePcStyle>
         <Image
-          src="/assets/PRODUCT_wave_PC.png"
+          src="/assets/Wave_Top.png"
           alt="aiful engineer recruitment"
           width={1511}
           height={858}
           sizes="100vw"
           style={{
-            width: '110%',
+            width: '100%',
             height: 'auto',
+            marginTop: '-5px',
           }}
         />
         <ProductLists
-          ListData={ListConstants.technologyData}
-          isOpenData={ListConstants.isOpenData}
+          ListData={ListConstants}
+          isOpenData={IsOpenListConstants}
           onClick={onClickAccordionToggle}
           isOpen={isOpen}
+        />
+        <Image
+          src="/assets/Wave_Bottom.png"
+          alt="aiful engineer recruitment"
+          width={1511}
+          height={858}
+          sizes="100vw"
+          style={{
+            width: '100%',
+            height: 'auto',
+            marginBottom: '-5px',
+          }}
         />
       </WavePcStyle>
       <WaveSpStyle className={isOpen ? 'isOpen' : ''}>
@@ -71,8 +82,8 @@ function TechnologySection() {
           }}
         />
         <ProductLists
-          ListData={ListConstants.technologyData}
-          isOpenData={ListConstants.isOpenData}
+          ListData={ListConstants}
+          isOpenData={IsOpenListConstants}
           onClick={onClickAccordionToggle}
           isOpen={isOpen}
         />
