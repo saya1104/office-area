@@ -51,7 +51,7 @@ const RecruitTextStyle = styled.div`
 const EntryButtonStyle = styled.div`
   padding: 13px 0;
   width: 260px;
-  margin: 60px auto 0 auto;
+  margin: 60px auto 0;
   color: #ff388a;
   border: solid 3px #ff388a;
   border-radius: 50px;
@@ -63,8 +63,9 @@ const EntryButtonStyle = styled.div`
     font-size: 25px;
     font-weight: 700;
     color: inherit;
+    text-align: center;
     text-decoration: none;
-    margin: 0;
+    margin: 0 auto;
   }
 `;
 
@@ -73,7 +74,6 @@ const RecruitRightImageStyle = styled.div`
   ${sp`
   max-width: 200px;
   margin: -80px 0 0 auto;
-
 `}
 `;
 
