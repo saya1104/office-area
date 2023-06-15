@@ -9,7 +9,7 @@ const ListStyle = styled.div`
     font-size: 40px;
     font-weight: 400;
     margin: 0;
-    &.isUndefined {
+    &.isHide {
       display: none;
     }
   }
@@ -17,7 +17,7 @@ const ListStyle = styled.div`
     font-size: 25px;
     color: #4ef4ff;
     margin: 50px 0 20px;
-    &.isUndefined {
+    &.isHide {
       display: none;
     }
   }
@@ -28,14 +28,14 @@ const ListStyle = styled.div`
     position: relative;
     border-left: inset 10px #ff318f;
     padding-left: 10px;
-    &.isUndefined {
+    &.isHide {
       display: none;
     }
   }
   h6 {
     font-size: 25px;
     margin: 20px 0 10px;
-    &.isUndefined {
+    &.isHide {
       display: none;
     }
   }
@@ -44,7 +44,7 @@ const ListStyle = styled.div`
     font-size: 25px;
     font-weight: 300;
     line-height: 35px;
-    &.isUndefined {
+    &.isHide {
       display: none;
     }
   }
@@ -123,7 +123,7 @@ const ButtonStyle = styled.div`
     border-left-width: 0;
     transform: rotate(135deg);
     &.isOpen {
-      margin: 5px 0 0 0 ;
+      margin: 5px 0 0 ;
       transform: rotate(315deg);
     }
   `}
@@ -156,18 +156,18 @@ export const ProductLists: React.FC<Props> = (props) => {
 
           {ListData.map((item, index) => (
             <React.Fragment key={index}>
-              <h4 className={item.title === undefined ? 'isUndefined' : ''}>{item?.title}</h4>
-              <h5 className={item.subtitle === undefined ? 'isUndefined' : ''}>{item?.subtitle}</h5>
-              <h6 className={item.category === undefined ? 'isUndefined' : ''}>{item?.category}</h6>
-              <p className={item.text === undefined ? 'isUndefined' : ''}>{item?.text}</p>
+              <h4 className={item.title === undefined ? 'isHide' : ''}>{item?.title}</h4>
+              <h5 className={item.subtitle === undefined ? 'isHide' : ''}>{item?.subtitle}</h5>
+              <h6 className={item.category === undefined ? 'isHide' : ''}>{item?.category}</h6>
+              <p className={item.text === undefined ? 'isHide' : ''}>{item?.text}</p>
             </React.Fragment>
           ))}
           {isOpenData.map((item, index) => (
             <React.Fragment key={index}>
-              <h4 className={item.title === undefined ? 'isUndefined' : ''}>{item?.title}</h4>
-              <h5 className={item.subtitle === undefined ? 'isUndefined' : ''}>{item?.subtitle}</h5>
-              <h6 className={item.category === undefined ? 'isUndefined' : ''}>{item?.category}</h6>
-              <p className={item.text === undefined ? 'isUndefined' : ''}>{item?.text}</p>
+              <h4 className={item.title === undefined ? 'isHide' : ''}>{item?.title}</h4>
+              <h5 className={item.subtitle === undefined ? 'isHide' : ''}>{item?.subtitle}</h5>
+              <h6 className={item.category === undefined ? 'isHide' : ''}>{item?.category}</h6>
+              <p className={item.text === undefined ? 'isHide' : ''}>{item?.text}</p>
             </React.Fragment>
           ))}
         </PcStyle>
@@ -176,20 +176,20 @@ export const ProductLists: React.FC<Props> = (props) => {
             <h3>使用技術スタック</h3>
             {ListData.map((item, index) => (
               <React.Fragment key={index}>
-                <h4 className={item.title === undefined ? 'isUndefined' : ''}>{item?.title}</h4>
-                <h5 className={item.subtitle === undefined ? 'isUndefined' : ''}>{item?.subtitle}</h5>
-                <h6 className={item.category === undefined ? 'isUndefined' : ''}>{item?.category}</h6>
-                <p className={item.text === undefined ? 'isUndefined' : ''}>{item?.text}</p>
+                <h4 className={item.title === undefined ? 'isHide' : ''}>{item?.title}</h4>
+                <h5 className={item.subtitle === undefined ? 'isHide' : ''}>{item?.subtitle}</h5>
+                <h6 className={item.category === undefined ? 'isHide' : ''}>{item?.category}</h6>
+                <p className={item.text === undefined ? 'isHide' : ''}>{item?.text}</p>
               </React.Fragment>
             ))}
             {isOpen && (
               <>
                 {isOpenData.map((item, index) => (
                   <React.Fragment key={index}>
-                    <h4 className={item.title === undefined ? 'isUndefined' : ''}>{item?.title}</h4>
-                    <h5 className={item.subtitle === undefined ? 'isUndefined' : ''}>{item?.subtitle}</h5>
-                    <h6 className={item.category === undefined ? 'isUndefined' : ''}>{item?.category}</h6>
-                    <p className={item.text === undefined ? 'isUndefined' : ''}>{item?.text}</p>
+                    <h4 className={item.title === undefined ? 'isHide' : ''}>{item?.title}</h4>
+                    <h5 className={item.subtitle === undefined ? 'isHide' : ''}>{item?.subtitle}</h5>
+                    <h6 className={item.category === undefined ? 'isHide' : ''}>{item?.category}</h6>
+                    <p className={item.text === undefined ? 'isHide' : ''}>{item?.text}</p>
                   </React.Fragment>
                 ))}
               </>
