@@ -16,7 +16,7 @@ const ListStyle = styled.div`
   h4 {
     font-size: 25px;
     color: #4ef4ff;
-    margin: 50px 0 20px 0;
+    margin: 50px 0 20px;
     &.isUndefined {
       display: none;
     }
@@ -24,7 +24,7 @@ const ListStyle = styled.div`
 
   h5 {
     font-size: 25px;
-    margin: 80px 0 20px 0;
+    margin: 80px 0 20px;
     position: relative;
     border-left: inset 10px #ff318f;
     padding-left: 10px;
@@ -34,7 +34,7 @@ const ListStyle = styled.div`
   }
   h6 {
     font-size: 25px;
-    margin: 20px 0 10px 0;
+    margin: 20px 0 10px;
     &.isUndefined {
       display: none;
     }
@@ -49,7 +49,7 @@ const ListStyle = styled.div`
     }
   }
   ${sp`
-   width:92vw;
+   width: 92vw;
    p{
     word-break: break-all;
    }
@@ -74,7 +74,6 @@ const SpTextStyle = styled.div`
   display:block;
   position: relative;
   &.isOpen{
-
     &::before{
     content: "";
     position: absolute;
@@ -83,7 +82,7 @@ const SpTextStyle = styled.div`
     bottom: 0;
     z-index: 2;
     width: 100%;
-    height:100px;
+    height: 100px;
     background: linear-gradient(rgba(89,100,128,0) 0, #596480 100px);   
     }
   }
@@ -97,12 +96,12 @@ const ReadMoreStyle = styled.div`
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin:30px auto;
+    margin: 30px auto;
     justify-content: space-evenly;
     border-radius: 50px;
     border: 0.15rem solid #ffffff;
-    width:210px;
-    height:40px;
+    width:  210px;
+    height: 40px;
     p{
       margin:0;
       color:#ffffff;
@@ -124,7 +123,7 @@ const ButtonStyle = styled.div`
     border-left-width: 0;
     transform: rotate(135deg);
     &.isOpen {
-      margin:5px 0 0 0 ;
+      margin: 5px 0 0 0 ;
       transform: rotate(315deg);
     }
   `}
