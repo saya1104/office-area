@@ -1,6 +1,6 @@
 type DataLayer ={
-	event:string,
-	[url:string]
+  event:string,
+  [url:string]
 }
 
 export declare global {
