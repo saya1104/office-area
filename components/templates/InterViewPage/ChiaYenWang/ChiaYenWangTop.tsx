@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 function ChiaYenWangTop() {
   return (
     <Wrapper>
-      <EachPageTop title="Chia Yen Wang" subTitle="フロントエンドエンジニア" src="../assets/Main_Chia_Yen_Wang.png">
+      <EachPageTop title="Chia Yen Wang" subTitle="フロントエンドエンジニア" src="../../assets/Main_Chia_Yen_Wang.png">
         思いやりと学びを大切にしながら、自社プロダクトを育てていく。
       </EachPageTop>
     </Wrapper>

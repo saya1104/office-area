@@ -13,7 +13,7 @@ export const OuKinhouConstants: InterViewType[] = [
         で見たことがある」程度でしたが、面談の中で雑談を交えながら話していくうちに、人柄や職場の雰囲気の良さを感じ取れたことが、入社の大きな決め手になりました。
       </>
     ),
-    src: '../assets/Ou_Kinhou01.png',
+    src: '../../assets/Ou_Kinhou01.png',
     alt: 'OuKinhouMotivation',
   },
   {
@@ -27,7 +27,7 @@ export const OuKinhouConstants: InterViewType[] = [
         チームメンバーとあれやこれやと試行錯誤したり、他愛のないコミュニケーションが取れるのがとても楽しいですね。誰かが話しているのを聞いているだけでも楽しいと思えるぐらい雰囲気が良いし、「どう思いますか？」と自分の意見が自然に求められることが新鮮です。チームでより良いものを作ろうとする意識を端々に感じられる環境が、刺激的でとても素敵だと日々実感しています。
       </>
     ),
-    src: '../assets/Ou_Kinhou02.png',
+    src: '../../assets/Ou_Kinhou02.png',
     alt: 'OuKinhouPosition',
   },
   {
@@ -40,14 +40,14 @@ export const OuKinhouConstants: InterViewType[] = [
         私自身もそんな風にチームの雰囲気や士気をあげられるようなコミュニケーションを取りたいと考えていますし、チームのみんなに頼られる存在でありたいです。
       </>
     ),
-    src: '../assets/Ou_Kinhou03.png',
+    src: '../../assets/Ou_Kinhou03.png',
     alt: 'AttractionOfAifulGroup',
   },
   {
     number: '04',
     subTitle: 'アイフルで実現したいこと',
     text: 'アイフル公式サイトを「たくさんの人から好かれるユーザーフレンドリーなサービス」に成長させていきたいです。そのためにはサイト全体や一つひとつのパーツの UI に至るまでこだわり抜いて、お客様の UX (ユーザー体験) を向上させていく必要があると思いますし、そうした改善のサイクルをより細かく速く回していくためには、プログラムやインフラのパフォーマンス改善やいかに保守運用を効率化するか、といった観点も重要になってくるでしょう。これらを実現するためには、必要に応じてモダンな技術を取り入れていく姿勢が必要だと考えているので、既存のやり方にとらわれず、柔軟な発想を大切にしていきたいですね。',
-    src: '../assets/Ou_Kinhou04.png',
+    src: '../../assets/Ou_Kinhou04.png',
     alt: 'OuKinhouGoal',
   },
 ];
