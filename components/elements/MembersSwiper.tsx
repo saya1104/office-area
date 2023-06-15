@@ -74,17 +74,20 @@ const MembersSwiper = () => {
       }}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
-      speed={6000}
+      speed={400}
       loop={viewWidth < 1450}
+      preventClicks={viewWidth < 835}
+      preventClicksPropagation={viewWidth < 835}
+      allowTouchMove={viewWidth < 835}
       autoplay={
         viewWidth < 1450
           ? {
-              delay: 0,
+              delay: 2000,
             }
           : false
       }
       breakpoints={{
-        770: {
+        600: {
           slidesPerView: 2,
         },
         1100: {
