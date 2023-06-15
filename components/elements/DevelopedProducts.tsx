@@ -90,6 +90,7 @@ const TitleStyle = styled.div`
   }
   P{
     font-size:17px;
+    margin-right:10px;
   }
   `}
 `;

@@ -1,53 +1,91 @@
+import React from 'react';
 import styled from 'styled-components';
-import { tablet } from '../../styles/breakPoint';
+import { sp, tablet } from '../../styles/breakPoint';
 
-const PcListStyle = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit- transform: translateY(-50%) translateX(-50%);
-  width:70vw;
-  height:520px;
-  p{
-	font-size:40px;
-	margin:0 0 50px 0 ;
+const ListStyle = styled.div`
+  margin: 0 auto;
+  width: 70vw;
+  h3 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0;
+    &.isHide {
+      display: none;
+    }
   }
-  ul{
-	margin:0 auto;
-	height:400px;
-	width:70vw;
-	display: flex;
-  flex-flow: column wrap;
+  h4 {
+    font-size: 25px;
+    color: #4ef4ff;
+    margin: 50px 0 20px;
+    &.isHide {
+      display: none;
+    }
   }
-  li{
-	 line-height: 30px;
-	 width:200px;
+
+  h5 {
+    font-size: 25px;
+    margin: 80px 0 20px;
+    position: relative;
+    border-left: inset 10px #ff318f;
+    padding-left: 10px;
+    &.isHide {
+      display: none;
+    }
   }
-  ${tablet`
-  	display:none			
+  h6 {
+    font-size: 25px;
+    margin: 20px 0 10px;
+    &.isHide {
+      display: none;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 35px;
+    &.isHide {
+      display: none;
+    }
+  }
+  ${sp`
+   width: 92vw;
+   p{
+    word-break: break-all;
+   }
   `}
 `;
 
-const SpListStyle = styled.div`
+const PcStyle = styled.div`
+  ${tablet`
+  display: none;
+  `};
+`;
+const SpStyle = styled.div`
   display: none;
   ${tablet`
   display:block;
-  width:90vw;
-  top: 80px;
-  margin:0 5vw;
-  ul{
-	display: flex;
-  flex-flow: column wrap;
   }
-  p{
-	  font-size:30px;
-	  margin:0 0 20px 0 ;
+  `};
+`;
+const SpTextStyle = styled.div`
+  display: none;
+  ${tablet`
+  display:block;
+  position: relative;
+  &.isOpen{
+    &::before{
+    content: "";
+    position: absolute;
+    border-style: none;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(rgba(89,100,128,0) 0, #596480 100px);   
+    }
   }
-  li{
-	 line-height: 40px;
-	 width:300px;
-   font-size:25px;
   }
   `};
 `;
@@ -58,12 +96,12 @@ const ReadMoreStyle = styled.div`
     cursor: pointer;
     display: flex;
     align-items: center;
+    margin: 30px auto;
     justify-content: space-evenly;
-    margin:0 auto;
     border-radius: 50px;
     border: 0.15rem solid #ffffff;
-    width:210px;
-    height:40px;
+    width: 210px;
+    height: 40px;
     p{
       margin:0;
       color:#ffffff;
@@ -85,15 +123,25 @@ const ButtonStyle = styled.div`
     border-left-width: 0;
     transform: rotate(135deg);
     &.isOpen {
-      margin:5px 0 0 0 ;
+      margin: 5px 0 0 ;
       transform: rotate(315deg);
     }
   `}
 `;
 
 type Props = {
-  ListData: string[];
-  isOpenData: string[];
+  ListData: {
+    title?: string;
+    subtitle?: string;
+    category?: string;
+    text?: string;
+  }[];
+  isOpenData: {
+    title?: string;
+    subtitle?: string;
+    category?: string;
+    text?: string;
+  }[];
   isOpen: boolean;
   onClick: React.MouseEventHandler<HTMLDivElement>;
 };
@@ -102,36 +150,57 @@ export const ProductLists: React.FC<Props> = (props) => {
   const { ListData, isOpenData, isOpen, onClick } = props;
   return (
     <>
-      <PcListStyle>
-        <p>使用技術スタック</p>
-        <ul>
+      <ListStyle>
+        <PcStyle>
+          <h3>使用技術スタック</h3>
+
           {ListData.map((item, index) => (
-            <li key={index}>{item}</li>
+            <React.Fragment key={index}>
+              <h4 className={item.title === undefined ? 'isHide' : ''}>{item?.title}</h4>
+              <h5 className={item.subtitle === undefined ? 'isHide' : ''}>{item?.subtitle}</h5>
+              <h6 className={item.category === undefined ? 'isHide' : ''}>{item?.category}</h6>
+              <p className={item.text === undefined ? 'isHide' : ''}>{item?.text}</p>
+            </React.Fragment>
           ))}
           {isOpenData.map((item, index) => (
-            <li key={index}>{item}</li>
+            <React.Fragment key={index}>
+              <h4 className={item.title === undefined ? 'isHide' : ''}>{item?.title}</h4>
+              <h5 className={item.subtitle === undefined ? 'isHide' : ''}>{item?.subtitle}</h5>
+              <h6 className={item.category === undefined ? 'isHide' : ''}>{item?.category}</h6>
+              <p className={item.text === undefined ? 'isHide' : ''}>{item?.text}</p>
+            </React.Fragment>
           ))}
-        </ul>
-      </PcListStyle>
-      <SpListStyle>
-        <p>使用技術スタック</p>
-        <ul>
-          {ListData.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-          {isOpen && (
-            <>
-              {isOpenData.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </>
-          )}
-        </ul>
-        <ReadMoreStyle onClick={onClick}>
-          <p>READ MORE</p>
-          <ButtonStyle className={isOpen ? 'isOpen' : ''} />
-        </ReadMoreStyle>
-      </SpListStyle>
+        </PcStyle>
+        <SpStyle>
+          <SpTextStyle className={isOpen ? '' : 'isOpen'}>
+            <h3>使用技術スタック</h3>
+            {ListData.map((item, index) => (
+              <React.Fragment key={index}>
+                <h4 className={item.title === undefined ? 'isHide' : ''}>{item?.title}</h4>
+                <h5 className={item.subtitle === undefined ? 'isHide' : ''}>{item?.subtitle}</h5>
+                <h6 className={item.category === undefined ? 'isHide' : ''}>{item?.category}</h6>
+                <p className={item.text === undefined ? 'isHide' : ''}>{item?.text}</p>
+              </React.Fragment>
+            ))}
+            {isOpen && (
+              <>
+                {isOpenData.map((item, index) => (
+                  <React.Fragment key={index}>
+                    <h4 className={item.title === undefined ? 'isHide' : ''}>{item?.title}</h4>
+                    <h5 className={item.subtitle === undefined ? 'isHide' : ''}>{item?.subtitle}</h5>
+                    <h6 className={item.category === undefined ? 'isHide' : ''}>{item?.category}</h6>
+                    <p className={item.text === undefined ? 'isHide' : ''}>{item?.text}</p>
+                  </React.Fragment>
+                ))}
+              </>
+            )}
+          </SpTextStyle>
+          <ReadMoreStyle onClick={onClick}>
+            <p>READ MORE</p>
+            <ButtonStyle className={isOpen ? 'isOpen' : ''} />
+          </ReadMoreStyle>
+        </SpStyle>
+      </ListStyle>
     </>
   );
 };
