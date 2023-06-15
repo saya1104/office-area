@@ -35,49 +35,27 @@ const ArrowStyle = styled.p`
   line-height: 30px;
   transform: rotate(60deg);
   position: relative;
-  margin: 0;
+  margin: 0 auto;
+  padding-bottom: 10px;
   text-align: center;
+  width: fit-content;
+  border-bottom: 2px solid;
+
   &::before {
     content: '';
     margin: auto;
     position: absolute;
-    top: 0;
-    bottom: -80px;
-    left: 130px;
+    right: -0.5px;
+    bottom: -6px;
     width: 0;
     height: 0;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-left: 9px solid #16223f;
   }
-
-  &::after {
-    content: '';
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: -80px;
-    left: 25px;
-    width: 105px; /* 棒の長さ */
-    height: 2px; /* 棒の太さ */
-    background: #16223f; /* 棒の色 */
-  }
   ${sp`
 		font-size:12px;
 		line-height: 18px;
-    &::before{
-      bottom: -60px;
-      left: 70px;
-      border-top: 4px solid transparent;
-      border-bottom: 4px solid transparent;
-      border-left: 8px solid #16223F;
-    }
-    &::after{
-      bottom:-60px;
-      left:15px;
-      width:55px;
-      height: 1.5px;
-    }
 	`}
 `;
 

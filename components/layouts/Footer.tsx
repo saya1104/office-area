@@ -149,7 +149,7 @@ const Footer = () => {
           </Link>
         </ListStyle>
       </UlStyle>
-      <Link href={'#'}>
+      <Link href={'#'} style={{ textDecoration: 'none' }}>
         <ArrowStyle>
           <ArrowUp />
           <PagetopLink>PAGE TOP</PagetopLink>
