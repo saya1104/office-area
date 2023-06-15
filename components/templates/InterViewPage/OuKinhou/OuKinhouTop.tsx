@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 function OuKinhouTop() {
   return (
     <Wrapper>
-      <EachPageTop title="Ou Kinhou" subTitle="バックエンドエンジニア" src="../assets/Main_Ou_Kinhou.png">
+      <EachPageTop title="Ou Kinhou" subTitle="バックエンドエンジニア" src="../../assets/Main_Ou_Kinhou.png">
         たくさんの人から好かれる ”アイフル“ を目指して。
       </EachPageTop>
     </Wrapper>

@@ -18,7 +18,11 @@ const Wrapper = styled.div`
 function OtaYujiTop() {
   return (
     <Wrapper>
-      <EachPageTop title="Ota Yuji" subTitle="チーフエンジニア 兼 AWS テックリード" src="../assets/Main_Ota_Yuji.png">
+      <EachPageTop
+        title="Ota Yuji"
+        subTitle="チーフエンジニア 兼 AWS テックリード"
+        src="../../assets/Main_Ota_Yuji.png"
+      >
         アイフルを「日本を代表する FinTech カンパニー」に育てていく。
       </EachPageTop>
     </Wrapper>

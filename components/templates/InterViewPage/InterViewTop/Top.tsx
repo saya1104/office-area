@@ -73,7 +73,7 @@ const SquareStyle = styled.div`
 function Top() {
   return (
     <>
-      <EachPageTop title={'INTERVIEW'} subTitle={'社員インタビュー'} src="assets/InterView_Top.png">
+      <EachPageTop title={'INTERVIEW'} subTitle={'社員インタビュー'} src="../assets/InterView_Top.png">
         日々進化を続けるアイフルで、どのように仕事に向き合っているのか。
         <br />
         さまざまな分野で挑戦を続ける社員の声をお伝えします。

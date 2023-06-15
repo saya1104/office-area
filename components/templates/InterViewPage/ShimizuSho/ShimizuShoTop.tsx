@@ -21,7 +21,7 @@ function ShimizuShoTop() {
       <EachPageTop
         title="Shimizu Sho"
         subTitle="バックエンドエンジニア 兼 AWS エンジニア"
-        src="../assets/Main_Shimizu_Sho.png"
+        src="../../assets/Main_Shimizu_Sho.png"
       >
         最高のユーザー体験をつくるために、お客様と技術の架け橋になる。
       </EachPageTop>
