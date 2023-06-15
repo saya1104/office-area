@@ -100,7 +100,7 @@ const ReadMoreStyle = styled.div`
     justify-content: space-evenly;
     border-radius: 50px;
     border: 0.15rem solid #ffffff;
-    width:  210px;
+    width: 210px;
     height: 40px;
     p{
       margin:0;
