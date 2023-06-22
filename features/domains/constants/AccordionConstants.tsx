@@ -83,7 +83,7 @@ export const accodionData: AccordionType[] = [
       {
         title: 'Be grateful',
         subtitle: '感恩',
-        text: '立場は関係なく、目下の人やお世話になった方などあらゆる相手に\n感謝・敬意を払うこと。',
+        text: '立場は関係なく、目下の人やお世話になった方などあらゆる相手に感謝・敬意を払うこと。',
       },
     ],
   },

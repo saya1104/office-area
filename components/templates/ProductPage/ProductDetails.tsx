@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { productData, AWSData } from '../../../features/domains/constants/ProductConstants';
+import { productData } from '../../../features/domains/constants/ProductConstants';
 import { sp } from '../../../styles/breakPoint';
 import DevelopedProducts from '../../elements/DevelopedProducts';
 import EachPageTop from '../../elements/EachPageTop';
@@ -22,14 +22,6 @@ function ProductDetails() {
         <SubTitle>内製開発システム・アプリ</SubTitle>
         {productData.map((item, index) => (
           <DevelopedProducts src={item.src} companyName={item.companyName} title={item.title} key={index}>
-            {item.children}
-          </DevelopedProducts>
-        ))}
-
-        <SubTitle>開発環境</SubTitle>
-
-        {AWSData.map((item, index) => (
-          <DevelopedProducts src={item.src} title={item.title} key={index}>
             {item.children}
           </DevelopedProducts>
         ))}
