@@ -63,12 +63,3 @@ export const productData: ProductConstants[] = [
       '月間約1000万PVを誇るアイフル公式サイト。商品やサービスの紹介だけでなく、金融知識の向上につながるコンテンツ（オウンドメディア）を提供しています。\n画面設計以外にも営業・マーケティング部門などと協働しながらSEOや構造化データ、WEB マーケティング、UI/UX など幅広い知識を活用し、チームアイフルで日々PDCAを回してユーザビリティ向上に努めています。',
   },
 ];
-
-export const AWSData: ProductConstants[] = [
-  {
-    src: '../assets/Aws.png',
-    title: 'AWS環境構築',
-    children:
-      'Web受付コンタクトセンターでの申込フォーム (AppForm / PC AppForm) から申込をしたお客様情報の管理および、メール / SMS を使用してお客様と双方向のコミュニケーションが取れるアプリケーションの構築。',
-  },
-];

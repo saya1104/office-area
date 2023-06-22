@@ -16,7 +16,7 @@ const MainVisualStyle = styled.div`
 
 const TextStyle = styled.div`
   position: absolute;
-  top: 254px;
+  top: 400px;
   left: 58px;
   z-index: 10;
   ${sp`

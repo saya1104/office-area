@@ -59,7 +59,7 @@ const PcImageStyle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 530px;
+  width: 500px;
   &.isReverse {
     padding: 30px;
   }
