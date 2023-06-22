@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
 import AifulLogo from '../../public/assets/AifulLogo.svg';
 import { sp, tablet } from '../../styles/breakPoint';
@@ -116,6 +117,9 @@ const PagetopLink = styled.p`
 `;
 
 const Footer = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <FooterStyle>
       <LogoStyle>
@@ -149,7 +153,7 @@ const Footer = () => {
           </Link>
         </ListStyle>
       </UlStyle>
-      <Link href={'#'} style={{ textDecoration: 'none' }}>
+      <Link href={'#'} style={{ textDecoration: 'none' }} onClick={scrollToTop}>
         <ArrowStyle>
           <ArrowUp />
           <PagetopLink>PAGE TOP</PagetopLink>

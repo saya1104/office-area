@@ -10,8 +10,8 @@ const FollowBannerStyle = styled.button<Props>`
   top: 70vh;
   right: 5px;
   display: inline-grid;
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   text-align: center;
   align-content: center;
@@ -30,7 +30,7 @@ const FollowBannerStyle = styled.button<Props>`
 
 const ArrowStyle = styled.p`
   color: #16223f;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 30px;
   transform: rotate(60deg);
