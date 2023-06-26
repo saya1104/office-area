@@ -29,6 +29,7 @@ const TextStyle = styled.div`
   h2 {
     ${GradationStyle}
     font-size: 83px;
+    font-family: Inter, sans-serif;
     ${tablet`
     font-size: 60px;
     `}
