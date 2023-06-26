@@ -70,6 +70,7 @@ const TitleStyle = styled.div`
     ${GradationStyle}
     font-weight: 200;
     font-size: min(10vw, 60px);
+    font-family: Inter, sans-serif;
     ${tablet`
       margin: 0 auto 20px auto;
       
