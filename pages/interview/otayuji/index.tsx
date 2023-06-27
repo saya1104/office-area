@@ -1,3 +1,4 @@
+import HeadMeta from '../../../components/elements/HeadMeta';
 import Footer from '../../../components/layouts/Footer';
 import Header from '../../../components/layouts/Header';
 import MemberInterviewCarousel from '../../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
@@ -7,6 +8,7 @@ import OtaYujiTop from '../../../components/templates/InterViewPage/OtaYuji/OtaY
 function otayuji() {
   return (
     <>
+      <HeadMeta title="Ota Yuji | AIFUL ENGINEER RECRUITMENT" />
       <Header />
       <OtaYujiTop />
       <OtaYujiInterviewDetail />

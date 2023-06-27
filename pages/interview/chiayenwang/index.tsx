@@ -1,3 +1,4 @@
+import HeadMeta from '../../../components/elements/HeadMeta';
 import Footer from '../../../components/layouts/Footer';
 import Header from '../../../components/layouts/Header';
 import ChiaYenWangInterviewDetail from '../../../components/templates/InterViewPage/ChiaYenWang/ChiaYenWangInterviewDetail';
@@ -7,6 +8,7 @@ import MemberInterviewCarousel from '../../../components/templates/InterViewPage
 function chiayenwang() {
   return (
     <>
+      <HeadMeta title="Chia Yen Wang | AIFUL ENGINEER RECRUITMENT" />
       <Header />
       <ChiaYenWangTop />
       <ChiaYenWangInterviewDetail />

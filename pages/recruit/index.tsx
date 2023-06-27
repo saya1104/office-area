@@ -1,3 +1,4 @@
+import HeadMeta from '../../components/elements/HeadMeta';
 import Footer from '../../components/layouts/Footer';
 import Header from '../../components/layouts/Header';
 import Guide from '../../components/templates/RecruitPage/Guide';
@@ -8,6 +9,7 @@ import TopVisual from '../../components/templates/RecruitPage/TopVisual';
 function recruit() {
   return (
     <>
+      <HeadMeta title="RECRUIT | AIFUL ENGINEER RECRUITMENT" />
       <Header />
       <TopVisual />
       <Table />

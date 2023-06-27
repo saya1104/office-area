@@ -1,3 +1,4 @@
+import HeadMeta from '../../../components/elements/HeadMeta';
 import Footer from '../../../components/layouts/Footer';
 import Header from '../../../components/layouts/Header';
 import MemberInterviewCarousel from '../../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
@@ -7,6 +8,7 @@ import TominagaRyoTop from '../../../components/templates/InterViewPage/ShimizuS
 function shimizusho() {
   return (
     <>
+      <HeadMeta title="Shimize Sho | AIFUL ENGINEER RECRUITMENT" />
       <Header />
       <TominagaRyoTop />
       <TominagaRyoInterviewDetail />

@@ -1,3 +1,4 @@
+import HeadMeta from '../../../components/elements/HeadMeta';
 import Footer from '../../../components/layouts/Footer';
 import Header from '../../../components/layouts/Header';
 import MemberInterviewCarousel from '../../../components/templates/InterViewPage/InterViewTop/MemberInterviewCarousel';
@@ -7,6 +8,7 @@ import OuKinhouTop from '../../../components/templates/InterViewPage/OuKinhou/Ou
 function oukinhou() {
   return (
     <>
+      <HeadMeta title="Ou Kinhou | AIFUL ENGINEER RECRUITMENT" />
       <Header />
       <OuKinhouTop />
       <OuKinhouInterviewDetail />

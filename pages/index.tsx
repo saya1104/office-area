@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import HeadMeta from '../components/elements/HeadMeta';
 import Footer from '../components/layouts/Footer';
 import Header from '../components/layouts/Header';
 import AboutTeam from '../components/templates/TopPage/AboutTeam';
@@ -19,6 +20,7 @@ function Home() {
   if (isLoading) return null;
   return (
     <>
+      <HeadMeta title="AIFUL ENGINEER RECRUITMENT" />
       <Header />
       <MainVisual />
       <AboutTeam />
