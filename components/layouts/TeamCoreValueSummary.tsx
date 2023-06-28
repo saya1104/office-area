@@ -44,6 +44,7 @@ const TitleStyle = styled.div`
     font-weight: 200;
     font-size: 60px;
     white-space: nowrap;
+    font-family: Inter, sans-serif;
     ${tablet`
       white-space: normal;
     `}
