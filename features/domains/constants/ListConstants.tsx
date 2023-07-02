@@ -59,4 +59,8 @@ export const IsOpenListConstants: List[] = [
     title: 'CMS',
     text: 'HeartCore, WordPress',
   },
+  {
+    title: 'CRM',
+    text: 'Salesforce',
+  },
 ];
