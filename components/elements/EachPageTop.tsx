@@ -65,7 +65,7 @@ const AboutTeamStyle = styled.div`
 const TitleStyle = styled.div`
   margin-right: 8%;
   h2 {
-    white-space: normal;
+    white-space: pre-wrap;
     width: fit-content;
     ${GradationStyle}
     font-weight: 200;
