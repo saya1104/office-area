@@ -44,9 +44,8 @@ const ListStyle = styled.li`
   list-style: none;
   position: relative;
   padding: 0px 0px 0px 1em;
-  margin-top: 50px;
+  margin: 50px 80px 0 0;
   justify-content: space-around;
-  min-width: 180px;
   font-size: 20px;
   &::before {
     content: '';
