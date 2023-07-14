@@ -6,7 +6,7 @@ const ArrowStyle = styled.a`
   padding-right: 80px;
   cursor: pointer;
   &::before {
-    animation: arrowmove 1s ease-in-out infinite;
+    animation: arrowMove 1s ease-in-out infinite;
     content: '';
     position: absolute;
     width: 182px;
@@ -16,7 +16,7 @@ const ArrowStyle = styled.a`
     background-color: #ff328f;
   }
   &::after {
-    animation: arrowmove 1s ease-in-out infinite;
+    animation: arrowMove 1s ease-in-out infinite;
     content: '';
     position: absolute;
     top: 19px;
@@ -24,7 +24,7 @@ const ArrowStyle = styled.a`
     border-width: 7px 0 7px 10px;
     border-color: transparent transparent transparent #ff388a;
   }
-  @keyframes arrowmove {
+  @keyframes arrowMove {
     0% {
       right: 1%;
     }
