@@ -16,7 +16,7 @@ const HeadMeta: React.FC<Props> = (props) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content="アイフルグループのエンジニア専用採用サイトです。" />
       <meta property="og:site_name" content="AIFUL ENGINEER RECRUITMENT" />
-      <meta property="og:image" content={`${window.location.href}assets/OGP_Image.png`} />
+      <meta property="og:image" content={`${window.location.origin}/assets/OGP_Image.png`} />
       <meta
         content="アイフルグループのエンジニア専用採用サイトです。お客様への愛、会社の愛、同僚への愛、自分の将来への愛など様々な「愛」に溢れている職場を紹介します。"
         name="description"
