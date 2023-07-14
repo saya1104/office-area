@@ -6,23 +6,36 @@ const ArrowStyle = styled.a`
   padding-right: 80px;
   cursor: pointer;
   &::before {
+    animation: arrowmove 1s ease-in-out infinite;
     content: '';
     position: absolute;
     width: 182px;
     height: 2px;
-	top: 25px;
+    top: 25px;
+    margin-right: 5px;
     background-color: #ff328f;
   }
   &::after {
+    animation: arrowmove 1s ease-in-out infinite;
     content: '';
     position: absolute;
-	top: 19px;
-	left: 180px;
-	border-style: solid;
+    top: 19px;
+    border-style: solid;
     border-width: 7px 0 7px 10px;
     border-color: transparent transparent transparent #ff388a;
   }
-  }`;
+  @keyframes arrowmove {
+    0% {
+      right: 1%;
+    }
+    50% {
+      right: 3%;
+    }
+    100% {
+      right: 1%;
+    }
+  }
+`;
 
 const ReadMoreStyle = styled.div`
   display: flex;
