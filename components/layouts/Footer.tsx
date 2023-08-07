@@ -4,6 +4,7 @@ import { animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
 import AifulLogo from '../../public/assets/AifulLogo.svg';
 import { sp, tablet } from '../../styles/breakPoint';
+import OpenInNewSharpIcon from '@mui/icons-material/OpenInNewSharp';
 
 const FooterStyle = styled.footer`
   position: relative;
@@ -149,6 +150,20 @@ const Footer = () => {
         <ListStyle>
           <Link href={'/recruit'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             RECRUIT
+          </Link>
+        </ListStyle>
+        <ListStyle>
+          <Link
+            href={'https://group.aiful.co.jp/'}
+            target="_blank"
+            style={{
+              textDecoration: 'none',
+              color: '#ffffff',
+              display: 'flex',
+            }}
+          >
+            GROUP SITE
+            <OpenInNewSharpIcon style={{ color: '#ff328f', width: '20px', marginLeft: '10px' }} />
           </Link>
         </ListStyle>
       </UlStyle>
