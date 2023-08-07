@@ -1,10 +1,10 @@
 import React from 'react';
+import OpenInNewSharpIcon from '@mui/icons-material/OpenInNewSharp';
 import Link from 'next/link';
 import { animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
 import AifulLogo from '../../public/assets/AifulLogo.svg';
 import { sp, tablet } from '../../styles/breakPoint';
-import OpenInNewSharpIcon from '@mui/icons-material/OpenInNewSharp';
 
 const FooterStyle = styled.footer`
   position: relative;
