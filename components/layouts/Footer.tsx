@@ -160,6 +160,7 @@ const Footer = () => {
               textDecoration: 'none',
               color: '#ffffff',
               display: 'flex',
+              alignItems: 'center',
             }}
           >
             GROUP SITE

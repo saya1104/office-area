@@ -1,3 +1,4 @@
+import OpenInNewSharpIcon from '@mui/icons-material/OpenInNewSharp';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { pcMin, sp } from '../../styles/breakPoint';
@@ -31,17 +32,16 @@ const Container = styled.div<Props>`
     margin-bottom: 60px;
     `}
     ${sp`
-    margin-bottom: 50px;
-    font-size: 30px;
+    margin-bottom: 45px;
     `}
   }
   ul {
-    margin: 200px 0 0 140px;
+    margin: 180px 0 0 140px;
     ${pcMin`
-    margin: 180px 0 0 100px;
+    margin: 150px 0 0 100px;
     `}
     ${sp`
-    margin:100px 0 0 5px;
+    margin:80px 0 0 5px;
     `}
   }
 `;
@@ -73,6 +73,21 @@ const HamburgerMenu: React.FC<Props> = (props) => {
         <li>
           <Link href={'/recruit'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             RECRUIT
+          </Link>
+        </li>
+        <li>
+          <Link
+            href={'https://group.aiful.co.jp/'}
+            target="_blank"
+            style={{
+              textDecoration: 'none',
+              color: '#ffffff',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            GROUP SITE
+            <OpenInNewSharpIcon style={{ color: '#ff328f', width: '38px', height: '38px', marginLeft: '10px' }} />
           </Link>
         </li>
       </ul>
