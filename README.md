@@ -1,12 +1,10 @@
-# [ProjectName]
+# アイフルエンジニアサイト
 
 これは Next.js(Typescript)のテンプレートリポジトリです。
 
 # プロジェクト詳細
-- backlog: url
-- 画面設計図: url
-- 要件定義書: url
-- 機能一覧: url
+- backlog: https://aiful100.backlog.com/projects/PJ_ENGINEER_RECRUIT_DEV
+- 画面設計図: figmaを参照
 
 # 起動方法
 
@@ -20,7 +18,7 @@
 # 使用しているライブラリ
 
 - styled-components
-- 
+- gasp
 
 ## すでに入っているライブラリ
 
