@@ -18,7 +18,7 @@
 # 使用しているライブラリ
 
 - styled-components
-- gasp
+- gsap
 
 ## すでに入っているライブラリ
 
