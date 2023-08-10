@@ -33,6 +33,28 @@
 `tree`コマンドを利用して`pages`配下の path ルートを下記にコピペする
 
 ```
-treeコマンドで出力されたパスをコピペ
+pages
+│   ├── 404
+│   │   └── index.tsx
+│   ├── README.md
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   ├── about
+│   │   └── index.tsx
+│   ├── index.tsx
+│   ├── interview
+│   │   ├── chiayenwang
+│   │   │   └── index.tsx
+│   │   ├── index.tsx
+│   │   ├── otayuji
+│   │   │   └── index.tsx
+│   │   ├── oukinhou
+│   │   │   └── index.tsx
+│   │   └── shimizusho
+│   │       └── index.tsx
+│   ├── product
+│   │   └── index.tsx
+│   └── recruit
+│       └── index.tsx
 
 ```
