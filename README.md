@@ -1,12 +1,10 @@
-# [ProjectName]
+# アイフルエンジニアサイト
 
 これは Next.js(Typescript)のテンプレートリポジトリです。
 
 # プロジェクト詳細
-- backlog: url
-- 画面設計図: url
-- 要件定義書: url
-- 機能一覧: url
+- backlog: https://aiful100.backlog.com/projects/PJ_ENGINEER_RECRUIT_DEV
+- 画面設計図: figmaを参照
 
 # 起動方法
 
@@ -20,7 +18,7 @@
 # 使用しているライブラリ
 
 - styled-components
-- 
+- gsap
 
 ## すでに入っているライブラリ
 
@@ -35,6 +33,28 @@
 `tree`コマンドを利用して`pages`配下の path ルートを下記にコピペする
 
 ```
-treeコマンドで出力されたパスをコピペ
+pages
+│   ├── 404
+│   │   └── index.tsx
+│   ├── README.md
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   ├── about
+│   │   └── index.tsx
+│   ├── index.tsx
+│   ├── interview
+│   │   ├── chiayenwang
+│   │   │   └── index.tsx
+│   │   ├── index.tsx
+│   │   ├── otayuji
+│   │   │   └── index.tsx
+│   │   ├── oukinhou
+│   │   │   └── index.tsx
+│   │   └── shimizusho
+│   │       └── index.tsx
+│   ├── product
+│   │   └── index.tsx
+│   └── recruit
+│       └── index.tsx
 
 ```

@@ -1,4 +1,5 @@
 import React from 'react';
+import OpenInNewSharpIcon from '@mui/icons-material/OpenInNewSharp';
 import Link from 'next/link';
 import { animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
@@ -149,6 +150,21 @@ const Footer = () => {
         <ListStyle>
           <Link href={'/recruit'} style={{ textDecoration: 'none', color: '#ffffff' }}>
             RECRUIT
+          </Link>
+        </ListStyle>
+        <ListStyle>
+          <Link
+            href={'https://group.aiful.co.jp/'}
+            target="_blank"
+            style={{
+              textDecoration: 'none',
+              color: '#ffffff',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            GROUP SITE
+            <OpenInNewSharpIcon style={{ color: '#ff328f', width: '20px', marginLeft: '10px' }} />
           </Link>
         </ListStyle>
       </UlStyle>
