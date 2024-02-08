@@ -1,10 +1,12 @@
 import { useEffect, useRef } from 'react';
+import React from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { svgPath, svgPathChange } from '../../../features/domains/constants/MainVisualSvgPath';
 import { GradationStyle } from '../../../styles/Styled';
 import { sp, tablet } from '../../../styles/breakPoint';
+
 
 const MainVisualStyle = styled.div`
   position: relative;
@@ -22,7 +24,7 @@ const TextStyle = styled.div`
   ${sp`
   top:110vw;
   left: 0;
-  width:94vw;
+  width:94vw;1
   height:auto;
   margin: 3vw;
   `}

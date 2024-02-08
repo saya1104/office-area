@@ -18,7 +18,7 @@ const Flex = styled.div`
   ${tablet`
    margin: 0 8vw 30vw;
   `} ${sp`
-    margin: 0 30px 60vw; 
+    margin: 0 30px 60vw;
   `};
 `;
 
