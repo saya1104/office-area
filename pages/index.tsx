@@ -5,6 +5,7 @@ import Header from '../components/layouts/Header';
 import AboutTeam from '../components/templates/TopPage/AboutTeam';
 import Interview from '../components/templates/TopPage/Interview';
 import MainVisual from '../components/templates/TopPage/MainVisual';
+import OfficeSpace from '../components/templates/TopPage/OfficeSpace';
 import Product from '../components/templates/TopPage/Product';
 import Recruit from '../components/templates/TopPage/Recruit';
 import TeamCoreValues from '../components/templates/TopPage/TeamCoreValues';
@@ -26,6 +27,7 @@ function Home() {
       <AboutTeam />
       <TeamCoreValues />
       <Product />
+      <OfficeSpace/>
       <Interview />
       <Recruit />
       <FooterMargin>

@@ -57,14 +57,6 @@ const ImagePcStyle = styled.div`
   `}
 `;
 
-const ImageSpStyle = styled.div`
-  display: none;
-  ${sp`
-    margin: 0 0 0 auto;
-    display: block;
-    max-width:500px;
-  `}
-`;
 
 const AboutTeam = () => {
   const router = useRouter();
@@ -74,19 +66,6 @@ const AboutTeam = () => {
         <h3>
           <Gradation>ABOUT TEAM</Gradation>
         </h3>
-        <ImageSpStyle>
-          <Image
-            src="/assets/AboutTeamImage.png"
-            alt="ABOUT TEAM"
-            width={382}
-            height={442}
-            sizes="100vw"
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          />
-        </ImageSpStyle>
         <p>
           アイフルエンジニアチームはグループ会社を含む自社サービスや社内システムの内製化を推進するスペシャリスト集団です。現場から日々生まれるお客様のニーズを迅速かつ正確に捉え、お客様への提供価値の最大化に常にチャレンジしています。
         </p>

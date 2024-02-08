@@ -1,9 +1,11 @@
+import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import { accodionData } from '../../../features/domains/constants/AccordionConstants';
 import { spMin, tablet } from '../../../styles/breakPoint';
 import AboutTeamAccordion from '../../elements/AboutTeamAccordion';
 import EachPageTop from '../../elements/EachPageTop';
+
 
 const Wrapper = styled.div`
   display: flex;
